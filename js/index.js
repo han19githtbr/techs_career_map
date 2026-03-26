@@ -58,6 +58,7 @@ async function init() {
   bindLangSwitcher();
   bindSearchEvent();
   updateStats();
+  renderRoles(APP.lang);
 
   // Fecha modal ao clicar fora do painel
   document.getElementById('modal-overlay').addEventListener('click', (e) => {
@@ -418,6 +419,7 @@ function setLanguage(lang) {
   renderFilters();
   renderCards();
   applyFilters();
+  renderRoles(APP.lang);
 
   if (APP.openTechId) openModal(APP.openTechId);
 }

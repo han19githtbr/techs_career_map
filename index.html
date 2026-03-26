@@ -12,6 +12,7 @@
   <meta name="apple-mobile-web-app-title" content="Tech Map" />
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/roles.css" />
 </head>
 <body>
 
@@ -88,6 +89,32 @@
   </div>
 
   <!-- =====================================================
+       SEÇÃO: PAPÉIS & RESPONSABILIDADES
+       ===================================================== -->
+  <section id="roles-section" aria-labelledby="roles-heading">
+
+    <div id="roles-header">
+      <div class="roles-badge">
+        <span class="roles-badge-dot"></span>
+        <span data-i18n="roles_badge">Guia de Responsabilidades</span>
+      </div>
+      <h2 id="roles-heading" data-i18n="roles_title">
+        Papéis &amp; Responsabilidades
+      </h2>
+      <p class="roles-subtitle" data-i18n="roles_subtitle">
+        Entenda o escopo real de cada função — o que é cobrado, o que está fora do escopo e por que confundir essas fronteiras sobrecarrega equipes.
+      </p>
+    </div>
+
+    <!-- Tabs de navegação entre papéis -->
+    <div id="roles-tabs" role="tablist" aria-label="Papéis de desenvolvimento"></div>
+
+    <!-- Painel de conteúdo do papel ativo -->
+    <div id="roles-panel" role="tabpanel"></div>
+
+  </section>
+
+  <!-- =====================================================
        FOOTER
        ===================================================== -->
   <footer id="app-footer">
@@ -105,6 +132,8 @@
     <button id="pwa-dismiss-btn" aria-label="Fechar">✕</button>
   </div>
 
+  <!-- Script de papéis & responsabilidades -->
+  <script src="js/roles.js"></script>
   <!-- Script principal -->
   <script src="js/index.js"></script>
 </body>
