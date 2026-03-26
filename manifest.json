@@ -1,0 +1,51 @@
+{
+  "name": "Tech Map — Mapa Técnico Interativo",
+  "short_name": "Tech Map",
+  "description": "Centralize e visualize todo o seu conhecimento técnico. Full Stack Developer Knowledge Map.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#080c14",
+  "theme_color": "#00d4ff",
+  "orientation": "any",
+  "lang": "pt-BR",
+  "categories": ["education", "developer tools", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Frontend",
+      "short_name": "Frontend",
+      "description": "Ver tecnologias Frontend",
+      "url": "/?category=frontend",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Backend",
+      "short_name": "Backend",
+      "description": "Ver tecnologias Backend",
+      "url": "/?category=backend",
+      "icons": [{ "src": "/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "Tech Map — Mapa Técnico Interativo"
+    }
+  ]
+}

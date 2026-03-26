@@ -1,0 +1,1853 @@
+{
+  "meta": {
+    "title": {
+      "pt": "Mapa Técnico Interativo",
+      "en": "Interactive Tech Map",
+      "fr": "Carte Technique Interactive"
+    },
+    "subtitle": {
+      "pt": "Centralize e visualize todo o seu conhecimento técnico",
+      "en": "Centralize and visualize all your technical knowledge",
+      "fr": "Centralisez et visualisez toutes vos connaissances techniques"
+    },
+    "search_placeholder": {
+      "pt": "Buscar tecnologia...",
+      "en": "Search technology...",
+      "fr": "Rechercher une technologie..."
+    },
+    "labels": {
+      "what_is": {
+        "pt": "O que é",
+        "en": "What it is",
+        "fr": "Ce que c'est"
+      },
+      "example": {
+        "pt": "Exemplo Prático",
+        "en": "Practical Example",
+        "fr": "Exemple Pratique"
+      },
+      "relations": {
+        "pt": "Se relaciona com",
+        "en": "Relates to",
+        "fr": "En relation avec"
+      },
+      "pros": {
+        "pt": "Vantagens",
+        "en": "Advantages",
+        "fr": "Avantages"
+      },
+      "cons": {
+        "pt": "Desvantagens",
+        "en": "Disadvantages",
+        "fr": "Inconvénients"
+      },
+      "scenarios": {
+        "pt": "Cenários de Uso",
+        "en": "Use Cases",
+        "fr": "Cas d'utilisation"
+      },
+      "interview": {
+        "pt": "Dicas para Entrevista",
+        "en": "Interview Tips",
+        "fr": "Conseils d'Entretien"
+      },
+      "close": {
+        "pt": "Fechar",
+        "en": "Close",
+        "fr": "Fermer"
+      },
+      "filter_all": {
+        "pt": "Todas",
+        "en": "All",
+        "fr": "Toutes"
+      }
+    }
+  },
+  "categories": [
+    {
+      "id": "frontend",
+      "label": {
+        "pt": "Front-end",
+        "en": "Front-end",
+        "fr": "Front-end"
+      },
+      "color": "#00d4ff",
+      "icon": "🖥️"
+    },
+    {
+      "id": "backend",
+      "label": {
+        "pt": "Back-end",
+        "en": "Back-end",
+        "fr": "Back-end"
+      },
+      "color": "#ff6b35",
+      "icon": "⚙️"
+    },
+    {
+      "id": "database",
+      "label": {
+        "pt": "Banco de Dados",
+        "en": "Database",
+        "fr": "Base de Données"
+      },
+      "color": "#a855f7",
+      "icon": "🗄️"
+    },
+    {
+      "id": "devops",
+      "label": {
+        "pt": "DevOps & Versionamento",
+        "en": "DevOps & Version Control",
+        "fr": "DevOps & Versionning"
+      },
+      "color": "#22c55e",
+      "icon": "🔧"
+    },
+    {
+      "id": "tools",
+      "label": {
+        "pt": "Ferramentas & Design",
+        "en": "Tools & Design",
+        "fr": "Outils & Design"
+      },
+      "color": "#f59e0b",
+      "icon": "🛠️"
+    },
+    {
+      "id": "iot",
+      "label": {
+        "pt": "IoT & Cloud",
+        "en": "IoT & Cloud",
+        "fr": "IoT & Cloud"
+      },
+      "color": "#ec4899",
+      "icon": "📡"
+    },
+    {
+      "id": "cms",
+      "label": {
+        "pt": "CMS & Infra",
+        "en": "CMS & Infra",
+        "fr": "CMS & Infra"
+      },
+      "color": "#64748b",
+      "icon": "🌐"
+    }
+  ],
+  "technologies": [
+    {
+      "id": "javascript",
+      "name": "JavaScript",
+      "category": "frontend",
+      "icon": "🟨",
+      "description": {
+        "pt": "A linguagem da web. Roda em todos os navegadores e no servidor via Node.js. Base de todo o ecossistema moderno de desenvolvimento.",
+        "en": "The language of the web. Runs in all browsers and on the server via Node.js. Foundation of the entire modern development ecosystem.",
+        "fr": "Le langage du web. Fonctionne dans tous les navigateurs et sur le serveur via Node.js. Base de tout l'écosystème de développement moderne."
+      },
+      "example": {
+        "pt": "Fetch de API com async/await, tratamento de erros e atualização do DOM.",
+        "en": "API fetch with async/await, error handling and DOM update.",
+        "fr": "Fetch d'API avec async/await, gestion des erreurs et mise à jour du DOM.",
+        "code": "async function loadUsers() {\n  try {\n    const res = await fetch('/api/users');\n    if (!res.ok) throw new Error('Erro na API');\n\n    const users = await res.json();\n    const list = document.getElementById('user-list');\n\n    list.innerHTML = users\n      .map(u => `<li>${u.name} — ${u.email}</li>`)\n      .join('');\n  } catch (err) {\n    console.error('Falha:', err.message);\n  }\n}"
+      },
+      "relations": [
+        "typescript",
+        "react",
+        "nextjs",
+        "angular",
+        "nodejs",
+        "firebase"
+      ],
+      "pros": {
+        "pt": [
+          "Universal — roda no browser e no servidor",
+          "Linguagem mais demandada no mercado",
+          "Tipagem dinâmica para prototipação rápida",
+          "Enorme ecossistema NPM"
+        ],
+        "en": [
+          "Universal — runs in browser and server",
+          "Most demanded language in the market",
+          "Dynamic typing for rapid prototyping",
+          "Huge NPM ecosystem"
+        ],
+        "fr": [
+          "Universel — fonctionne dans le navigateur et le serveur",
+          "Langage le plus demandé sur le marché",
+          "Typage dynamique pour prototypage rapide",
+          "Énorme écosystème NPM"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Tipagem fraca pode gerar bugs silenciosos (use TypeScript)",
+          "Comportamentos inesperados (coerção de tipos)",
+          "Múltiplos paradigmas podem gerar inconsistência"
+        ],
+        "en": [
+          "Weak typing can cause silent bugs (use TypeScript)",
+          "Unexpected behaviors (type coercion)",
+          "Multiple paradigms can generate inconsistency"
+        ],
+        "fr": [
+          "Le typage faible peut générer des bugs silencieux (utilisez TypeScript)",
+          "Comportements inattendus (coercition de types)",
+          "Les multiples paradigmes peuvent générer des incohérences"
+        ]
+      },
+      "scenarios": {
+        "pt": "Base de toda stack web. Usado em front-end, back-end, mobile (React Native), desktop (Electron) e IoT.",
+        "en": "Foundation of the entire web stack. Used in front-end, back-end, mobile (React Native), desktop (Electron) and IoT.",
+        "fr": "Base de toute la stack web. Utilisé en front-end, back-end, mobile (React Native), desktop (Electron) et IoT."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Qual a diferença entre <code>var</code>, <code>let</code> e <code>const</code>?</strong><br>\nA: <code>var</code> tem escopo de função e sofre hoisting (é içado para o topo, mas com valor <code>undefined</code>). <code>let</code> e <code>const</code> têm escopo de bloco e não sofrem hoisting utilizável. <code>const</code> não permite reatribuição, mas objetos/arrays declarados com ela ainda podem ser mutados.</li>\n<li><strong>Q: O que é o Event Loop?</strong><br>\nA: O JS é single-threaded. O Event Loop monitora a Call Stack e a Callback Queue. Quando a stack está vazia, ele pega callbacks da fila e os executa. Microtasks (Promises) têm prioridade sobre macrotasks (setTimeout).<br>\n<pre>console.log('1');\nsetTimeout(() => console.log('2'), 0);\nPromise.resolve().then(() => console.log('3'));\nconsole.log('4');\n// Output: 1, 4, 3, 2</pre></li>\n<li><strong>Q: O que é uma closure?</strong><br>\nA: Uma função que lembra o escopo onde foi criada, mesmo após esse escopo ter sido encerrado.<br>\n<pre>function counter() {\n  let count = 0;\n  return () => ++count; // lembra 'count'\n}\nconst inc = counter();\ninc(); // 1\ninc(); // 2</pre></li>\n<li><strong>Q: O que é uma Promise?</strong><br>\nA: Representa um valor que pode estar pendente, resolvido ou rejeitado. Permite encadear operações assíncronas com <code>.then()</code> e <code>.catch()</code>, ou usar <code>async/await</code> para sintaxe síncrona.</li>\n<li><strong>Q: Qual a diferença entre <code>==</code> e <code>===</code>?</strong><br>\nA: <code>==</code> faz coerção de tipo antes de comparar (<code>0 == \"0\"</code> é <code>true</code>). <code>===</code> compara valor E tipo sem coerção. Sempre prefira <code>===</code>.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What's the difference between <code>var</code>, <code>let</code> and <code>const</code>?</strong><br>\nA: <code>var</code> has function scope and is hoisted (moved to the top, but with <code>undefined</code> value). <code>let</code> and <code>const</code> have block scope and are not hoisted usably. <code>const</code> prevents reassignment, but objects/arrays declared with it can still be mutated.</li>\n<li><strong>Q: What is the Event Loop?</strong><br>\nA: JS is single-threaded. The Event Loop monitors the Call Stack and Callback Queue. When the stack is empty, it picks callbacks from the queue. Microtasks (Promises) take priority over macrotasks (setTimeout).<br>\n<pre>console.log('1');\nsetTimeout(() => console.log('2'), 0);\nPromise.resolve().then(() => console.log('3'));\nconsole.log('4');\n// Output: 1, 4, 3, 2</pre></li>\n<li><strong>Q: What is a closure?</strong><br>\nA: A function that remembers the scope where it was created, even after that scope has ended.<br>\n<pre>function counter() {\n  let count = 0;\n  return () => ++count;\n}\nconst inc = counter();\ninc(); // 1 — inc(); // 2</pre></li>\n<li><strong>Q: What is a Promise?</strong><br>\nA: Represents a value that may be pending, fulfilled or rejected. Allows chaining async operations with <code>.then()</code>/<code>.catch()</code>, or using <code>async/await</code> for synchronous-looking syntax.</li>\n<li><strong>Q: Difference between <code>==</code> and <code>===</code>?</strong><br>\nA: <code>==</code> coerces types before comparing (<code>0 == \"0\"</code> is <code>true</code>). <code>===</code> compares value AND type without coercion. Always prefer <code>===</code>.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Différence entre <code>var</code>, <code>let</code> et <code>const</code> ?</strong><br>\nR : <code>var</code> a une portée de fonction et est sujet au hoisting (avec valeur <code>undefined</code>). <code>let</code> et <code>const</code> ont une portée de bloc. <code>const</code> empêche la réassignation, mais les objets/tableaux restent mutables.</li>\n<li><strong>Q : Qu'est-ce que l'Event Loop ?</strong><br>\nR : JS est mono-thread. L'Event Loop surveille la Call Stack et la Callback Queue. Quand la stack est vide, il prend les callbacks en attente. Les microtasks (Promises) ont la priorité sur les macrotasks (setTimeout).</li>\n<li><strong>Q : Qu'est-ce qu'une closure ?</strong><br>\nR : Une fonction qui mémorise la portée où elle a été créée.<br>\n<pre>function counter() {\n  let count = 0;\n  return () => ++count;\n}</pre></li>\n<li><strong>Q : Qu'est-ce qu'une Promise ?</strong><br>\nR : Représente une valeur pouvant être en attente, résolue ou rejetée. Permet l'enchaînement avec <code>.then()</code>/<code>.catch()</code> ou <code>async/await</code>.</li>\n<li><strong>Q : Différence entre <code>==</code> et <code>===</code> ?</strong><br>\nR : <code>==</code> coerce les types avant comparaison. <code>===</code> compare valeur ET type sans coercition. Toujours préférer <code>===</code>.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "typescript",
+      "name": "TypeScript",
+      "category": "frontend",
+      "icon": "🔷",
+      "description": {
+        "pt": "Superset do JavaScript com tipagem estática opcional. Detecta erros em tempo de compilação, melhora a manutenção e é essencial em projetos grandes.",
+        "en": "JavaScript superset with optional static typing. Detects errors at compile time, improves maintainability and is essential in large projects.",
+        "fr": "Superset de JavaScript avec typage statique optionnel. Détecte les erreurs à la compilation, améliore la maintenabilité et est essentiel dans les grands projets."
+      },
+      "example": {
+        "pt": "Interface, generics e tipo de retorno explícito em uma função utilitária.",
+        "en": "Interface, generics and explicit return type in a utility function.",
+        "fr": "Interface, generics et type de retour explicite dans une fonction utilitaire.",
+        "code": "interface ApiResponse<T> {\n  data: T;\n  status: number;\n  message: string;\n}\n\nasync function fetchData<T>(url: string): Promise<ApiResponse<T>> {\n  const res = await fetch(url);\n  const data: T = await res.json();\n  return { data, status: res.status, message: 'OK' };\n}\n\n// Uso com tipo explícito\nconst result = await fetchData<User[]>('/api/users');"
+      },
+      "relations": [
+        "javascript",
+        "react",
+        "angular",
+        "nodejs",
+        "nextjs"
+      ],
+      "pros": {
+        "pt": [
+          "Detecta bugs em tempo de desenvolvimento",
+          "Autocomplete e IntelliSense muito melhor",
+          "Código auto-documentado com tipos",
+          "Essencial para times grandes"
+        ],
+        "en": [
+          "Detects bugs at development time",
+          "Much better autocomplete and IntelliSense",
+          "Self-documenting code with types",
+          "Essential for large teams"
+        ],
+        "fr": [
+          "Détecte les bugs au moment du développement",
+          "Autocomplétion et IntelliSense bien meilleurs",
+          "Code auto-documenté avec les types",
+          "Essentiel pour les grandes équipes"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Curva de aprendizado inicial",
+          "Necessita compilação (transpilação para JS)",
+          "Configuração do tsconfig pode ser complexa"
+        ],
+        "en": [
+          "Initial learning curve",
+          "Requires compilation (transpilation to JS)",
+          "tsconfig setup can be complex"
+        ],
+        "fr": [
+          "Courbe d'apprentissage initiale",
+          "Nécessite une compilation (transpilation en JS)",
+          "La configuration du tsconfig peut être complexe"
+        ]
+      },
+      "scenarios": {
+        "pt": "Indispensável em projetos médios/grandes com React, Angular ou Node. Amplamente exigido em vagas de nível intermediário e sênior.",
+        "en": "Indispensable in medium/large projects with React, Angular or Node. Widely required for mid-level and senior positions.",
+        "fr": "Indispensable dans les projets moyens/grands avec React, Angular ou Node. Très demandé pour les postes intermédiaires et seniors."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Diferença entre <code>interface</code> e <code>type</code>?</strong><br>\nA: Ambos descrevem a forma de um objeto. <code>interface</code> é extensível (declaração de mesclagem — pode ser redeclarada para adicionar propriedades), enquanto <code>type</code> é mais versátil (aceita union, intersection, tuplas). Prefira <code>interface</code> para objetos públicos de API e <code>type</code> para union types complexos.</li>\n<li><strong>Q: O que são Generics?</strong><br>\nA: Permitem criar componentes reutilizáveis tipados sem perder type-safety.<br>\n<pre>function identity&lt;T&gt;(arg: T): T { return arg; }\nidentity&lt;string&gt;('hello'); // retorna string\nidentity&lt;number&gt;(42);     // retorna number</pre></li>\n<li><strong>Q: Quando usar <code>any</code> vs <code>unknown</code>?</strong><br>\nA: <code>any</code> desativa a checagem de tipos (evite). <code>unknown</code> é seguro: você deve fazer type guard antes de usar o valor.<br>\n<pre>let val: unknown = fetchData();\nif (typeof val === 'string') val.toUpperCase(); // OK</pre></li>\n<li><strong>Q: Quais Utility Types mais usados?</strong><br>\nA: <code>Partial&lt;T&gt;</code> (todos opcionais), <code>Required&lt;T&gt;</code> (todos obrigatórios), <code>Pick&lt;T, K&gt;</code> (seleciona chaves), <code>Omit&lt;T, K&gt;</code> (exclui chaves), <code>Record&lt;K, V&gt;</code> (mapa de chaves), <code>Readonly&lt;T&gt;</code> (imutável).</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Difference between <code>interface</code> and <code>type</code>?</strong><br>\nA: Both describe the shape of an object. <code>interface</code> is extensible (declaration merging), while <code>type</code> is more versatile (union, intersection, tuples). Prefer <code>interface</code> for public API objects and <code>type</code> for complex union types.</li>\n<li><strong>Q: What are Generics?</strong><br>\nA: Allow creating reusable typed components without losing type-safety.<br>\n<pre>function identity&lt;T&gt;(arg: T): T { return arg; }</pre></li>\n<li><strong>Q: When to use <code>any</code> vs <code>unknown</code>?</strong><br>\nA: <code>any</code> disables type checking (avoid it). <code>unknown</code> is safe: you must perform a type guard before using the value.<br>\n<pre>let val: unknown = fetchData();\nif (typeof val === 'string') val.toUpperCase();</pre></li>\n<li><strong>Q: Most used Utility Types?</strong><br>\nA: <code>Partial&lt;T&gt;</code>, <code>Required&lt;T&gt;</code>, <code>Pick&lt;T,K&gt;</code>, <code>Omit&lt;T,K&gt;</code>, <code>Record&lt;K,V&gt;</code>, <code>Readonly&lt;T&gt;</code>.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Différence entre <code>interface</code> et <code>type</code> ?</strong><br>\nR : Les deux décrivent la forme d'un objet. <code>interface</code> est extensible (déclaration-fusion), <code>type</code> est plus polyvalent (union, intersection, tuples).</li>\n<li><strong>Q : Que sont les Generics ?</strong><br>\nR : Permettent de créer des composants réutilisables et typés sans perdre la sécurité des types.<br>\n<pre>function identity&lt;T&gt;(arg: T): T { return arg; }</pre></li>\n<li><strong>Q : Quand utiliser <code>any</code> vs <code>unknown</code> ?</strong><br>\nR : <code>any</code> désactive la vérification de types (à éviter). <code>unknown</code> est sûr : vous devez faire un type guard avant d'utiliser la valeur.</li>\n<li><strong>Q : Utility Types les plus utilisés ?</strong><br>\nR : <code>Partial&lt;T&gt;</code>, <code>Required&lt;T&gt;</code>, <code>Pick&lt;T,K&gt;</code>, <code>Omit&lt;T,K&gt;</code>, <code>Record&lt;K,V&gt;</code>, <code>Readonly&lt;T&gt;</code>.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "react",
+      "name": "React.js",
+      "category": "frontend",
+      "icon": "⚛️",
+      "description": {
+        "pt": "Biblioteca JavaScript para criação de interfaces de usuário baseadas em componentes reutilizáveis.",
+        "en": "JavaScript library for building user interfaces based on reusable components.",
+        "fr": "Bibliothèque JavaScript pour créer des interfaces utilisateur basées sur des composants réutilisables."
+      },
+      "example": {
+        "pt": "Criar um componente de card de produto com estado local para controle de quantidade no carrinho.",
+        "en": "Creating a product card component with local state to control cart quantity.",
+        "fr": "Créer un composant de carte produit avec état local pour contrôler la quantité dans le panier.",
+        "code": "const ProductCard = ({ product }) => {\n  const [qty, setQty] = useState(0);\n\n  return (\n    <div className=\"card\">\n      <h2>{product.name}</h2>\n      <p>{product.price}</p>\n      <button onClick={() => setQty(qty + 1)}>\n        Adicionar ({qty})\n      </button>\n    </div>\n  );\n};"
+      },
+      "relations": [
+        "nextjs",
+        "typescript",
+        "tailwind",
+        "nodejs",
+        "firebase",
+        "redux"
+      ],
+      "pros": {
+        "pt": [
+          "Componentização e reuso de código",
+          "Grande ecossistema e comunidade ativa",
+          "Virtual DOM para performance",
+          "Facilidade de integração com APIs"
+        ],
+        "en": [
+          "Componentization and code reuse",
+          "Large ecosystem and active community",
+          "Virtual DOM for performance",
+          "Easy API integration"
+        ],
+        "fr": [
+          "Componentisation et réutilisation du code",
+          "Grand écosystème et communauté active",
+          "DOM virtuel pour les performances",
+          "Intégration facile avec les APIs"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Apenas UI — precisa de libs extras para estado global",
+          "Curva de aprendizado com hooks avançados",
+          "JSX pode confundir iniciantes"
+        ],
+        "en": [
+          "UI only — needs extra libs for global state",
+          "Learning curve with advanced hooks",
+          "JSX can confuse beginners"
+        ],
+        "fr": [
+          "UI uniquement — nécessite des libs supplémentaires pour l'état global",
+          "Courbe d'apprentissage avec les hooks avancés",
+          "JSX peut dérouter les débutants"
+        ]
+      },
+      "scenarios": {
+        "pt": "Ideal para SPAs, dashboards e aplicações com muita interatividade no lado do cliente.",
+        "en": "Ideal for SPAs, dashboards, and applications with high client-side interactivity.",
+        "fr": "Idéal pour les SPAs, tableaux de bord et applications avec beaucoup d'interactivité côté client."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Diferença entre <code>useState</code> e <code>useReducer</code>?</strong><br>\nA: <code>useState</code> é ideal para estado simples e independente. <code>useReducer</code> é melhor quando o próximo estado depende do anterior, ou quando há lógica de transição complexa (similar ao Redux).<br>\n<pre>const [state, dispatch] = useReducer(reducer, {count:0});\ndispatch({ type: 'INCREMENT' });</pre></li>\n<li><strong>Q: Como funciona o <code>useEffect</code>?</strong><br>\nA: Executa efeitos colaterais após a renderização. O array de dependências controla quando re-executa. Retorne uma função de cleanup para cancelar subscriptions/timers.<br>\n<pre>useEffect(() => {\n  const sub = subscribe(id);\n  return () => sub.unsubscribe(); // cleanup\n}, [id]); // re-executa quando id muda</pre></li>\n<li><strong>Q: O que é reconciliation/Virtual DOM?</strong><br>\nA: React mantém uma representação virtual da UI em memória. Ao atualizar, ele compara o novo Virtual DOM com o anterior (diffing) e aplica apenas as mudanças mínimas no DOM real (reconciliation).</li>\n<li><strong>Q: Diferença entre <code>memo</code>, <code>useMemo</code> e <code>useCallback</code>?</strong><br>\nA: <code>React.memo</code> memoriza um componente (evita re-render se props não mudaram). <code>useMemo</code> memoriza o resultado de uma computação cara. <code>useCallback</code> memoriza uma função para manter referência estável.<br>\n<pre>const sortedList = useMemo(() => list.sort(), [list]);\nconst handleClick = useCallback(() => doSomething(id), [id]);</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Difference between <code>useState</code> and <code>useReducer</code>?</strong><br>\nA: <code>useState</code> is ideal for simple, independent state. <code>useReducer</code> is better when the next state depends on the previous one, or when there's complex transition logic (similar to Redux).</li>\n<li><strong>Q: How does <code>useEffect</code> work?</strong><br>\nA: Runs side effects after rendering. The dependency array controls when it re-runs. Return a cleanup function to cancel subscriptions/timers.<br>\n<pre>useEffect(() => {\n  const sub = subscribe(id);\n  return () => sub.unsubscribe();\n}, [id]);</pre></li>\n<li><strong>Q: What is reconciliation/Virtual DOM?</strong><br>\nA: React keeps a virtual UI representation in memory. On update, it compares the new Virtual DOM with the previous (diffing) and applies only minimal changes to the real DOM (reconciliation).</li>\n<li><strong>Q: Difference between <code>memo</code>, <code>useMemo</code> and <code>useCallback</code>?</strong><br>\nA: <code>React.memo</code> memoizes a component. <code>useMemo</code> memoizes an expensive computation. <code>useCallback</code> memoizes a function to keep a stable reference.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Différence entre <code>useState</code> et <code>useReducer</code> ?</strong><br>\nR : <code>useState</code> pour l'état simple. <code>useReducer</code> quand l'état suivant dépend du précédent ou avec logique de transition complexe.</li>\n<li><strong>Q : Comment fonctionne <code>useEffect</code> ?</strong><br>\nR : Exécute des effets de bord après le rendu. Le tableau de dépendances contrôle la ré-exécution. Retournez une fonction de cleanup pour annuler les abonnements.</li>\n<li><strong>Q : Qu'est-ce que la réconciliation/Virtual DOM ?</strong><br>\nR : React maintient une représentation virtuelle de l'UI. À chaque mise à jour, il compare (diffing) et applique uniquement les changements minimaux au DOM réel.</li>\n<li><strong>Q : <code>memo</code>, <code>useMemo</code> et <code>useCallback</code> ?</strong><br>\nR : <code>React.memo</code> mémoïse un composant. <code>useMemo</code> mémoïse le résultat d'un calcul coûteux. <code>useCallback</code> mémoïse une fonction pour garder une référence stable.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "nextjs",
+      "name": "Next.js",
+      "category": "frontend",
+      "icon": "▲",
+      "description": {
+        "pt": "Framework React com suporte a SSR, SSG e rotas automáticas. Combina front-end e back-end em um único projeto.",
+        "en": "React framework with SSR, SSG support and automatic routing. Combines front-end and back-end in one project.",
+        "fr": "Framework React avec support SSR, SSG et routage automatique. Combine front-end et back-end dans un seul projet."
+      },
+      "example": {
+        "pt": "Blog com páginas geradas estaticamente via getStaticProps e rotas dinâmicas por slug.",
+        "en": "Blog with statically generated pages via getStaticProps and dynamic routes by slug.",
+        "fr": "Blog avec pages générées statiquement via getStaticProps et routes dynamiques par slug.",
+        "code": "// pages/blog/[slug].js\nexport async function getStaticProps({ params }) {\n  const post = await fetchPost(params.slug);\n  return { props: { post } };\n}\n\nexport async function getStaticPaths() {\n  const posts = await fetchAllPosts();\n  return {\n    paths: posts.map(p => ({ params: { slug: p.slug } })),\n    fallback: false\n  };\n}"
+      },
+      "relations": [
+        "react",
+        "nodejs",
+        "mongodb",
+        "tailwind",
+        "firebase",
+        "typescript"
+      ],
+      "pros": {
+        "pt": [
+          "SSR e SSG nativos — ótimo para SEO",
+          "Rotas baseadas em arquivos",
+          "API Routes integradas",
+          "Deploy facilitado na Vercel"
+        ],
+        "en": [
+          "Native SSR and SSG — great for SEO",
+          "File-based routing",
+          "Integrated API Routes",
+          "Easy deployment on Vercel"
+        ],
+        "fr": [
+          "SSR et SSG natifs — excellent pour le SEO",
+          "Routage basé sur les fichiers",
+          "Routes API intégrées",
+          "Déploiement facilité sur Vercel"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Maior complexidade que React puro",
+          "Build mais lento em projetos grandes",
+          "Configurações avançadas podem ser verbosas"
+        ],
+        "en": [
+          "More complex than plain React",
+          "Slower builds on large projects",
+          "Advanced configs can be verbose"
+        ],
+        "fr": [
+          "Plus complexe que React pur",
+          "Build plus lent sur les grands projets",
+          "Les configurations avancées peuvent être verbeuses"
+        ]
+      },
+      "scenarios": {
+        "pt": "Perfeito para e-commerces, portfólios, sites institucionais e aplicações que precisam de SEO.",
+        "en": "Perfect for e-commerces, portfolios, institutional sites and SEO-demanding applications.",
+        "fr": "Parfait pour les e-commerces, portfolios, sites institutionnels et applications nécessitant le SEO."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Diferença entre SSR, SSG, ISR e CSR?</strong><br>\nA: <b>SSR</b> (Server-Side Rendering) — HTML gerado em cada request no servidor. <b>SSG</b> (Static Site Generation) — HTML gerado no build, servido como arquivo estático. <b>ISR</b> (Incremental Static Regeneration) — SSG com revalidação periódica em background. <b>CSR</b> (Client-Side Rendering) — HTML gerado no browser via JS. SSG + ISR é o sweet spot para performance + SEO + dados atualizados.</li>\n<li><strong>Q: Server Components vs Client Components (App Router)?</strong><br>\nA: Server Components rodam apenas no servidor — podem fazer fetch direto ao banco, sem bundle JS no cliente. Client Components usam <code>\"use client\"</code> no topo e têm acesso a hooks e eventos do browser. Por padrão, tudo é Server Component no App Router.</li>\n<li><strong>Q: Como funciona o novo <code>fetch()</code> com cache?</strong><br>\nA: No Next 13+, o <code>fetch()</code> nativo foi extendido para suportar cache automático:<br>\n<pre>fetch('/api/data', { cache: 'force-cache' });  // SSG\nfetch('/api/data', { cache: 'no-store' });      // SSR\nfetch('/api/data', { next: { revalidate: 60 } }); // ISR 60s</pre></li>\n<li><strong>Q: Para que serve o Middleware do Next.js?</strong><br>\nA: Roda antes de qualquer rota, no Edge Runtime. Ideal para autenticação, redirecionamentos, A/B testing e localização — sem cold start.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Difference between SSR, SSG, ISR and CSR?</strong><br>\nA: <b>SSR</b> — HTML generated per request on server. <b>SSG</b> — HTML generated at build, served as static file. <b>ISR</b> — SSG with periodic background revalidation. <b>CSR</b> — HTML generated in browser via JS. SSG + ISR is the sweet spot for performance + SEO + fresh data.</li>\n<li><strong>Q: Server Components vs Client Components (App Router)?</strong><br>\nA: Server Components run server-side only — can fetch directly from DB, no client JS bundle. Client Components use <code>\"use client\"</code> at the top and have access to hooks and browser events. Everything is a Server Component by default in App Router.</li>\n<li><strong>Q: How does the new <code>fetch()</code> with cache work?</strong><br>\n<pre>fetch('/api/data', { cache: 'force-cache' });  // SSG\nfetch('/api/data', { cache: 'no-store' });      // SSR\nfetch('/api/data', { next: { revalidate: 60 } }); // ISR 60s</pre></li>\n<li><strong>Q: What is Next.js Middleware for?</strong><br>\nA: Runs before any route, on the Edge Runtime. Ideal for auth, redirects, A/B testing and localization — no cold start.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Différence entre SSR, SSG, ISR et CSR ?</strong><br>\nR : <b>SSR</b> — HTML généré à chaque requête. <b>SSG</b> — HTML généré au build. <b>ISR</b> — SSG avec revalidation périodique. <b>CSR</b> — HTML généré côté navigateur. SSG + ISR est le meilleur compromis.</li>\n<li><strong>Q : Server Components vs Client Components ?</strong><br>\nR : Les Server Components s'exécutent uniquement côté serveur, sans JS client. Les Client Components utilisent <code>\"use client\"</code> et ont accès aux hooks et événements navigateur.</li>\n<li><strong>Q : Nouveau <code>fetch()</code> avec cache ?</strong><br>\n<pre>fetch('/api', { cache: 'force-cache' }); // SSG\nfetch('/api', { next: { revalidate: 60 } }); // ISR</pre></li>\n<li><strong>Q : Middleware Next.js ?</strong><br>\nR : S'exécute avant toute route sur l'Edge Runtime. Idéal pour l'authentification, les redirections et la localisation.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "angular",
+      "name": "Angular",
+      "category": "frontend",
+      "icon": "🔺",
+      "description": {
+        "pt": "Framework front-end completo da Google baseado em TypeScript, com injeção de dependência e arquitetura MVC.",
+        "en": "Google's complete front-end TypeScript-based framework with dependency injection and MVC architecture.",
+        "fr": "Framework front-end complet de Google basé sur TypeScript, avec injection de dépendances et architecture MVC."
+      },
+      "example": {
+        "pt": "Serviço HTTP injetável para consumo de API REST com tipagem forte em TypeScript.",
+        "en": "Injectable HTTP service for consuming REST APIs with strong TypeScript typing.",
+        "fr": "Service HTTP injectable pour consommer des APIs REST avec un typage fort TypeScript.",
+        "code": "@Injectable({ providedIn: 'root' })\nexport class UserService {\n  constructor(private http: HttpClient) {}\n\n  getUsers(): Observable<User[]> {\n    return this.http.get<User[]>('/api/users');\n  }\n}"
+      },
+      "relations": [
+        "typescript",
+        "nodejs",
+        "java",
+        "mysql",
+        "rxjs"
+      ],
+      "pros": {
+        "pt": [
+          "Solução completa out-of-the-box",
+          "TypeScript nativo",
+          "Estrutura opinada facilita times grandes",
+          "CLI poderoso"
+        ],
+        "en": [
+          "Complete out-of-the-box solution",
+          "Native TypeScript",
+          "Opinionated structure helps large teams",
+          "Powerful CLI"
+        ],
+        "fr": [
+          "Solution complète prête à l'emploi",
+          "TypeScript natif",
+          "Structure opinionnée facilite les grandes équipes",
+          "CLI puissant"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Curva de aprendizado íngreme",
+          "Verboso e boilerplate excessivo",
+          "Mais pesado que React e Vue"
+        ],
+        "en": [
+          "Steep learning curve",
+          "Verbose with excessive boilerplate",
+          "Heavier than React and Vue"
+        ],
+        "fr": [
+          "Courbe d'apprentissage abrupte",
+          "Verbeux avec beaucoup de code répétitif",
+          "Plus lourd que React et Vue"
+        ]
+      },
+      "scenarios": {
+        "pt": "Indicado para sistemas corporativos grandes, ERPs e projetos com equipes estruturadas.",
+        "en": "Suited for large enterprise systems, ERPs and projects with structured teams.",
+        "fr": "Indiqué pour les grands systèmes d'entreprise, ERP et projets avec des équipes structurées."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é Injeção de Dependência (DI)?</strong><br>\nA: Padrão onde dependências são fornecidas externamente em vez de serem criadas pela classe. No Angular, o Injector cria e gerencia instâncias de serviços. Facilita testabilidade e desacoplamento.<br>\n<pre>@Injectable({ providedIn: 'root' })\nexport class AuthService { /* ... */ }\n// No componente:\nconstructor(private auth: AuthService) {}</pre></li>\n<li><strong>Q: Change Detection Default vs OnPush?</strong><br>\nA: <b>Default</b>: verifica toda a árvore de componentes em qualquer evento. <b>OnPush</b>: só verifica quando a referência das inputs muda ou um event é disparado — muito mais performático para listas grandes.</li>\n<li><strong>Q: Observable vs Promise?</strong><br>\nA: Promise resolve uma vez. Observable é um stream que pode emitir múltiplos valores ao longo do tempo, suporta cancelamento, e tem operadores RxJS poderosos (<code>map</code>, <code>filter</code>, <code>switchMap</code>, <code>debounceTime</code>).</li>\n<li><strong>Q: Lazy Loading de módulos?</strong><br>\nA: Carrega um módulo/feature apenas quando a rota é acessada, reduzindo o bundle inicial.<br>\n<pre>{ path: 'admin', loadChildren: () =>\n  import('./admin/admin.module').then(m => m.AdminModule) }</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is Dependency Injection (DI)?</strong><br>\nA: Pattern where dependencies are provided externally rather than created by the class. Angular's Injector creates and manages service instances, improving testability and decoupling.</li>\n<li><strong>Q: Change Detection Default vs OnPush?</strong><br>\nA: <b>Default</b>: checks the entire component tree on any event. <b>OnPush</b>: only checks when input references change or an event fires — much more performant for large lists.</li>\n<li><strong>Q: Observable vs Promise?</strong><br>\nA: Promise resolves once. Observable is a stream that can emit multiple values over time, supports cancellation, and has powerful RxJS operators (<code>map</code>, <code>switchMap</code>, <code>debounceTime</code>).</li>\n<li><strong>Q: Lazy Loading?</strong><br>\n<pre>{ path: 'admin', loadChildren: () =>\n  import('./admin/admin.module').then(m => m.AdminModule) }</pre></li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce que l'Injection de Dépendances (DI) ?</strong><br>\nR : Les dépendances sont fournies de l'extérieur plutôt que créées par la classe. L'Injector Angular gère les instances de services.</li>\n<li><strong>Q : Change Detection Default vs OnPush ?</strong><br>\nR : <b>Default</b> : vérifie tout l'arbre à chaque événement. <b>OnPush</b> : vérifie uniquement quand les références d'entrée changent — beaucoup plus performant.</li>\n<li><strong>Q : Observable vs Promise ?</strong><br>\nR : Promise résout une fois. Observable est un flux pouvant émettre plusieurs valeurs avec des opérateurs RxJS puissants (<code>map</code>, <code>switchMap</code>, <code>debounceTime</code>).</li>\n<li><strong>Q : Lazy Loading ?</strong><br>\nR : Charge un module uniquement quand la route est accédée, réduisant le bundle initial.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "tailwind",
+      "name": "Tailwind CSS",
+      "category": "frontend",
+      "icon": "🌊",
+      "description": {
+        "pt": "Framework CSS utilitário que permite estilizar diretamente no HTML com classes pré-definidas.",
+        "en": "Utility-first CSS framework that allows styling directly in HTML with predefined classes.",
+        "fr": "Framework CSS utilitaire qui permet de styliser directement en HTML avec des classes prédéfinies."
+      },
+      "example": {
+        "pt": "Botão responsivo com hover e modo dark usando apenas classes Tailwind.",
+        "en": "Responsive button with hover and dark mode using only Tailwind classes.",
+        "fr": "Bouton responsive avec hover et mode sombre en utilisant uniquement des classes Tailwind.",
+        "code": "<button class=\"\n  bg-blue-600 hover:bg-blue-700\n  dark:bg-blue-500 dark:hover:bg-blue-600\n  text-white font-semibold\n  px-6 py-3 rounded-xl\n  transition-all duration-200\n  shadow-lg hover:shadow-xl\n\">\n  Salvar Alterações\n</button>"
+      },
+      "relations": [
+        "react",
+        "nextjs",
+        "angular",
+        "figma",
+        "css"
+      ],
+      "pros": {
+        "pt": [
+          "Prototipação ultra rápida",
+          "Sem conflito de classes CSS globais",
+          "Bundle final otimizado com PurgeCSS",
+          "Design system consistente"
+        ],
+        "en": [
+          "Ultra-fast prototyping",
+          "No global CSS class conflicts",
+          "Optimized final bundle with PurgeCSS",
+          "Consistent design system"
+        ],
+        "fr": [
+          "Prototypage ultra rapide",
+          "Pas de conflits de classes CSS globales",
+          "Bundle final optimisé avec PurgeCSS",
+          "Design system cohérent"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "HTML pode ficar verboso com muitas classes",
+          "Requer aprender a nomenclatura das classes",
+          "Difícil manter consistência sem disciplina"
+        ],
+        "en": [
+          "HTML can become verbose with many classes",
+          "Requires learning class naming",
+          "Hard to maintain consistency without discipline"
+        ],
+        "fr": [
+          "Le HTML peut devenir verbeux avec de nombreuses classes",
+          "Nécessite d'apprendre la nomenclature",
+          "Difficile à maintenir sans discipline"
+        ]
+      },
+      "scenarios": {
+        "pt": "Excelente para projetos React/Next.js que precisam de agilidade no desenvolvimento e design responsivo.",
+        "en": "Excellent for React/Next.js projects needing agility in development and responsive design.",
+        "fr": "Excellent pour les projets React/Next.js nécessitant de l'agilité et un design responsive."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Tailwind vs CSS-in-JS (Styled Components)?</strong><br>\nA: Tailwind usa classes utilitárias no HTML — sem CSS custom gerado em runtime, bundle menor e sem prop drilling de estilos. Styled Components gera CSS em runtime com escopo automático. Tailwind é mais performático; Styled Components tem melhor isolamento por componente.</li>\n<li><strong>Q: O que é o JIT (Just-in-Time) compiler?</strong><br>\nA: Desde Tailwind v3, o JIT gera apenas as classes usadas no código em vez de um CSS gigante. Resultado: bundle final muito menor, suporte a classes arbitrárias e tempo de build reduzido.</li>\n<li><strong>Q: Como customizar o tema?</strong><br>\nA: Via <code>tailwind.config.js</code>:<br>\n<pre>module.exports = {\n  theme: {\n    extend: {\n      colors: { brand: '#00d4ff' },\n      fontFamily: { display: ['Syne', 'sans-serif'] }\n    }\n  }\n}</pre></li>\n<li><strong>Q: Como criar componentes reutilizáveis com Tailwind?</strong><br>\nA: Use <code>@apply</code> no CSS para extrair classes repetidas em um componente:<br>\n<pre>.btn-primary {\n  @apply bg-blue-600 text-white px-6 py-3 rounded-xl\n         hover:bg-blue-700 transition-all;\n}</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Tailwind vs CSS-in-JS?</strong><br>\nA: Tailwind uses utility classes in HTML — no runtime CSS generation, smaller bundle. Styled Components generates CSS at runtime with automatic scoping. Tailwind is more performant; Styled Components has better per-component isolation.</li>\n<li><strong>Q: What is the JIT compiler?</strong><br>\nA: Since Tailwind v3, JIT generates only the classes used in code instead of a giant CSS file. Result: much smaller bundle, arbitrary value support, and faster build time.</li>\n<li><strong>Q: How to customize the theme?</strong><br>\n<pre>module.exports = {\n  theme: { extend: { colors: { brand: '#00d4ff' } } }\n}</pre></li>\n<li><strong>Q: Reusable components with Tailwind?</strong><br>\n<pre>.btn-primary {\n  @apply bg-blue-600 text-white px-6 py-3 rounded-xl;\n}</pre></li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Tailwind vs CSS-in-JS ?</strong><br>\nR : Tailwind utilise des classes utilitaires dans le HTML, sans génération CSS en runtime. CSS-in-JS comme Styled Components génère le CSS à l'exécution avec portée automatique.</li>\n<li><strong>Q : Compilateur JIT ?</strong><br>\nR : Depuis Tailwind v3, le JIT génère uniquement les classes utilisées, résultant en un bundle beaucoup plus petit.</li>\n<li><strong>Q : Personnaliser le thème ?</strong><br>\n<pre>module.exports = {\n  theme: { extend: { colors: { brand: '#00d4ff' } } }\n}</pre></li>\n<li><strong>Q : Composants réutilisables ?</strong><br>\n<pre>.btn { @apply bg-blue-600 text-white px-6 py-3; }</pre></li>\n</ul>"
+      }
+    },
+    {
+      "id": "css",
+      "name": "CSS Puro",
+      "category": "frontend",
+      "icon": "🎨",
+      "description": {
+        "pt": "Cascading Style Sheets — linguagem de estilo nativa da web para controle total de layout, animações e responsividade.",
+        "en": "Cascading Style Sheets — the web's native styling language for full control of layout, animations and responsiveness.",
+        "fr": "Cascading Style Sheets — le langage de style natif du web pour un contrôle total de la mise en page, des animations et de la réactivité."
+      },
+      "example": {
+        "pt": "Grid responsivo com variáveis CSS e animação de entrada.",
+        "en": "Responsive grid with CSS variables and entrance animation.",
+        "fr": "Grille responsive avec variables CSS et animation d'entrée.",
+        "code": ":root {\n  --primary: #0070f3;\n  --gap: 1.5rem;\n}\n\n.grid {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\n  gap: var(--gap);\n}\n\n.card {\n  animation: fadeUp 0.4s ease forwards;\n}\n\n@keyframes fadeUp {\n  from { opacity: 0; transform: translateY(20px); }\n  to   { opacity: 1; transform: translateY(0); }\n}"
+      },
+      "relations": [
+        "tailwind",
+        "javascript",
+        "react",
+        "figma",
+        "nextjs"
+      ],
+      "pros": {
+        "pt": [
+          "Zero dependência — nativo do browser",
+          "Controle total do layout com Grid e Flexbox",
+          "CSS Variables e Custom Properties",
+          "Animações sem JS com @keyframes e transitions"
+        ],
+        "en": [
+          "Zero dependency — native to the browser",
+          "Full layout control with Grid and Flexbox",
+          "CSS Variables and Custom Properties",
+          "Animations without JS with @keyframes and transitions"
+        ],
+        "fr": [
+          "Zéro dépendance — natif du navigateur",
+          "Contrôle total du layout avec Grid et Flexbox",
+          "Variables CSS et Custom Properties",
+          "Animations sans JS avec @keyframes et transitions"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Sem escopo nativo — classes podem colidir",
+          "Manutenção difícil em projetos grandes sem convenção (BEM)",
+          "Sem lógica condicional sem JS"
+        ],
+        "en": [
+          "No native scope — classes can collide",
+          "Hard to maintain in large projects without convention (BEM)",
+          "No conditional logic without JS"
+        ],
+        "fr": [
+          "Pas de portée native — les classes peuvent entrer en collision",
+          "Maintenance difficile dans les grands projets sans convention (BEM)",
+          "Pas de logique conditionnelle sans JS"
+        ]
+      },
+      "scenarios": {
+        "pt": "Base fundamental que todo dev web deve dominar. Essencial para entender frameworks como Tailwind e styled-components.",
+        "en": "Fundamental base every web dev must master. Essential to understand frameworks like Tailwind and styled-components.",
+        "fr": "Base fondamentale que tout dev web doit maîtriser. Essentiel pour comprendre des frameworks comme Tailwind et styled-components."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Flexbox vs Grid — quando usar cada um?</strong><br>\nA: <b>Flexbox</b> é unidimensional (linha OU coluna) — ideal para alinhar itens em uma direção, navbars, cards em linha. <b>Grid</b> é bidimensional (linhas E colunas) — ideal para layouts de página, grades de cards, dashboards.<br>\n<pre>/* Centralizar um item com Flexbox */\n.container { display:flex; place-items:center; }\n/* Grid com 3 colunas responsivas */\n.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }</pre></li>\n<li><strong>Q: Como funciona a especificidade CSS?</strong><br>\nA: Calculada como (inline, IDs, classes/attrs, elementos): estilo inline = 1000, ID = 100, class/pseudo-class/attr = 10, elemento/pseudo-elemento = 1. <code>!important</code> sobrepõe tudo (evite).</li>\n<li><strong>Q: O que é o Box Model?</strong><br>\nA: Todo elemento é uma caixa com: content → padding → border → margin. Com <code>box-sizing: border-box</code> (padrão moderno), padding e border ficam dentro da width definida.</li>\n<li><strong>Q: position relative/absolute/fixed/sticky?</strong><br>\nA: <b>relative</b> — deslocado em relação à sua posição original. <b>absolute</b> — posicionado em relação ao ancestral <code>position:relative</code> mais próximo. <b>fixed</b> — fixo na viewport. <b>sticky</b> — relativo até atingir o scroll threshold, depois age como fixed.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Flexbox vs Grid?</strong><br>\nA: <b>Flexbox</b> is one-dimensional (row OR column) — ideal for aligning items in one direction, navbars, inline cards. <b>Grid</b> is two-dimensional — ideal for page layouts, card grids, dashboards.<br>\n<pre>.container { display:flex; place-items:center; }\n.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); }</pre></li>\n<li><strong>Q: How does CSS specificity work?</strong><br>\nA: Calculated as (inline, IDs, classes/attrs, elements): inline style = 1000, ID = 100, class/pseudo-class = 10, element = 1. <code>!important</code> overrides everything (avoid it).</li>\n<li><strong>Q: What is the Box Model?</strong><br>\nA: Every element is a box: content → padding → border → margin. With <code>box-sizing: border-box</code>, padding and border are included within the defined width.</li>\n<li><strong>Q: position relative/absolute/fixed/sticky?</strong><br>\nA: <b>relative</b> — offset from its normal position. <b>absolute</b> — positioned relative to nearest <code>relative</code> ancestor. <b>fixed</b> — fixed to viewport. <b>sticky</b> — relative until scroll threshold, then acts like fixed.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Flexbox vs Grid ?</strong><br>\nR : <b>Flexbox</b> est unidimensionnel (rangée OU colonne). <b>Grid</b> est bidimensionnel (rangées ET colonnes), idéal pour les mises en page complexes.</li>\n<li><strong>Q : Spécificité CSS ?</strong><br>\nR : Style inline=1000, ID=100, classe=10, élément=1. <code>!important</code> surpasse tout (à éviter).</li>\n<li><strong>Q : Box Model ?</strong><br>\nR : Tout élément est une boîte : contenu → padding → border → margin. Avec <code>box-sizing:border-box</code>, padding et border sont inclus dans la largeur.</li>\n<li><strong>Q : Positions ?</strong><br>\nR : <b>relative</b> : décalé de sa position normale. <b>absolute</b> : par rapport à l'ancêtre relatif. <b>fixed</b> : fixé à la viewport. <b>sticky</b> : relatif puis fixe après un seuil de scroll.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js",
+      "category": "backend",
+      "icon": "🟢",
+      "description": {
+        "pt": "Runtime JavaScript no servidor baseado no motor V8 do Chrome. Permite executar JS fora do browser com modelo non-blocking I/O.",
+        "en": "JavaScript runtime on the server based on Chrome's V8 engine. Allows running JS outside the browser with non-blocking I/O model.",
+        "fr": "Runtime JavaScript sur le serveur basé sur le moteur V8 de Chrome. Permet d'exécuter JS hors du navigateur avec un modèle d'I/O non-bloquant."
+      },
+      "example": {
+        "pt": "API REST com Express.js e middleware de autenticação JWT.",
+        "en": "REST API with Express.js and JWT authentication middleware.",
+        "fr": "API REST avec Express.js et middleware d'authentification JWT.",
+        "code": "const express = require('express');\nconst jwt = require('jsonwebtoken');\nconst app = express();\napp.use(express.json());\n\nconst authMiddleware = (req, res, next) => {\n  const token = req.headers.authorization?.split(' ')[1];\n  if (!token) return res.status(401).json({ error: 'No token' });\n  try {\n    req.user = jwt.verify(token, process.env.JWT_SECRET);\n    next();\n  } catch { res.status(401).json({ error: 'Invalid token' }); }\n};\n\napp.get('/api/profile', authMiddleware, (req, res) => {\n  res.json({ user: req.user });\n});\n\napp.listen(3000);"
+      },
+      "relations": [
+        "javascript",
+        "typescript",
+        "express",
+        "mongodb",
+        "postgresql",
+        "docker",
+        "redis"
+      ],
+      "pros": {
+        "pt": [
+          "Mesmo idioma no front e back (full-stack JS)",
+          "Non-blocking I/O — excelente para alta concorrência",
+          "Enorme ecossistema NPM",
+          "Leve e rápido para APIs e microserviços"
+        ],
+        "en": [
+          "Same language in front and back (full-stack JS)",
+          "Non-blocking I/O — excellent for high concurrency",
+          "Huge NPM ecosystem",
+          "Lightweight and fast for APIs and microservices"
+        ],
+        "fr": [
+          "Même langage en front et back (full-stack JS)",
+          "I/O non-bloquant — excellent pour la haute concurrence",
+          "Énorme écosystème NPM",
+          "Léger et rapide pour les APIs et microservices"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Single-threaded — não ideal para CPU-intensive tasks",
+          "Callback hell em código legado",
+          "Menos adequado que Python para data science"
+        ],
+        "en": [
+          "Single-threaded — not ideal for CPU-intensive tasks",
+          "Callback hell in legacy code",
+          "Less suited than Python for data science"
+        ],
+        "fr": [
+          "Single-threaded — pas idéal pour les tâches CPU-intensives",
+          "L'enfer des callbacks dans le code hérité",
+          "Moins adapté que Python pour la data science"
+        ]
+      },
+      "scenarios": {
+        "pt": "Perfeito para APIs REST/GraphQL, BFF (Backend for Frontend), microserviços, websockets e streaming de dados.",
+        "en": "Perfect for REST/GraphQL APIs, BFF (Backend for Frontend), microservices, websockets and data streaming.",
+        "fr": "Parfait pour les APIs REST/GraphQL, BFF (Backend for Frontend), microservices, websockets et le streaming de données."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Como o Node.js é single-threaded mas lida com concorrência?</strong><br>\nA: O Node usa o Event Loop com libuv para operações I/O assíncronas não bloqueantes. Operações de I/O (rede, disco) são delegadas ao sistema operacional e o Event Loop continua processando outras requisições enquanto aguarda. CPU-intensive tasks devem usar Worker Threads.</li>\n<li><strong>Q: O que são Streams?</strong><br>\nA: Permitem processar dados em pedaços (chunks) em vez de carregar tudo na memória. Tipos: Readable, Writable, Duplex, Transform. Essencial para processamento de arquivos grandes.<br>\n<pre>const fs = require('fs');\nfs.createReadStream('big.csv')\n  .pipe(parseCSV())\n  .pipe(fs.createWriteStream('out.json'));</pre></li>\n<li><strong>Q: Diferença entre <code>process.nextTick</code> e <code>setImmediate</code>?</strong><br>\nA: <code>process.nextTick</code> executa antes do próximo ciclo do Event Loop (antes de I/O callbacks). <code>setImmediate</code> executa na fase \"check\" do Event Loop, após callbacks de I/O.</li>\n<li><strong>Q: Como escalar aplicações Node.js?</strong><br>\nA: Cluster module — cria workers para usar múltiplos CPU cores. PM2 gerencia processos e reinicialização. Para estado compartilhado entre workers, use Redis.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: How does single-threaded Node.js handle concurrency?</strong><br>\nA: Node uses the Event Loop with libuv for non-blocking async I/O. I/O operations (network, disk) are delegated to the OS; the Event Loop keeps processing other requests while waiting. CPU-intensive tasks should use Worker Threads.</li>\n<li><strong>Q: What are Streams?</strong><br>\nA: Allow processing data in chunks instead of loading everything into memory. Types: Readable, Writable, Duplex, Transform.<br>\n<pre>fs.createReadStream('big.csv').pipe(transform).pipe(dest);</pre></li>\n<li><strong>Q: <code>process.nextTick</code> vs <code>setImmediate</code>?</strong><br>\nA: <code>process.nextTick</code> runs before the next Event Loop cycle (before I/O callbacks). <code>setImmediate</code> runs in the \"check\" phase, after I/O callbacks.</li>\n<li><strong>Q: How to scale Node.js?</strong><br>\nA: Cluster module creates workers to use multiple CPU cores. PM2 manages processes. Use Redis for shared state between workers.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Comment Node.js mono-thread gère-t-il la concurrence ?</strong><br>\nR : Via l'Event Loop et libuv pour les I/O asynchrones non bloquants. Les opérations I/O sont déléguées au système d'exploitation. Pour le CPU intensif, utilisez les Worker Threads.</li>\n<li><strong>Q : Que sont les Streams ?</strong><br>\nR : Permettent de traiter des données par morceaux (chunks) au lieu de tout charger en mémoire. Types : Readable, Writable, Duplex, Transform.</li>\n<li><strong>Q : <code>process.nextTick</code> vs <code>setImmediate</code> ?</strong><br>\nR : <code>nextTick</code> s'exécute avant le prochain cycle de l'Event Loop. <code>setImmediate</code> s'exécute dans la phase \"check\", après les callbacks I/O.</li>\n<li><strong>Q : Mise à l'échelle ?</strong><br>\nR : Module Cluster pour multi-core, PM2 pour la gestion de processus, Redis pour l'état partagé.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "java",
+      "name": "Java",
+      "category": "backend",
+      "icon": "☕",
+      "description": {
+        "pt": "Linguagem orientada a objetos fortemente tipada e compilada para bytecode, rodando na JVM. Amplamente usado em sistemas corporativos e Android.",
+        "en": "Strongly typed, object-oriented language compiled to bytecode, running on the JVM. Widely used in enterprise systems and Android.",
+        "fr": "Langage orienté objet fortement typé compilé en bytecode, s'exécutant sur la JVM. Largement utilisé dans les systèmes d'entreprise et Android."
+      },
+      "example": {
+        "pt": "Endpoint REST com Spring Boot e JPA para CRUD de usuários.",
+        "en": "REST endpoint with Spring Boot and JPA for user CRUD.",
+        "fr": "Endpoint REST avec Spring Boot et JPA pour le CRUD des utilisateurs.",
+        "code": "@RestController\n@RequestMapping(\"/api/users\")\npublic class UserController {\n\n  @Autowired\n  private UserService userService;\n\n  @GetMapping\n  public List<User> getAll() {\n    return userService.findAll();\n  }\n\n  @PostMapping\n  public ResponseEntity<User> create(@RequestBody User user) {\n    User saved = userService.save(user);\n    return ResponseEntity.status(201).body(saved);\n  }\n}"
+      },
+      "relations": [
+        "spring",
+        "postgresql",
+        "mysql",
+        "docker",
+        "angular",
+        "mongodb"
+      ],
+      "pros": {
+        "pt": [
+          "Fortemente tipado — menos bugs em produção",
+          "Excelente performance na JVM",
+          "Spring Boot — o melhor framework backend enterprise",
+          "Ampla adoção corporativa e mercado de trabalho robusto"
+        ],
+        "en": [
+          "Strongly typed — fewer bugs in production",
+          "Excellent JVM performance",
+          "Spring Boot — the best enterprise backend framework",
+          "Wide corporate adoption and robust job market"
+        ],
+        "fr": [
+          "Fortement typé — moins de bugs en production",
+          "Excellente performance sur la JVM",
+          "Spring Boot — le meilleur framework backend enterprise",
+          "Large adoption corporate et marché de l'emploi robuste"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Verboso comparado a Python/JS",
+          "Startup time mais lento (melhorado com GraalVM/Quarkus)",
+          "Configuração inicial de projetos mais trabalhosa"
+        ],
+        "en": [
+          "Verbose compared to Python/JS",
+          "Slower startup time (improved with GraalVM/Quarkus)",
+          "Initial project setup is more laborious"
+        ],
+        "fr": [
+          "Verbeux comparé à Python/JS",
+          "Temps de démarrage plus lent (amélioré avec GraalVM/Quarkus)",
+          "La configuration initiale des projets est plus laborieuse"
+        ]
+      },
+      "scenarios": {
+        "pt": "Padrão em bancos, fintechs e grandes empresas. Com Spring Boot, domina o mercado de APIs enterprise e sistemas de alta disponibilidade.",
+        "en": "Standard in banks, fintechs and large companies. With Spring Boot, it dominates the market for enterprise APIs and high-availability systems.",
+        "fr": "Standard dans les banques, fintechs et grandes entreprises. Avec Spring Boot, il domine le marché des APIs enterprise et des systèmes haute disponibilité."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Os 4 pilares da OOP?</strong><br>\nA: <b>Encapsulamento</b> — esconder implementação interna (private + getters/setters). <b>Herança</b> — reutilizar código de uma classe pai. <b>Polimorfismo</b> — o mesmo método se comporta diferente dependendo do objeto. <b>Abstração</b> — expor apenas o necessário (interfaces e classes abstratas).</li>\n<li><strong>Q: Diferença entre <code>interface</code> e classe abstrata?</strong><br>\nA: Classe abstrata pode ter estado (campos) e implementações concretas. Interface define apenas contrato (desde Java 8, pode ter métodos default). Uma classe pode implementar múltiplas interfaces, mas só pode herdar de uma classe abstrata.</li>\n<li><strong>Q: Como funciona o Garbage Collector?</strong><br>\nA: A JVM gerencia memória automaticamente. Objetos sem referências são elegíveis para coleta. O GC usa geração de memória (Young, Old/Tenured, Metaspace). <code>finalize()</code> está obsoleto — use <code>try-with-resources</code>.</li>\n<li><strong>Q: <code>equals()</code> vs <code>==</code>?</strong><br>\nA: <code>==</code> compara referências (se apontam para o mesmo objeto na heap). <code>equals()</code> compara conteúdo. Para Strings, sempre use <code>equals()</code>:<br>\n<pre>\"hello\" == \"hello\"         // pode ser true (string pool)\nnew String(\"hello\") == new String(\"hello\") // false!\nnew String(\"hello\").equals(new String(\"hello\")) // true</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: The 4 OOP pillars?</strong><br>\nA: <b>Encapsulation</b> — hide internal implementation. <b>Inheritance</b> — reuse parent class code. <b>Polymorphism</b> — same method behaves differently per object. <b>Abstraction</b> — expose only what's necessary (interfaces and abstract classes).</li>\n<li><strong>Q: Interface vs abstract class?</strong><br>\nA: Abstract class can have state (fields) and concrete implementations. Interface defines only a contract (since Java 8, can have default methods). A class can implement multiple interfaces but only extend one abstract class.</li>\n<li><strong>Q: How does Garbage Collection work?</strong><br>\nA: JVM manages memory automatically. Unreferenced objects are eligible for collection. GC uses generational memory (Young, Old/Tenured, Metaspace). Use <code>try-with-resources</code> instead of <code>finalize()</code>.</li>\n<li><strong>Q: <code>equals()</code> vs <code>==</code>?</strong><br>\nA: <code>==</code> compares references. <code>equals()</code> compares content. Always use <code>equals()</code> for Strings.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Les 4 piliers de la POO ?</strong><br>\nR : <b>Encapsulation</b>, <b>Héritage</b>, <b>Polymorphisme</b>, <b>Abstraction</b>.</li>\n<li><strong>Q : Interface vs classe abstraite ?</strong><br>\nR : La classe abstraite peut avoir un état et des implémentations concrètes. L'interface définit uniquement un contrat. Une classe peut implémenter plusieurs interfaces mais n'hériter que d'une classe abstraite.</li>\n<li><strong>Q : Garbage Collector ?</strong><br>\nR : La JVM gère automatiquement la mémoire. Les objets sans référence sont collectés. Utilisez <code>try-with-resources</code> plutôt que <code>finalize()</code>.</li>\n<li><strong>Q : <code>equals()</code> vs <code>==</code> ?</strong><br>\nR : <code>==</code> compare les références. <code>equals()</code> compare le contenu. Toujours utiliser <code>equals()</code> pour les Strings.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "python",
+      "name": "Python",
+      "category": "backend",
+      "icon": "🐍",
+      "description": {
+        "pt": "Linguagem de alto nível, de sintaxe limpa e propósito geral. Dominante em data science, IA/ML, automação e backend web com Django/FastAPI.",
+        "en": "High-level, clean-syntax, general-purpose language. Dominant in data science, AI/ML, automation and web backend with Django/FastAPI.",
+        "fr": "Langage de haut niveau, à syntaxe claire et polyvalent. Dominant en data science, IA/ML, automatisation et backend web avec Django/FastAPI."
+      },
+      "example": {
+        "pt": "API REST simples com FastAPI, tipagem e documentação automática.",
+        "en": "Simple REST API with FastAPI, typing and automatic documentation.",
+        "fr": "API REST simple avec FastAPI, typage et documentation automatique.",
+        "code": "from fastapi import FastAPI\nfrom pydantic import BaseModel\nfrom typing import List\n\napp = FastAPI()\n\nclass User(BaseModel):\n    id: int\n    name: str\n    email: str\n\nusers_db: List[User] = []\n\n@app.get('/users', response_model=List[User])\ndef get_users():\n    return users_db\n\n@app.post('/users', status_code=201)\ndef create_user(user: User):\n    users_db.append(user)\n    return user"
+      },
+      "relations": [
+        "postgresql",
+        "mongodb",
+        "redis",
+        "docker",
+        "javascript",
+        "nodejs"
+      ],
+      "pros": {
+        "pt": [
+          "Sintaxe limpa e legível — produtividade alta",
+          "Dominante em IA, ML e data science",
+          "Enorme biblioteca padrão",
+          "Django e FastAPI são excelentes para backend"
+        ],
+        "en": [
+          "Clean, readable syntax — high productivity",
+          "Dominant in AI, ML and data science",
+          "Huge standard library",
+          "Django and FastAPI are excellent for backend"
+        ],
+        "fr": [
+          "Syntaxe claire et lisible — haute productivité",
+          "Dominant en IA, ML et data science",
+          "Énorme bibliothèque standard",
+          "Django et FastAPI sont excellents pour le backend"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Mais lento que Java/Go/C++ em execução",
+          "GIL limita paralelismo real de threads",
+          "Tipagem dinâmica pode gerar bugs sem type hints"
+        ],
+        "en": [
+          "Slower than Java/Go/C++ in execution",
+          "GIL limits real thread parallelism",
+          "Dynamic typing can generate bugs without type hints"
+        ],
+        "fr": [
+          "Plus lent que Java/Go/C++ en exécution",
+          "Le GIL limite le vrai parallélisme des threads",
+          "Le typage dynamique peut générer des bugs sans type hints"
+        ]
+      },
+      "scenarios": {
+        "pt": "Essencial para scripts de automação, ETL, APIs rápidas com FastAPI, e qualquer projeto envolvendo dados ou IA.",
+        "en": "Essential for automation scripts, ETL, fast APIs with FastAPI, and any project involving data or AI.",
+        "fr": "Essentiel pour les scripts d'automatisation, ETL, APIs rapides avec FastAPI, et tout projet impliquant des données ou l'IA."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é o GIL (Global Interpreter Lock)?</strong><br>\nA: Mutex no CPython que permite apenas uma thread executar bytecode Python por vez. Impede verdadeiro paralelismo de threads CPU-bound — use <code>multiprocessing</code> para isso. Para I/O-bound, <code>asyncio</code> ou threads ainda funcionam bem.</li>\n<li><strong>Q: List comprehension vs Generator?</strong><br>\nA: List comprehension cria toda a lista na memória de uma vez. Generator produz valores sob demanda (lazy evaluation), consumindo muito menos memória para listas grandes.<br>\n<pre>squares_list = [x**2 for x in range(10**6)]  # 8MB em memória\nsquares_gen  = (x**2 for x in range(10**6))   # quase 0 bytes</pre></li>\n<li><strong>Q: O que é um decorator?</strong><br>\nA: Função que envolve outra função para modificar ou estender seu comportamento sem alterá-la. Muito usado para logging, autenticação e cache.<br>\n<pre>def timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        print(f'{func.__name__} levou {time.time()-start:.2f}s')\n        return result\n    return wrapper\n\n@timer\ndef process_data(data): ...</pre></li>\n<li><strong>Q: Diferença entre <code>*args</code> e <code>**kwargs</code>?</strong><br>\nA: <code>*args</code> captura argumentos posicionais variádicos como tupla. <code>**kwargs</code> captura argumentos nomeados variádicos como dicionário.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is the GIL?</strong><br>\nA: Mutex in CPython allowing only one thread to execute Python bytecode at a time. Prevents true CPU-bound thread parallelism — use <code>multiprocessing</code> instead. For I/O-bound, <code>asyncio</code> or threads still work well.</li>\n<li><strong>Q: List comprehension vs Generator?</strong><br>\nA: List comprehension creates the whole list in memory at once. Generator produces values on demand (lazy evaluation), using far less memory.<br>\n<pre>squares_list = [x**2 for x in range(10**6)]  # ~8MB\nsquares_gen  = (x**2 for x in range(10**6))   # ~0 bytes</pre></li>\n<li><strong>Q: What is a decorator?</strong><br>\nA: A function that wraps another function to modify/extend its behavior without altering it. Used for logging, auth, caching.<br>\n<pre>@timer\ndef process_data(data): ...</pre></li>\n<li><strong>Q: <code>*args</code> vs <code>**kwargs</code>?</strong><br>\nA: <code>*args</code> captures positional variadic arguments as a tuple. <code>**kwargs</code> captures named variadic arguments as a dictionary.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce que le GIL ?</strong><br>\nR : Mutex dans CPython n'autorisant qu'un thread à exécuter du bytecode à la fois. Empêche le vrai parallélisme CPU-bound — utilisez <code>multiprocessing</code>. Pour I/O-bound, <code>asyncio</code> fonctionne bien.</li>\n<li><strong>Q : List comprehension vs Generator ?</strong><br>\nR : List comprehension crée toute la liste en mémoire. Le generator produit les valeurs à la demande (lazy evaluation), consommant beaucoup moins de mémoire.</li>\n<li><strong>Q : Qu'est-ce qu'un decorator ?</strong><br>\nR : Fonction enveloppant une autre pour modifier son comportement sans la modifier. Très utilisé pour le logging, l'authentification et le cache.</li>\n<li><strong>Q : <code>*args</code> vs <code>**kwargs</code> ?</strong><br>\nR : <code>*args</code> capture les arguments positionnels variadic en tuple. <code>**kwargs</code> capture les arguments nommés en dictionnaire.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "restapi",
+      "name": "REST & HTTP",
+      "category": "backend",
+      "icon": "🔗",
+      "description": {
+        "pt": "Arquitetura de APIs baseada em recursos HTTP. Define verbos (GET, POST, PUT, DELETE, PATCH), status codes e princípios de statelessness para comunicação entre sistemas.",
+        "en": "HTTP resource-based API architecture. Defines verbs (GET, POST, PUT, DELETE, PATCH), status codes and statelessness principles for communication between systems.",
+        "fr": "Architecture d'API basée sur les ressources HTTP. Définit les verbes (GET, POST, PUT, DELETE, PATCH), les codes de statut et les principes de statelessness pour la communication entre systèmes."
+      },
+      "example": {
+        "pt": "Padrão de endpoints RESTful para um recurso de usuários com boas práticas.",
+        "en": "RESTful endpoint pattern for a users resource following best practices.",
+        "fr": "Modèle d'endpoints RESTful pour une ressource utilisateurs suivant les bonnes pratiques.",
+        "code": "// Boas práticas REST\nGET    /api/v1/users          // lista todos\nGET    /api/v1/users/:id      // busca por id\nPOST   /api/v1/users          // cria novo (body: JSON)\nPUT    /api/v1/users/:id      // atualiza completo\nPATCH  /api/v1/users/:id      // atualiza parcial\nDELETE /api/v1/users/:id      // remove\n\n// Status codes semânticos\n200 OK | 201 Created | 204 No Content\n400 Bad Request | 401 Unauthorized\n403 Forbidden | 404 Not Found\n422 Unprocessable Entity | 500 Internal Server Error"
+      },
+      "relations": [
+        "nodejs",
+        "java",
+        "python",
+        "javascript",
+        "postgresql",
+        "mongodb"
+      ],
+      "pros": {
+        "pt": [
+          "Padrão universal — qualquer linguagem consome",
+          "Stateless — fácil de escalar horizontalmente",
+          "Amplamente documentado e compreendido",
+          "Integração com qualquer cliente (web, mobile, IoT)"
+        ],
+        "en": [
+          "Universal standard — any language can consume",
+          "Stateless — easy to scale horizontally",
+          "Widely documented and understood",
+          "Integration with any client (web, mobile, IoT)"
+        ],
+        "fr": [
+          "Standard universel — tout langage peut consommer",
+          "Stateless — facile à mettre à l'échelle horizontalement",
+          "Largement documenté et compris",
+          "Intégration avec tout client (web, mobile, IoT)"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Over-fetching e under-fetching (GraphQL resolve isso)",
+          "Sem contrato de tipos sem OpenAPI/Swagger",
+          "Versionamento de API pode ser complexo"
+        ],
+        "en": [
+          "Over-fetching and under-fetching (GraphQL solves this)",
+          "No type contract without OpenAPI/Swagger",
+          "API versioning can be complex"
+        ],
+        "fr": [
+          "Over-fetching et under-fetching (GraphQL résout cela)",
+          "Pas de contrat de types sans OpenAPI/Swagger",
+          "Le versionnage d'API peut être complexe"
+        ]
+      },
+      "scenarios": {
+        "pt": "Base de toda comunicação entre sistemas modernos. Todo dev backend precisa dominar REST antes de partir para GraphQL ou gRPC.",
+        "en": "Foundation of all communication between modern systems. Every backend dev needs to master REST before moving to GraphQL or gRPC.",
+        "fr": "Base de toute communication entre les systèmes modernes. Tout dev backend doit maîtriser REST avant de passer à GraphQL ou gRPC."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Diferença entre PUT e PATCH?</strong><br>\nA: <b>PUT</b> substitui o recurso completo (idempotente — enviar a mesma requisição produz o mesmo resultado). <b>PATCH</b> atualiza parcialmente o recurso (apenas os campos enviados). PUT requer enviar o objeto inteiro; PATCH só as mudanças.</li>\n<li><strong>Q: Quais verbos HTTP são idempotentes?</strong><br>\nA: GET, PUT, DELETE e HEAD são idempotentes (executar N vezes = mesmo resultado que executar 1 vez). POST não é idempotente (criar o mesmo recurso N vezes = N recursos criados).</li>\n<li><strong>Q: Os 6 princípios REST de Fielding?</strong><br>\nA: 1. Client-Server, 2. Stateless (sem estado no servidor entre requisições), 3. Cacheable, 4. Uniform Interface, 5. Layered System, 6. Code on Demand (opcional).</li>\n<li><strong>Q: Como funciona JWT?</strong><br>\nA: JSON Web Token = header.payload.signature (Base64). O servidor assina o token com uma chave secreta. O cliente envia o JWT no header <code>Authorization: Bearer &lt;token&gt;</code> em cada request. O servidor valida a assinatura sem precisar de sessão — stateless.<br>\n<pre>// Geração (Node.js)\nconst token = jwt.sign({ userId: 123 }, SECRET, { expiresIn: '24h' });\n// Validação\nconst decoded = jwt.verify(token, SECRET); // { userId: 123 }</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Difference between PUT and PATCH?</strong><br>\nA: <b>PUT</b> replaces the complete resource (idempotent). <b>PATCH</b> partially updates the resource (only sent fields). PUT requires sending the whole object; PATCH sends only changes.</li>\n<li><strong>Q: Which HTTP verbs are idempotent?</strong><br>\nA: GET, PUT, DELETE and HEAD are idempotent (N executions = same result as 1). POST is not idempotent (N POSTs = N resources created).</li>\n<li><strong>Q: Fielding's 6 REST constraints?</strong><br>\nA: 1. Client-Server, 2. Stateless, 3. Cacheable, 4. Uniform Interface, 5. Layered System, 6. Code on Demand (optional).</li>\n<li><strong>Q: How does JWT work?</strong><br>\n<pre>const token = jwt.sign({ userId: 123 }, SECRET, { expiresIn: '24h' });\nconst decoded = jwt.verify(token, SECRET);</pre></li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Différence PUT vs PATCH ?</strong><br>\nR : <b>PUT</b> remplace la ressource complète (idempotent). <b>PATCH</b> met à jour partiellement.</li>\n<li><strong>Q : Verbes HTTP idempotents ?</strong><br>\nR : GET, PUT, DELETE et HEAD sont idempotents. POST ne l'est pas.</li>\n<li><strong>Q : 6 contraintes REST de Fielding ?</strong><br>\nR : Client-Server, Stateless, Cacheable, Interface Uniforme, Système en couches, Code à la demande (optionnel).</li>\n<li><strong>Q : Comment fonctionne JWT ?</strong><br>\nR : header.payload.signature (Base64). Le serveur signe avec une clé secrète. Le client envoie <code>Authorization: Bearer token</code>. Validation sans session — stateless.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL",
+      "category": "database",
+      "icon": "🐘",
+      "description": {
+        "pt": "Banco de dados relacional open-source avançado. Suporta ACID, JSON, arrays, full-text search e extensões como PostGIS. O banco SQL mais completo disponível.",
+        "en": "Advanced open-source relational database. Supports ACID, JSON, arrays, full-text search and extensions like PostGIS. The most complete SQL database available.",
+        "fr": "Base de données relationnelle open-source avancée. Supporte ACID, JSON, tableaux, recherche plein texte et extensions comme PostGIS. La base SQL la plus complète disponible."
+      },
+      "example": {
+        "pt": "Query com JOINs, CTE e window function para relatório de vendas.",
+        "en": "Query with JOINs, CTE and window function for sales report.",
+        "fr": "Requête avec JOINs, CTE et window function pour un rapport de ventes.",
+        "code": "-- CTE + Window Function: ranking de vendas por vendedor\nWITH monthly_sales AS (\n  SELECT\n    seller_id,\n    SUM(amount) AS total,\n    DATE_TRUNC('month', created_at) AS month\n  FROM orders\n  WHERE status = 'paid'\n  GROUP BY seller_id, month\n)\nSELECT\n  s.name,\n  ms.total,\n  ms.month,\n  RANK() OVER (PARTITION BY ms.month ORDER BY ms.total DESC) AS rank\nFROM monthly_sales ms\nJOIN sellers s ON s.id = ms.seller_id\nORDER BY ms.month DESC, rank;"
+      },
+      "relations": [
+        "nodejs",
+        "java",
+        "python",
+        "docker",
+        "redis",
+        "restapi"
+      ],
+      "pros": {
+        "pt": [
+          "ACID completo — integridade de dados garantida",
+          "Suporte nativo a JSON (JSONB) — flexibilidade de schema",
+          "Window functions, CTEs, triggers poderosos",
+          "Extensível — PostGIS, uuid-ossp, pg_trgm"
+        ],
+        "en": [
+          "Full ACID — guaranteed data integrity",
+          "Native JSON support (JSONB) — schema flexibility",
+          "Powerful window functions, CTEs, triggers",
+          "Extensible — PostGIS, uuid-ossp, pg_trgm"
+        ],
+        "fr": [
+          "ACID complet — intégrité des données garantie",
+          "Support natif JSON (JSONB) — flexibilité de schéma",
+          "Window functions, CTEs, triggers puissants",
+          "Extensible — PostGIS, uuid-ossp, pg_trgm"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Mais pesado que MySQL para leitura simples",
+          "Configuração de alta disponibilidade exige expertise",
+          "Menos popular em stacks de startups pequenas"
+        ],
+        "en": [
+          "Heavier than MySQL for simple reads",
+          "High availability setup requires expertise",
+          "Less popular in small startup stacks"
+        ],
+        "fr": [
+          "Plus lourd que MySQL pour les lectures simples",
+          "La configuration haute disponibilité nécessite une expertise",
+          "Moins populaire dans les stacks de petites startups"
+        ]
+      },
+      "scenarios": {
+        "pt": "Ideal quando você precisa de relações entre dados, consistência ACID e queries complexas. Preferido para fintechs, ERPs e sistemas onde a integridade dos dados é crítica.",
+        "en": "Ideal when you need data relationships, ACID consistency and complex queries. Preferred for fintechs, ERPs and systems where data integrity is critical.",
+        "fr": "Idéal quand vous avez besoin de relations entre données, cohérence ACID et requêtes complexes. Préféré pour les fintechs, ERP et systèmes où l'intégrité des données est critique."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é ACID?</strong><br>\nA: <b>Atomicidade</b> — tudo ou nada (commit ou rollback). <b>Consistência</b> — dados sempre em estado válido. <b>Isolamento</b> — transações concorrentes não interferem entre si. <b>Durabilidade</b> — dados persistem após commit mesmo com crash.<br>\n<pre>BEGIN;\n  UPDATE accounts SET balance = balance - 100 WHERE id = 1;\n  UPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT; -- ambas ou nenhuma</pre></li>\n<li><strong>Q: Como otimizar queries lentas?</strong><br>\nA: Use <code>EXPLAIN ANALYZE</code> para ver o plano de execução. Adicione índices nas colunas usadas em WHERE, JOIN e ORDER BY. Evite <code>SELECT *</code>. Use CTEs para legibilidade mas atenção ao desempenho.<br>\n<pre>EXPLAIN ANALYZE SELECT * FROM orders WHERE customer_id = 42;\n-- Seq Scan → cria índice: CREATE INDEX idx_orders_customer ON orders(customer_id);</pre></li>\n<li><strong>Q: O que é o problema N+1?</strong><br>\nA: Para 100 usuários, fazer 1 query para listar + 100 queries para buscar detalhes de cada um = 101 queries. Solução: usar JOIN ou ORM eager loading.<br>\n<pre>-- Ruim (N+1): SELECT * FROM users; + para cada user: SELECT * FROM orders WHERE user_id = ?\n-- Bom: SELECT u.*, o.* FROM users u LEFT JOIN orders o ON o.user_id = u.id;</pre></li>\n<li><strong>Q: INNER JOIN vs LEFT JOIN?</strong><br>\nA: <b>INNER JOIN</b> retorna apenas linhas que têm correspondência nos dois lados. <b>LEFT JOIN</b> retorna todas as linhas da tabela esquerda, com NULL para as que não têm correspondência na direita.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is ACID?</strong><br>\nA: <b>Atomicity</b> — all or nothing. <b>Consistency</b> — data always in valid state. <b>Isolation</b> — concurrent transactions don't interfere. <b>Durability</b> — data persists after commit even with crash.<br>\n<pre>BEGIN;\n  UPDATE accounts SET balance = balance - 100 WHERE id = 1;\n  UPDATE accounts SET balance = balance + 100 WHERE id = 2;\nCOMMIT;</pre></li>\n<li><strong>Q: How to optimize slow queries?</strong><br>\nA: Use <code>EXPLAIN ANALYZE</code> to see the execution plan. Add indexes on columns used in WHERE, JOIN, ORDER BY.<br>\n<pre>EXPLAIN ANALYZE SELECT * FROM orders WHERE customer_id = 42;\n-- Seq Scan → CREATE INDEX idx_orders_customer ON orders(customer_id);</pre></li>\n<li><strong>Q: What is the N+1 problem?</strong><br>\nA: 1 query to list 100 users + 100 queries for their details = 101 queries. Solution: use JOIN or ORM eager loading.</li>\n<li><strong>Q: INNER JOIN vs LEFT JOIN?</strong><br>\nA: INNER JOIN returns only rows matching on both sides. LEFT JOIN returns all left-table rows, with NULL for unmatched right rows.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce qu'ACID ?</strong><br>\nR : <b>Atomicité</b> — tout ou rien. <b>Cohérence</b> — données toujours valides. <b>Isolation</b> — transactions concurrentes sans interférence. <b>Durabilité</b> — persistance après commit.</li>\n<li><strong>Q : Optimiser les requêtes lentes ?</strong><br>\nR : Utilisez <code>EXPLAIN ANALYZE</code>. Ajoutez des index sur les colonnes utilisées dans WHERE, JOIN, ORDER BY.</li>\n<li><strong>Q : Problème N+1 ?</strong><br>\nR : 1 requête pour 100 utilisateurs + 100 requêtes pour leurs détails = 101 requêtes. Solution : JOIN ou chargement eager en ORM.</li>\n<li><strong>Q : INNER JOIN vs LEFT JOIN ?</strong><br>\nR : INNER JOIN retourne uniquement les lignes correspondantes des deux côtés. LEFT JOIN retourne toutes les lignes de gauche, avec NULL pour les non-correspondances.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "mongodb",
+      "name": "MongoDB",
+      "category": "database",
+      "icon": "🍃",
+      "description": {
+        "pt": "Banco de dados NoSQL orientado a documentos JSON. Flexível, escalável horizontalmente, ideal para dados semi-estruturados.",
+        "en": "JSON document-oriented NoSQL database. Flexible, horizontally scalable, ideal for semi-structured data.",
+        "fr": "Base de données NoSQL orientée documents JSON. Flexible, scalable horizontalement, idéale pour les données semi-structurées."
+      },
+      "example": {
+        "pt": "Aggregation pipeline para relatório com groupby e lookup (JOIN).",
+        "en": "Aggregation pipeline for report with groupby and lookup (JOIN).",
+        "fr": "Pipeline d'agrégation pour un rapport avec groupby et lookup (JOIN).",
+        "code": "db.orders.aggregate([\n  { $match: { status: 'paid' } },\n  {\n    $lookup: {\n      from: 'customers',\n      localField: 'customer_id',\n      foreignField: '_id',\n      as: 'customer'\n    }\n  },\n  { $unwind: '$customer' },\n  {\n    $group: {\n      _id: '$customer.city',\n      total: { $sum: '$amount' },\n      count: { $sum: 1 }\n    }\n  },\n  { $sort: { total: -1 } },\n  { $limit: 10 }\n]);"
+      },
+      "relations": [
+        "nodejs",
+        "react",
+        "nextjs",
+        "firebase",
+        "docker",
+        "redis"
+      ],
+      "pros": {
+        "pt": [
+          "Schema flexível — perfeito para dados que mudam",
+          "Escalabilidade horizontal nativa (sharding)",
+          "Queries poderosas com aggregation pipeline",
+          "Ideal para prototipação rápida"
+        ],
+        "en": [
+          "Flexible schema — perfect for changing data",
+          "Native horizontal scalability (sharding)",
+          "Powerful queries with aggregation pipeline",
+          "Ideal for rapid prototyping"
+        ],
+        "fr": [
+          "Schéma flexible — parfait pour les données changeantes",
+          "Scalabilité horizontale native (sharding)",
+          "Requêtes puissantes avec le pipeline d'agrégation",
+          "Idéal pour le prototypage rapide"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Sem JOINs nativos — $lookup é mais lento",
+          "Sem ACID completo por padrão (apenas por documento)",
+          "Consumo de disco maior (dados duplicados por design)"
+        ],
+        "en": [
+          "No native JOINs — $lookup is slower",
+          "No full ACID by default (per document only)",
+          "Higher disk usage (data duplicated by design)"
+        ],
+        "fr": [
+          "Pas de JOINs natifs — $lookup est plus lent",
+          "Pas d'ACID complet par défaut (par document uniquement)",
+          "Consommation disque plus élevée (données dupliquées par conception)"
+        ]
+      },
+      "scenarios": {
+        "pt": "Excelente para catálogos de produtos, sistemas de conteúdo, IoT e qualquer contexto com schema variável. Muito usado com Node.js e Mongoose.",
+        "en": "Excellent for product catalogs, content systems, IoT and any context with variable schema. Widely used with Node.js and Mongoose.",
+        "fr": "Excellent pour les catalogues de produits, systèmes de contenu, IoT et tout contexte avec schéma variable. Très utilisé avec Node.js et Mongoose."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: SQL vs NoSQL — quando usar cada um?</strong><br>\nA: <b>SQL (relacional)</b>: dados estruturados com relacionamentos fortes, necessidade de ACID (ex: financeiro, ERP). <b>NoSQL</b>: schema variável, escalabilidade horizontal, grandes volumes de dados semi-estruturados (ex: catálogos, IoT, logs).</li>\n<li><strong>Q: Embedding vs Referencing em MongoDB?</strong><br>\nA: <b>Embedding</b> — dados aninhados no mesmo documento. Melhor para dados que são sempre acessados juntos (1:poucos).<br>\n<b>Referencing</b> — armazena apenas o ObjectId e faz $lookup. Melhor para relacionamentos muitos:muitos ou dados compartilhados entre documentos.<br>\n<pre>// Embedding\n{ _id: 1, name: \"Alice\", address: { street: \"...\", city: \"...\" } }\n// Referencing\n{ _id: 1, name: \"Alice\", addressId: ObjectId(\"...\") }</pre></li>\n<li><strong>Q: O que é um Replica Set?</strong><br>\nA: Grupo de 3+ instâncias MongoDB com um nó primário (recebe writes) e secundários (replicam os dados). Se o primário falha, os secundários elegem um novo primário automaticamente — alta disponibilidade.</li>\n<li><strong>Q: Quando usar $lookup?</strong><br>\nA: Para JOIN entre coleções no aggregation pipeline. É mais lento que um JOIN SQL pois MongoDB não é otimizado para isso — considere embedding se a performance for crítica.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: SQL vs NoSQL?</strong><br>\nA: <b>SQL</b>: structured data with strong relationships, need for ACID (finance, ERP). <b>NoSQL</b>: variable schema, horizontal scalability, semi-structured data (catalogs, IoT, logs).</li>\n<li><strong>Q: Embedding vs Referencing?</strong><br>\nA: <b>Embedding</b> — nested data in same document. Best for always-together data (1:few). <b>Referencing</b> — store only ObjectId and use $lookup. Best for many:many or shared data.<br>\n<pre>// Embedding\n{ _id: 1, name: \"Alice\", address: { city: \"...\" } }\n// Referencing\n{ _id: 1, name: \"Alice\", addressId: ObjectId(\"...\") }</pre></li>\n<li><strong>Q: What is a Replica Set?</strong><br>\nA: Group of 3+ MongoDB instances with one primary (receives writes) and secondaries (replicate data). If primary fails, secondaries elect a new primary — high availability.</li>\n<li><strong>Q: When to use $lookup?</strong><br>\nA: For JOIN between collections in aggregation pipeline. Slower than SQL JOIN — consider embedding if performance is critical.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : SQL vs NoSQL ?</strong><br>\nR : <b>SQL</b> : données structurées, relations fortes, besoin d'ACID. <b>NoSQL</b> : schéma variable, scalabilité horizontale, données semi-structurées.</li>\n<li><strong>Q : Embedding vs Referencing ?</strong><br>\nR : <b>Embedding</b> — données imbriquées dans le même document. <b>Referencing</b> — stocke uniquement l'ObjectId et utilise $lookup.</li>\n<li><strong>Q : Replica Set ?</strong><br>\nR : Groupe de 3+ instances MongoDB avec un nœud primaire et des secondaires. Haute disponibilité avec élection automatique.</li>\n<li><strong>Q : Quand utiliser $lookup ?</strong><br>\nR : Pour les JOIN entre collections. Plus lent que le JOIN SQL — préférez l'embedding si la performance est critique.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "redis",
+      "name": "Redis",
+      "category": "database",
+      "icon": "🔴",
+      "description": {
+        "pt": "Banco de dados em memória do tipo chave-valor. Usado como cache, session store, message broker e fila de jobs. Extremamente rápido (sub-millisecond).",
+        "en": "In-memory key-value database. Used as cache, session store, message broker and job queue. Extremely fast (sub-millisecond).",
+        "fr": "Base de données en mémoire de type clé-valeur. Utilisé comme cache, session store, message broker et file de jobs. Extrêmement rapide (sub-milliseconde)."
+      },
+      "example": {
+        "pt": "Cache de API com TTL e invalidação seletiva usando Node.js.",
+        "en": "API cache with TTL and selective invalidation using Node.js.",
+        "fr": "Cache d'API avec TTL et invalidation sélective avec Node.js.",
+        "code": "const redis = require('redis');\nconst client = redis.createClient();\n\nasync function getCachedData(key, fetchFn, ttl = 300) {\n  // Tenta buscar no cache\n  const cached = await client.get(key);\n  if (cached) return JSON.parse(cached);\n\n  // Cache miss — busca da fonte e armazena\n  const data = await fetchFn();\n  await client.setEx(key, ttl, JSON.stringify(data));\n  return data;\n}\n\n// Uso\nconst users = await getCachedData(\n  'users:all',\n  () => db.query('SELECT * FROM users'),\n  600 // 10 minutos\n);"
+      },
+      "relations": [
+        "nodejs",
+        "postgresql",
+        "mongodb",
+        "docker",
+        "java",
+        "python"
+      ],
+      "pros": {
+        "pt": [
+          "Latência sub-milissegundo — o mais rápido possível",
+          "Estruturas de dados ricas (strings, lists, sets, hashes, sorted sets)",
+          "Pub/Sub para mensageria simples",
+          "Persistência opcional (RDB + AOF)"
+        ],
+        "en": [
+          "Sub-millisecond latency — the fastest possible",
+          "Rich data structures (strings, lists, sets, hashes, sorted sets)",
+          "Pub/Sub for simple messaging",
+          "Optional persistence (RDB + AOF)"
+        ],
+        "fr": [
+          "Latence sub-milliseconde — le plus rapide possible",
+          "Structures de données riches (strings, lists, sets, hashes, sorted sets)",
+          "Pub/Sub pour la messagerie simple",
+          "Persistance optionnelle (RDB + AOF)"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Dados em RAM — custo alto para grandes volumes",
+          "Sem queries complexas (não substitui um banco relacional)",
+          "Requer estratégia de invalidação de cache cuidadosa"
+        ],
+        "en": [
+          "Data in RAM — high cost for large volumes",
+          "No complex queries (does not replace a relational database)",
+          "Requires careful cache invalidation strategy"
+        ],
+        "fr": [
+          "Données en RAM — coût élevé pour les grands volumes",
+          "Pas de requêtes complexes (ne remplace pas une base relationnelle)",
+          "Nécessite une stratégie d'invalidation de cache soigneuse"
+        ]
+      },
+      "scenarios": {
+        "pt": "Indispensável em sistemas de alta performance: cache de queries pesadas, controle de rate limiting, sessões de usuário, filas com Bull/BullMQ e leaderboards em tempo real.",
+        "en": "Indispensable in high-performance systems: heavy query cache, rate limiting control, user sessions, queues with Bull/BullMQ and real-time leaderboards.",
+        "fr": "Indispensable dans les systèmes haute performance : cache de requêtes lourdes, contrôle du rate limiting, sessions utilisateur, files avec Bull/BullMQ et classements en temps réel."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é cache e por que usar?</strong><br>\nA: Cache é uma camada de armazenamento temporário rápido. Use para evitar queries repetidas ao banco (ex: resultado de relatório pesado), reduzir latência e diminuir carga no servidor de banco.</li>\n<li><strong>Q: O que é cache invalidation e por que é difícil?</strong><br>\nA: A arte de decidir quando remover dados do cache para não servir dados desatualizados. Difícil porque: quando expirar? (TTL muito curto = muitas queries; muito longo = dados stale). Estratégias: TTL fixo, cache-aside, write-through, event-driven invalidation.</li>\n<li><strong>Q: Como implementar Rate Limiting com Redis?</strong><br>\nA: Sliding window com sorted sets:<br>\n<pre>// Limite: 100 req/minuto por IP\nasync function isRateLimited(ip) {\n  const key = `ratelimit:${ip}`;\n  const now = Date.now();\n  const windowStart = now - 60000; // 1 min\n  await redis.zRemRangeByScore(key, 0, windowStart);\n  const count = await redis.zCard(key);\n  if (count >= 100) return true;\n  await redis.zAdd(key, { score: now, value: now.toString() });\n  await redis.expire(key, 60);\n  return false;\n}</pre></li>\n<li><strong>Q: Redis vs Memcached?</strong><br>\nA: Redis: estruturas de dados ricas, persistência, pub/sub, Lua scripting, cluster nativo. Memcached: simples key-value, multi-threaded. Para a maioria dos casos, Redis é superior.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is cache and why use it?</strong><br>\nA: Cache is a fast temporary storage layer. Use it to avoid repeated DB queries, reduce latency and lower database server load.</li>\n<li><strong>Q: What is cache invalidation and why is it hard?</strong><br>\nA: Deciding when to remove data from cache to avoid serving stale data. Strategies: fixed TTL, cache-aside, write-through, event-driven invalidation.</li>\n<li><strong>Q: Rate Limiting with Redis?</strong><br>\n<pre>const windowStart = now - 60000;\nawait redis.zRemRangeByScore(key, 0, windowStart);\nconst count = await redis.zCard(key);\nif (count >= 100) return true; // rate limited</pre></li>\n<li><strong>Q: Redis vs Memcached?</strong><br>\nA: Redis: rich data structures, persistence, pub/sub, Lua scripting. Memcached: simple key-value, multi-threaded. Redis is superior for most use cases.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce que le cache ?</strong><br>\nR : Couche de stockage temporaire rapide pour éviter les requêtes DB répétées et réduire la latence.</li>\n<li><strong>Q : Invalidation de cache ?</strong><br>\nR : Décider quand supprimer les données du cache pour éviter les données périmées. Stratégies : TTL fixe, cache-aside, write-through, invalidation événementielle.</li>\n<li><strong>Q : Rate Limiting avec Redis ?</strong><br>\nR : Fenêtre glissante avec sorted sets : on retire les entrées hors fenêtre, on compte et on bloque si le seuil est atteint.</li>\n<li><strong>Q : Redis vs Memcached ?</strong><br>\nR : Redis : structures de données riches, persistance, pub/sub. Memcached : clé-valeur simple, multi-thread. Redis est supérieur dans la plupart des cas.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "mysql",
+      "name": "MySQL",
+      "category": "database",
+      "icon": "🐬",
+      "description": {
+        "pt": "Banco de dados relacional open-source, o mais popular do mundo. Base de stacks LAMP e amplamente usado em aplicações web.",
+        "en": "The world's most popular open-source relational database. Core of LAMP stacks and widely used in web applications.",
+        "fr": "La base de données relationnelle open-source la plus populaire au monde. Base des stacks LAMP et largement utilisée dans les applications web."
+      },
+      "example": {
+        "pt": "Stored procedure para calcular comissão de vendedores com transação.",
+        "en": "Stored procedure to calculate salesperson commission with transaction.",
+        "fr": "Procédure stockée pour calculer la commission des vendeurs avec transaction.",
+        "code": "DELIMITER //\nCREATE PROCEDURE calc_commission(IN seller_id INT)\nBEGIN\n  DECLARE total DECIMAL(10,2);\n\n  START TRANSACTION;\n\n  SELECT SUM(amount) INTO total\n  FROM orders\n  WHERE seller_id = seller_id AND status = 'paid'\n    AND MONTH(created_at) = MONTH(NOW());\n\n  UPDATE sellers\n  SET commission = total * 0.05\n  WHERE id = seller_id;\n\n  COMMIT;\nEND //\nDELIMITER ;"
+      },
+      "relations": [
+        "php",
+        "java",
+        "nodejs",
+        "wordpress",
+        "python"
+      ],
+      "pros": {
+        "pt": [
+          "Amplamente suportado — todo host oferece MySQL",
+          "Rápido para leituras simples",
+          "Ecossistema maduro com muita documentação",
+          "Base do WordPress e da maioria dos CMSs"
+        ],
+        "en": [
+          "Widely supported — every host offers MySQL",
+          "Fast for simple reads",
+          "Mature ecosystem with plenty of documentation",
+          "Foundation of WordPress and most CMSs"
+        ],
+        "fr": [
+          "Largement supporté — tout hébergeur propose MySQL",
+          "Rapide pour les lectures simples",
+          "Écosystème mature avec beaucoup de documentation",
+          "Base de WordPress et de la plupart des CMS"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Menos features avançadas que PostgreSQL",
+          "Replicação master-slave mais simples",
+          "Suporte a JSON inferior ao PostgreSQL"
+        ],
+        "en": [
+          "Fewer advanced features than PostgreSQL",
+          "Simpler master-slave replication",
+          "JSON support inferior to PostgreSQL"
+        ],
+        "fr": [
+          "Moins de fonctionnalités avancées que PostgreSQL",
+          "Réplication maître-esclave plus simple",
+          "Support JSON inférieur à PostgreSQL"
+        ]
+      },
+      "scenarios": {
+        "pt": "Padrão para aplicações PHP/WordPress, e-commerces simples e qualquer sistema legado. Para novos projetos, PostgreSQL tende a ser preferível.",
+        "en": "Standard for PHP/WordPress applications, simple e-commerces and any legacy system. For new projects, PostgreSQL tends to be preferable.",
+        "fr": "Standard pour les applications PHP/WordPress, e-commerces simples et tout système hérité. Pour les nouveaux projets, PostgreSQL tend à être préférable."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Diferença entre MyISAM e InnoDB?</strong><br>\nA: <b>InnoDB</b> (padrão desde MySQL 5.5): suporta transações ACID, foreign keys, row-level locking. <b>MyISAM</b>: mais rápido para leituras puras, mas sem transações e com table-level locking. Use sempre InnoDB.</li>\n<li><strong>Q: O que é um índice e quando criar?</strong><br>\nA: Estrutura de dados (B-tree por padrão) que acelera buscas em troca de espaço em disco e overhead em inserts/updates. Crie índices em colunas usadas frequentemente em WHERE, JOIN e ORDER BY. Evite indexar colunas com baixa cardinalidade (ex: boolean).<br>\n<pre>CREATE INDEX idx_email ON users(email);\nEXPLAIN SELECT * FROM users WHERE email = 'a@b.com'; -- deve mostrar \"Using index\"</pre></li>\n<li><strong>Q: TRUNCATE vs DELETE?</strong><br>\nA: <b>DELETE</b>: remove linhas uma a uma, pode ter WHERE, ativa triggers, é recuperável com ROLLBACK. <b>TRUNCATE</b>: remove todas as linhas de uma vez (operação DDL), reseta AUTO_INCREMENT, não pode ser usado com WHERE, muito mais rápido.</li>\n<li><strong>Q: Como funcionam as transações?</strong><br>\nA: Agrupam operações SQL em uma unidade atômica: <code>BEGIN → operações → COMMIT</code> (salva) ou <code>ROLLBACK</code> (desfaz). Níveis de isolamento: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ (padrão MySQL), SERIALIZABLE.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: MyISAM vs InnoDB?</strong><br>\nA: <b>InnoDB</b> (default since MySQL 5.5): ACID transactions, foreign keys, row-level locking. <b>MyISAM</b>: faster for pure reads but no transactions and table-level locking. Always use InnoDB.</li>\n<li><strong>Q: What is an index and when to create one?</strong><br>\nA: Data structure (B-tree by default) that speeds up lookups at the cost of disk space and insert/update overhead. Create on columns frequently used in WHERE, JOIN, ORDER BY.<br>\n<pre>CREATE INDEX idx_email ON users(email);</pre></li>\n<li><strong>Q: TRUNCATE vs DELETE?</strong><br>\nA: <b>DELETE</b>: row by row, can have WHERE, triggers fire, rollback possible. <b>TRUNCATE</b>: removes all rows at once (DDL), resets AUTO_INCREMENT, no WHERE, much faster.</li>\n<li><strong>Q: How do transactions work?</strong><br>\nA: <code>BEGIN → operations → COMMIT</code> or <code>ROLLBACK</code>. Isolation levels: READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ (MySQL default), SERIALIZABLE.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : MyISAM vs InnoDB ?</strong><br>\nR : <b>InnoDB</b> (défaut depuis MySQL 5.5) : transactions ACID, clés étrangères, verrouillage au niveau des lignes. Toujours utiliser InnoDB.</li>\n<li><strong>Q : Index et quand en créer ?</strong><br>\nR : Structure B-tree accélérant les recherches. Créer sur les colonnes fréquemment utilisées dans WHERE, JOIN, ORDER BY.</li>\n<li><strong>Q : TRUNCATE vs DELETE ?</strong><br>\nR : DELETE : ligne par ligne, peut avoir WHERE, rollback possible. TRUNCATE : supprime tout d'un coup, réinitialise AUTO_INCREMENT, beaucoup plus rapide.</li>\n<li><strong>Q : Transactions ?</strong><br>\nR : <code>BEGIN → opérations → COMMIT</code> ou <code>ROLLBACK</code>. Niveaux d'isolation : READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, SERIALIZABLE.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "docker",
+      "name": "Docker",
+      "category": "devops",
+      "icon": "🐳",
+      "description": {
+        "pt": "Plataforma de containerização que empacota aplicações e suas dependências em containers isolados, garantindo portabilidade e consistência entre ambientes.",
+        "en": "Containerization platform that packages applications and their dependencies in isolated containers, ensuring portability and consistency across environments.",
+        "fr": "Plateforme de conteneurisation qui empaquette les applications et leurs dépendances dans des conteneurs isolés, garantissant portabilité et cohérence entre les environnements."
+      },
+      "example": {
+        "pt": "docker-compose.yml para stack completa Node.js + PostgreSQL + Redis.",
+        "en": "docker-compose.yml for complete Node.js + PostgreSQL + Redis stack.",
+        "fr": "docker-compose.yml pour une stack complète Node.js + PostgreSQL + Redis.",
+        "code": "version: '3.8'\nservices:\n  app:\n    build: .\n    ports: ['3000:3000']\n    environment:\n      DATABASE_URL: postgres://user:pass@db:5432/mydb\n      REDIS_URL: redis://cache:6379\n    depends_on: [db, cache]\n    volumes: ['./src:/app/src']\n\n  db:\n    image: postgres:15-alpine\n    environment:\n      POSTGRES_USER: user\n      POSTGRES_PASSWORD: pass\n      POSTGRES_DB: mydb\n    volumes: ['pgdata:/var/lib/postgresql/data']\n\n  cache:\n    image: redis:7-alpine\n\nvolumes:\n  pgdata:"
+      },
+      "relations": [
+        "nodejs",
+        "java",
+        "python",
+        "postgresql",
+        "redis",
+        "github",
+        "gitlab"
+      ],
+      "pros": {
+        "pt": [
+          "'Funciona na minha máquina' — eliminado para sempre",
+          "Isolamento de dependências entre projetos",
+          "Docker Compose para orquestrar múltiplos serviços",
+          "Base do Kubernetes para produção"
+        ],
+        "en": [
+          "'Works on my machine' — eliminated forever",
+          "Dependency isolation between projects",
+          "Docker Compose for orchestrating multiple services",
+          "Foundation of Kubernetes for production"
+        ],
+        "fr": [
+          "'Ça marche sur ma machine' — éliminé pour toujours",
+          "Isolation des dépendances entre projets",
+          "Docker Compose pour orchestrer plusieurs services",
+          "Base de Kubernetes pour la production"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Curva de aprendizado para redes e volumes",
+          "Overhead de performance em Windows/Mac (VM layer)",
+          "Segurança exige configuração cuidadosa de permissões"
+        ],
+        "en": [
+          "Learning curve for networks and volumes",
+          "Performance overhead on Windows/Mac (VM layer)",
+          "Security requires careful permission configuration"
+        ],
+        "fr": [
+          "Courbe d'apprentissage pour les réseaux et volumes",
+          "Surcharge de performance sur Windows/Mac (couche VM)",
+          "La sécurité nécessite une configuration soigneuse des permissions"
+        ]
+      },
+      "scenarios": {
+        "pt": "Indispensável em qualquer pipeline CI/CD moderno. Usado para desenvolvimento local consistente, staging e como base para Kubernetes em produção.",
+        "en": "Indispensable in any modern CI/CD pipeline. Used for consistent local development, staging and as a foundation for Kubernetes in production.",
+        "fr": "Indispensable dans tout pipeline CI/CD moderne. Utilisé pour le développement local cohérent, la staging et comme base pour Kubernetes en production."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Diferença entre imagem e container?</strong><br>\nA: <b>Imagem</b> é o template imutável (blueprint) com o sistema de arquivos em camadas. <b>Container</b> é uma instância em execução da imagem — é efêmero e tem uma camada de escrita temporária por cima.</li>\n<li><strong>Q: Principais instruções do Dockerfile?</strong><br>\nA:<br>\n<pre>FROM node:18-alpine        # imagem base\nWORKDIR /app               # diretório de trabalho\nCOPY package*.json ./      # copia antes para cache\nRUN npm ci --omit=dev      # instala dependências\nCOPY . .                   # copia código\nEXPOSE 3000                # documenta a porta\nCMD [\"node\", \"server.js\"]  # comando ao iniciar</pre></li>\n<li><strong>Q: CMD vs ENTRYPOINT?</strong><br>\nA: <b>ENTRYPOINT</b> define o executável principal (não sobrescrito por argumentos do <code>docker run</code>). <b>CMD</b> fornece argumentos padrão que podem ser sobrescritos. Padrão: <code>ENTRYPOINT [\"node\"]</code> + <code>CMD [\"server.js\"]</code>.</li>\n<li><strong>Q: O que são volumes?</strong><br>\nA: Mecanismo para persistir dados fora do container (o container é efêmero). Tipos: <b>Volume</b> (gerenciado pelo Docker, recomendado para produção), <b>Bind mount</b> (monta diretório do host — útil para dev com hot reload).<br>\n<pre>docker run -v /host/path:/container/path myapp</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Image vs Container?</strong><br>\nA: <b>Image</b> is the immutable template with a layered filesystem. <b>Container</b> is a running instance of an image — ephemeral, with a temporary write layer on top.</li>\n<li><strong>Q: Main Dockerfile instructions?</strong><br>\n<pre>FROM node:18-alpine\nWORKDIR /app\nCOPY package*.json ./\nRUN npm ci --omit=dev\nCOPY . .\nEXPOSE 3000\nCMD [\"node\", \"server.js\"]</pre></li>\n<li><strong>Q: CMD vs ENTRYPOINT?</strong><br>\nA: <b>ENTRYPOINT</b> defines the main executable (not overridden by <code>docker run</code> args). <b>CMD</b> provides default args that can be overridden.</li>\n<li><strong>Q: What are volumes?</strong><br>\nA: Mechanism to persist data outside the container. Types: <b>Volume</b> (Docker-managed, recommended for production), <b>Bind mount</b> (mounts host directory — useful for dev hot reload).</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Image vs Container ?</strong><br>\nR : L'<b>image</b> est le template immuable avec un système de fichiers en couches. Le <b>container</b> est une instance en cours d'exécution — éphémère avec une couche d'écriture temporaire.</li>\n<li><strong>Q : Instructions principales du Dockerfile ?</strong><br>\nR : FROM (image de base), WORKDIR (répertoire de travail), COPY (copier des fichiers), RUN (exécuter des commandes), EXPOSE (documenter le port), CMD (commande de démarrage).</li>\n<li><strong>Q : CMD vs ENTRYPOINT ?</strong><br>\nR : ENTRYPOINT définit l'exécutable principal. CMD fournit les arguments par défaut, overridables au lancement.</li>\n<li><strong>Q : Volumes ?</strong><br>\nR : Mécanisme pour persister les données hors du container. Types : Volume (géré par Docker, recommandé) et Bind mount (montage de répertoire hôte).</li>\n</ul>"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "devops",
+      "icon": "🌿",
+      "description": {
+        "pt": "Sistema de controle de versão distribuído criado por Linus Torvalds. Base de todo trabalho colaborativo em desenvolvimento de software.",
+        "en": "Distributed version control system created by Linus Torvalds. Foundation of all collaborative work in software development.",
+        "fr": "Système de contrôle de version distribué créé par Linus Torvalds. Base de tout travail collaboratif en développement logiciel."
+      },
+      "example": {
+        "pt": "Fluxo de trabalho com Git Flow: branches, merge, rebase e resolução de conflitos.",
+        "en": "Git Flow workflow: branches, merge, rebase and conflict resolution.",
+        "fr": "Flux de travail Git Flow : branches, merge, rebase et résolution de conflits.",
+        "code": "# Criando e publicando uma feature branch\ngit checkout -b feature/user-authentication\ngit add .\ngit commit -m 'feat: add JWT authentication middleware'\ngit push origin feature/user-authentication\n\n# Mantendo branch atualizada com main (rebase)\ngit fetch origin\ngit rebase origin/main\n\n# Squash dos commits antes do PR (últimos 3)\ngit rebase -i HEAD~3\n\n# Desfazendo último commit (mantendo mudanças)\ngit reset --soft HEAD~1\n\n# Stash de mudanças temporárias\ngit stash push -m 'WIP: auth refactor'"
+      },
+      "relations": [
+        "github",
+        "gitlab",
+        "docker",
+        "nodejs",
+        "java"
+      ],
+      "pros": {
+        "pt": [
+          "Controle total do histórico de mudanças",
+          "Branching e merging rápidos e eficientes",
+          "Trabalho offline — repositório local completo",
+          "Base de toda colaboração em software"
+        ],
+        "en": [
+          "Full control of change history",
+          "Fast and efficient branching and merging",
+          "Offline work — complete local repository",
+          "Foundation of all software collaboration"
+        ],
+        "fr": [
+          "Contrôle total de l'historique des changements",
+          "Branchement et fusion rapides et efficaces",
+          "Travail hors ligne — dépôt local complet",
+          "Base de toute collaboration logicielle"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Curva de aprendizado para comandos avançados",
+          "Merge conflicts podem ser difíceis de resolver",
+          "Histórico pode ficar confuso sem disciplina de commits"
+        ],
+        "en": [
+          "Learning curve for advanced commands",
+          "Merge conflicts can be hard to resolve",
+          "History can get messy without commit discipline"
+        ],
+        "fr": [
+          "Courbe d'apprentissage pour les commandes avancées",
+          "Les conflits de fusion peuvent être difficiles à résoudre",
+          "L'historique peut devenir confus sans discipline de commits"
+        ]
+      },
+      "scenarios": {
+        "pt": "Obrigatório em todo projeto de software. Dominar Git vai muito além de add/commit/push — rebase interativo, cherry-pick e bisect são diferenciais reais.",
+        "en": "Mandatory in every software project. Mastering Git goes far beyond add/commit/push — interactive rebase, cherry-pick and bisect are real differentiators.",
+        "fr": "Obligatoire dans tout projet logiciel. Maîtriser Git va bien au-delà de add/commit/push — le rebase interactif, cherry-pick et bisect sont de vrais différenciateurs."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Merge vs Rebase — quando usar cada um?</strong><br>\nA: <b>Merge</b> preserva o histórico completo com um \"merge commit\" — use em branches principais (main/develop). <b>Rebase</b> reescreve o histórico colocando seus commits no topo da branch alvo — use em feature branches para histórico linear e limpo. <b>Regra de ouro</b>: nunca faça rebase em branches compartilhadas/públicas.<br>\n<pre># Rebase interativo: editar/squash últimos 3 commits\ngit rebase -i HEAD~3</pre></li>\n<li><strong>Q: Como desfazer um commit já publicado?</strong><br>\nA: <b>git revert &lt;hash&gt;</b>: cria um novo commit que desfaz as mudanças — seguro para branches públicas. <b>git reset --hard &lt;hash&gt;</b>: apaga commits do histórico local — NUNCA use em branches compartilhadas (reescreve história pública).</li>\n<li><strong>Q: O que é cherry-pick?</strong><br>\nA: Aplica um commit específico de outra branch na branch atual.<br>\n<pre>git cherry-pick abc1234 # aplica apenas aquele commit</pre></li>\n<li><strong>Q: O que é Git Flow?</strong><br>\nA: Estratégia de branching com branches: <code>main</code> (produção), <code>develop</code> (integração), <code>feature/*</code> (funcionalidades), <code>release/*</code> (preparação de versão), <code>hotfix/*</code> (correções urgentes em produção).</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Merge vs Rebase?</strong><br>\nA: <b>Merge</b> preserves full history with a merge commit — use on main branches. <b>Rebase</b> rewrites history placing your commits on top of the target — use on feature branches for clean linear history. <b>Golden rule</b>: never rebase shared/public branches.<br>\n<pre>git rebase -i HEAD~3 # interactive rebase: edit/squash last 3 commits</pre></li>\n<li><strong>Q: How to undo a published commit?</strong><br>\nA: <b>git revert &lt;hash&gt;</b>: creates new commit undoing changes — safe for public branches. <b>git reset --hard &lt;hash&gt;</b>: deletes commits from local history — NEVER on shared branches.</li>\n<li><strong>Q: What is cherry-pick?</strong><br>\n<pre>git cherry-pick abc1234 # applies only that commit</pre></li>\n<li><strong>Q: What is Git Flow?</strong><br>\nA: Branching strategy with: <code>main</code> (production), <code>develop</code> (integration), <code>feature/*</code>, <code>release/*</code>, <code>hotfix/*</code>.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Merge vs Rebase ?</strong><br>\nR : <b>Merge</b> préserve l'historique complet avec un commit de fusion. <b>Rebase</b> réécrit l'historique en plaçant vos commits au sommet. Règle d'or : ne jamais rebaser des branches partagées.</li>\n<li><strong>Q : Annuler un commit publié ?</strong><br>\nR : <b>git revert</b> crée un nouveau commit qui annule les changements — sûr. <b>git reset --hard</b> supprime des commits — JAMAIS sur des branches partagées.</li>\n<li><strong>Q : Cherry-pick ?</strong><br>\n<pre>git cherry-pick abc1234</pre></li>\n<li><strong>Q : Git Flow ?</strong><br>\nR : Stratégie avec branches : <code>main</code>, <code>develop</code>, <code>feature/*</code>, <code>release/*</code>, <code>hotfix/*</code>.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "category": "devops",
+      "icon": "🐙",
+      "description": {
+        "pt": "Plataforma de hospedagem de código com Git. Oferece controle de versão, colaboração, CI/CD e GitHub Actions.",
+        "en": "Code hosting platform with Git. Offers version control, collaboration, CI/CD and GitHub Actions.",
+        "fr": "Plateforme d'hébergement de code avec Git. Offre le contrôle de version, la collaboration, CI/CD et GitHub Actions."
+      },
+      "example": {
+        "pt": "GitHub Action para deploy automático em Vercel ao fazer push na branch main.",
+        "en": "GitHub Action for automatic deployment to Vercel on push to main branch.",
+        "fr": "GitHub Action pour déploiement automatique sur Vercel lors d'un push sur la branche main.",
+        "code": "# .github/workflows/deploy.yml\nname: Deploy to Vercel\non:\n  push:\n    branches: [main]\n\njobs:\n  deploy:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v3\n      - uses: actions/setup-node@v3\n        with:\n          node-version: '18'\n      - run: npm ci && npm run build\n      - uses: amondnet/vercel-action@v25\n        with:\n          vercel-token: ${{ secrets.VERCEL_TOKEN }}\n          vercel-org-id: ${{ secrets.ORG_ID }}\n          vercel-project-id: ${{ secrets.PROJECT_ID }}"
+      },
+      "relations": [
+        "git",
+        "gitlab",
+        "docker",
+        "nodejs",
+        "react",
+        "nextjs"
+      ],
+      "pros": {
+        "pt": [
+          "Git nativo com interface visual amigável",
+          "GitHub Actions para CI/CD gratuito",
+          "Pull Requests facilitam code review",
+          "Integração com quase todas as ferramentas"
+        ],
+        "en": [
+          "Native Git with friendly visual interface",
+          "GitHub Actions for free CI/CD",
+          "Pull Requests facilitate code review",
+          "Integration with almost all tools"
+        ],
+        "fr": [
+          "Git natif avec interface visuelle conviviale",
+          "GitHub Actions pour CI/CD gratuit",
+          "Les Pull Requests facilitent la revue de code",
+          "Intégration avec presque tous les outils"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Repositórios privados têm limitações no plano gratuito",
+          "Dependência de plataforma externa",
+          "Issues e projetos menos robustos que Jira"
+        ],
+        "en": [
+          "Private repos have limitations on free plan",
+          "External platform dependency",
+          "Issues and projects less robust than Jira"
+        ],
+        "fr": [
+          "Les dépôts privés ont des limitations dans le plan gratuit",
+          "Dépendance envers une plateforme externe",
+          "Issues et projets moins robustes que Jira"
+        ]
+      },
+      "scenarios": {
+        "pt": "Indispensável em qualquer projeto de software. Essencial para colaboração, versionamento e CI/CD.",
+        "en": "Indispensable in any software project. Essential for collaboration, versioning and CI/CD.",
+        "fr": "Indispensable dans tout projet logiciel. Essentiel pour la collaboration, le versionnage et le CI/CD."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Explique o fluxo de um Pull Request?</strong><br>\nA: 1. Fork (ou branch no mesmo repo). 2. Cria branch descritiva (<code>feature/login-oauth</code>). 3. Commits pequenos e semânticos. 4. Abre PR com descrição clara do que e por quê. 5. Code review com revisores. 6. CI/CD passa (testes + lint). 7. Aprovação e merge. 8. Delete da branch. <b>Boa prática</b>: PRs pequenos (< 400 linhas) são muito mais fáceis de revisar.</li>\n<li><strong>Q: Como funciona o GitHub Actions?</strong><br>\nA: CI/CD integrado ao GitHub. Workflows são arquivos YAML em <code>.github/workflows/</code> acionados por eventos (push, PR, schedule).<br>\n<pre>name: CI\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm ci\n      - run: npm test</pre></li>\n<li><strong>Q: O que é Semantic Versioning?</strong><br>\nA: <code>MAJOR.MINOR.PATCH</code> — ex: <code>2.1.3</code>. MAJOR: breaking changes. MINOR: nova funcionalidade sem quebrar API. PATCH: correção de bugs. Prefixo <code>v</code> em tags: <code>git tag v2.1.3</code>.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Pull Request flow?</strong><br>\nA: 1. Fork or branch. 2. Descriptive branch name. 3. Small, semantic commits. 4. Open PR with clear description. 5. Code review. 6. CI/CD passes. 7. Approval and merge. 8. Delete branch. <b>Best practice</b>: small PRs (&lt;400 lines) are much easier to review.</li>\n<li><strong>Q: How does GitHub Actions work?</strong><br>\n<pre>name: CI\non: [push, pull_request]\njobs:\n  test:\n    runs-on: ubuntu-latest\n    steps:\n      - uses: actions/checkout@v4\n      - run: npm ci && npm test</pre></li>\n<li><strong>Q: Semantic Versioning?</strong><br>\nA: <code>MAJOR.MINOR.PATCH</code>. MAJOR: breaking changes. MINOR: new feature, no breaking. PATCH: bug fix.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Flux d'une Pull Request ?</strong><br>\nR : Fork/branche → commits sémantiques → PR avec description → code review → CI/CD → approbation → merge → suppression de branche.</li>\n<li><strong>Q : GitHub Actions ?</strong><br>\nR : CI/CD intégré à GitHub. Workflows en YAML dans <code>.github/workflows/</code>, déclenchés par événements (push, PR, planification).</li>\n<li><strong>Q : Versionnage sémantique ?</strong><br>\nR : <code>MAJOR.MINOR.PATCH</code>. MAJOR : changements cassants. MINOR : nouvelle fonctionnalité sans casser. PATCH : correction de bugs.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "gitlab",
+      "name": "GitLab",
+      "category": "devops",
+      "icon": "🦊",
+      "description": {
+        "pt": "Plataforma DevOps completa com Git, CI/CD integrado, gerenciamento de issues, container registry e pode ser self-hosted.",
+        "en": "Complete DevOps platform with Git, integrated CI/CD, issue management, container registry and can be self-hosted.",
+        "fr": "Plateforme DevOps complète avec Git, CI/CD intégré, gestion des issues, registre de conteneurs et peut être hébergée en local."
+      },
+      "example": {
+        "pt": "Pipeline CI/CD com stages de test, build e deploy automático.",
+        "en": "CI/CD pipeline with test, build and automatic deploy stages.",
+        "fr": "Pipeline CI/CD avec étapes de test, build et déploiement automatique.",
+        "code": "# .gitlab-ci.yml\nstages:\n  - test\n  - build\n  - deploy\n\ntest:\n  stage: test\n  script:\n    - npm install\n    - npm test\n\nbuild:\n  stage: build\n  script:\n    - npm run build\n  artifacts:\n    paths: [dist/]\n\ndeploy:\n  stage: deploy\n  script:\n    - rsync -r dist/ user@server:/var/www/app\n  only:\n    - main"
+      },
+      "relations": [
+        "git",
+        "github",
+        "nodejs",
+        "react",
+        "java",
+        "docker"
+      ],
+      "pros": {
+        "pt": [
+          "CI/CD nativo e muito poderoso",
+          "Pode ser auto-hospedado (on-premise)",
+          "Solução all-in-one para DevOps",
+          "Container Registry integrado"
+        ],
+        "en": [
+          "Native and very powerful CI/CD",
+          "Can be self-hosted (on-premise)",
+          "All-in-one DevOps solution",
+          "Integrated Container Registry"
+        ],
+        "fr": [
+          "CI/CD natif et très puissant",
+          "Peut être hébergé en local (on-premise)",
+          "Solution all-in-one pour le DevOps",
+          "Registre de conteneurs intégré"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Interface mais complexa que GitHub",
+          "Menor comunidade open source",
+          "Self-hosted exige mais infraestrutura"
+        ],
+        "en": [
+          "More complex interface than GitHub",
+          "Smaller open source community",
+          "Self-hosted requires more infrastructure"
+        ],
+        "fr": [
+          "Interface plus complexe que GitHub",
+          "Communauté open source plus petite",
+          "L'auto-hébergement nécessite plus d'infrastructure"
+        ]
+      },
+      "scenarios": {
+        "pt": "Excelente para empresas que precisam de controle total do pipeline DevOps e auto-hospedagem.",
+        "en": "Excellent for companies needing full control of the DevOps pipeline and self-hosting.",
+        "fr": "Excellent pour les entreprises ayant besoin d'un contrôle total du pipeline DevOps et de l'auto-hébergement."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é CI/CD?</strong><br>\nA: <b>CI (Continuous Integration)</b>: automatizar testes, lint e build a cada push/MR — detecta bugs cedo. <b>CD (Continuous Delivery/Deployment)</b>: automatizar o deploy para staging/produção após CI passar. Objetivo: entrega mais rápida e confiável de software.</li>\n<li><strong>Q: Como funciona um pipeline GitLab?</strong><br>\nA: Definido em <code>.gitlab-ci.yml</code>. Composto por stages (sequenciais) e jobs (paralelos dentro de um stage).<br>\n<pre>stages: [test, build, deploy]\n\ntest:\n  stage: test\n  script: [npm ci, npm test]\n\ndeploy-prod:\n  stage: deploy\n  script: [./deploy.sh]\n  only: [main]\n  when: manual</pre></li>\n<li><strong>Q: GitLab vs GitHub?</strong><br>\nA: GitLab oferece CI/CD integrado mais poderoso, registro de Docker/packages nativo, e é auto-hospedável (GitLab CE). GitHub tem marketplace de Actions maior e melhor integração com o ecossistema open-source.</li>\n<li><strong>Q: Cache em pipelines?</strong><br>\nA: Salva node_modules entre execuções do pipeline para acelerar os jobs.<br>\n<pre>cache:\n  key: ${CI_COMMIT_REF_SLUG}\n  paths: [node_modules/]</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is CI/CD?</strong><br>\nA: <b>CI</b>: automate tests, lint and build on every push/MR — catch bugs early. <b>CD</b>: automate deploy to staging/production after CI passes. Goal: faster, more reliable software delivery.</li>\n<li><strong>Q: How does a GitLab pipeline work?</strong><br>\n<pre>stages: [test, build, deploy]\ntest:\n  stage: test\n  script: [npm ci, npm test]\ndeploy-prod:\n  stage: deploy\n  script: [./deploy.sh]\n  only: [main]\n  when: manual</pre></li>\n<li><strong>Q: GitLab vs GitHub?</strong><br>\nA: GitLab has more powerful built-in CI/CD, native Docker/package registry, self-hostable. GitHub has a larger Actions marketplace and better open-source ecosystem integration.</li>\n<li><strong>Q: Pipeline cache?</strong><br>\n<pre>cache:\n  key: ${CI_COMMIT_REF_SLUG}\n  paths: [node_modules/]</pre></li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce que le CI/CD ?</strong><br>\nR : <b>CI</b> : automatiser tests, lint et build à chaque push. <b>CD</b> : automatiser le déploiement après CI. Objectif : livraison plus rapide et fiable.</li>\n<li><strong>Q : Pipeline GitLab ?</strong><br>\nR : Défini dans <code>.gitlab-ci.yml</code>. Composé de stages (séquentiels) et jobs (parallèles dans un stage).</li>\n<li><strong>Q : GitLab vs GitHub ?</strong><br>\nR : GitLab a un CI/CD intégré plus puissant, auto-hébergeable. GitHub a un plus grand marketplace et une meilleure intégration open-source.</li>\n<li><strong>Q : Cache pipeline ?</strong><br>\n<pre>cache:\n  paths: [node_modules/]</pre></li>\n</ul>"
+      }
+    },
+    {
+      "id": "firebase",
+      "name": "Firebase",
+      "category": "iot",
+      "icon": "🔥",
+      "description": {
+        "pt": "Plataforma BaaS (Backend as a Service) do Google com banco em tempo real, autenticação, storage, hosting e cloud functions.",
+        "en": "Google's BaaS (Backend as a Service) platform with realtime database, authentication, storage, hosting and cloud functions.",
+        "fr": "Plateforme BaaS (Backend as a Service) de Google avec base de données en temps réel, authentification, stockage, hébergement et cloud functions."
+      },
+      "example": {
+        "pt": "Listener em tempo real para sensor IoT com alerta de temperatura.",
+        "en": "Real-time listener for IoT sensor with temperature alert.",
+        "fr": "Écouteur en temps réel pour un capteur IoT avec alerte de température.",
+        "code": "import { ref, onValue } from 'firebase/database';\n\nconst sensorRef = ref(db, 'devices/sensor-01/temperature');\n\nonValue(sensorRef, (snapshot) => {\n  const temp = snapshot.val();\n  setTemperature(temp);\n\n  if (temp > 80) {\n    sendAlert('Temperatura crítica: ' + temp + '°C');\n  }\n});"
+      },
+      "relations": [
+        "nodejs",
+        "react",
+        "nextjs",
+        "javascript",
+        "mongodb"
+      ],
+      "pros": {
+        "pt": [
+          "Realtime Database nativo",
+          "Autenticação pronta (Google, GitHub, email)",
+          "Escalabilidade automática",
+          "Ideal para MVP e prototipação rápida"
+        ],
+        "en": [
+          "Native Realtime Database",
+          "Ready-made authentication (Google, GitHub, email)",
+          "Automatic scalability",
+          "Ideal for MVP and rapid prototyping"
+        ],
+        "fr": [
+          "Base de données en temps réel native",
+          "Authentification prête (Google, GitHub, email)",
+          "Évolutivité automatique",
+          "Idéal pour les MVP et le prototypage rapide"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Vendor lock-in com Google",
+          "Custo pode escalar rapidamente",
+          "Menos controle sobre a infraestrutura"
+        ],
+        "en": [
+          "Vendor lock-in with Google",
+          "Cost can scale quickly",
+          "Less control over infrastructure"
+        ],
+        "fr": [
+          "Dépendance vis-à-vis de Google",
+          "Le coût peut augmenter rapidement",
+          "Moins de contrôle sur l'infrastructure"
+        ]
+      },
+      "scenarios": {
+        "pt": "Ideal para IoT, apps mobile, dashboards em tempo real, chat e notificações push.",
+        "en": "Ideal for IoT, mobile apps, real-time dashboards, chat and push notifications.",
+        "fr": "Idéal pour l'IoT, les apps mobiles, les tableaux de bord en temps réel, le chat et les notifications push."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Realtime Database vs Firestore?</strong><br>\nA: <b>Realtime Database</b>: um grande JSON em árvore, latência ultra-baixa, mais barato para leituras simples em tempo real. <b>Firestore</b>: coleções/documentos, queries mais poderosas, melhor escalabilidade, modelo de preço por operação. Para novos projetos, prefira Firestore.</li>\n<li><strong>Q: O que são Firebase Security Rules?</strong><br>\nA: Regras declarativas que controlam quem pode ler/escrever quais dados, sem precisar de backend próprio.<br>\n<pre>// Firestore Rules\nmatch /posts/{postId} {\n  allow read: if true; // público\n  allow write: if request.auth.uid == resource.data.authorId;\n}</pre></li>\n<li><strong>Q: Como funciona Firebase Auth?</strong><br>\nA: SDK que gerencia autenticação com provedores (Email/Senha, Google, GitHub, Apple etc). Gera um JWT (ID Token) que você pode verificar no backend com o Firebase Admin SDK.<br>\n<pre>import { signInWithPopup, GoogleAuthProvider } from 'firebase/auth';\nconst result = await signInWithPopup(auth, new GoogleAuthProvider());</pre></li>\n<li><strong>Q: Cloud Functions — quando usar?</strong><br>\nA: Para lógica de backend sem servidor: triggers de banco (onCreate, onUpdate), webhooks, processamento de pagamentos. Evita expor lógica sensível no cliente.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Realtime Database vs Firestore?</strong><br>\nA: <b>Realtime Database</b>: one big JSON tree, ultra-low latency, cheaper for simple real-time reads. <b>Firestore</b>: collections/documents, more powerful queries, better scalability. For new projects, prefer Firestore.</li>\n<li><strong>Q: Firebase Security Rules?</strong><br>\n<pre>match /posts/{postId} {\n  allow read: if true;\n  allow write: if request.auth.uid == resource.data.authorId;\n}</pre></li>\n<li><strong>Q: Firebase Auth?</strong><br>\nA: Manages authentication with providers (Email, Google, GitHub etc). Generates JWT (ID Token) verifiable on backend with Firebase Admin SDK.<br>\n<pre>const result = await signInWithPopup(auth, new GoogleAuthProvider());</pre></li>\n<li><strong>Q: Cloud Functions — when to use?</strong><br>\nA: Backend logic without a server: DB triggers (onCreate, onUpdate), webhooks, payment processing. Avoids exposing sensitive logic to the client.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Realtime Database vs Firestore ?</strong><br>\nR : <b>Realtime Database</b> : un grand JSON, latence ultra-basse. <b>Firestore</b> : collections/documents, requêtes plus puissantes, meilleure scalabilité. Préférer Firestore pour les nouveaux projets.</li>\n<li><strong>Q : Firebase Security Rules ?</strong><br>\n<pre>match /posts/{postId} {\n  allow read: if true;\n  allow write: if request.auth.uid == resource.data.authorId;\n}</pre></li>\n<li><strong>Q : Firebase Auth ?</strong><br>\nR : Gère l'authentification avec des providers. Génère un JWT vérifiable côté serveur via Firebase Admin SDK.</li>\n<li><strong>Q : Cloud Functions ?</strong><br>\nR : Logique backend sans serveur : triggers de base de données, webhooks, traitement de paiements.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "category": "tools",
+      "icon": "🎭",
+      "description": {
+        "pt": "Ferramenta de design colaborativo para criação de protótipos, wireframes e design systems diretamente no navegador.",
+        "en": "Collaborative design tool for creating prototypes, wireframes and design systems directly in the browser.",
+        "fr": "Outil de design collaboratif pour créer des prototypes, wireframes et design systems directement dans le navigateur."
+      },
+      "example": {
+        "pt": "Design system com tokens de cor exportados como variáveis CSS.",
+        "en": "Design system with color tokens exported as CSS variables.",
+        "fr": "Design system avec tokens de couleur exportés en variables CSS.",
+        "code": "/* Design System exportado do Figma para CSS */\n:root {\n  /* Color Tokens */\n  --color-primary: #0070F3;\n  --color-primary-hover: #0060D0;\n  --color-secondary: #F5F5F5;\n\n  /* Spacing Tokens */\n  --space-sm: 8px;\n  --space-md: 16px;\n  --space-lg: 24px;\n\n  /* Border Radius */\n  --radius-btn: 8px;\n}"
+      },
+      "relations": [
+        "react",
+        "nextjs",
+        "tailwind",
+        "css",
+        "angular"
+      ],
+      "pros": {
+        "pt": [
+          "Colaboração em tempo real",
+          "Protótipos interativos sem código",
+          "Design systems e bibliotecas de componentes",
+          "Handoff para desenvolvedores com CSS gerado"
+        ],
+        "en": [
+          "Real-time collaboration",
+          "Interactive prototypes without code",
+          "Design systems and component libraries",
+          "Developer handoff with generated CSS"
+        ],
+        "fr": [
+          "Collaboration en temps réel",
+          "Prototypes interactifs sans code",
+          "Design systems et bibliothèques de composants",
+          "Handoff pour développeurs avec CSS généré"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Baseado em cloud — requer internet",
+          "Versão gratuita com limite de projetos",
+          "Pode ser lento com arquivos muito grandes"
+        ],
+        "en": [
+          "Cloud-based — requires internet",
+          "Free version with project limits",
+          "Can be slow with very large files"
+        ],
+        "fr": [
+          "Basé sur le cloud — nécessite internet",
+          "Version gratuite avec limite de projets",
+          "Peut être lent avec de très grands fichiers"
+        ]
+      },
+      "scenarios": {
+        "pt": "Indispensável antes de qualquer desenvolvimento front-end. Alinha expectativas entre design e desenvolvimento.",
+        "en": "Indispensable before any front-end development. Aligns expectations between design and development.",
+        "fr": "Indispensable avant tout développement front-end. Aligne les attentes entre design et développement."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é um Design System?</strong><br>\nA: Biblioteca centralizada de componentes reutilizáveis, tokens de design (cores, tipografia, espaçamento) e guidelines. Garante consistência visual em toda a aplicação e acelera o desenvolvimento. Exemplos: Material Design (Google), Fluent (Microsoft).</li>\n<li><strong>Q: Como traduzir um design Figma em código?</strong><br>\nA: 1. Inspecione o painel direito (Dev Mode) para CSS, medidas e assets. 2. Identifique componentes repetidos (viram componentes de código). 3. Mapeie tokens de cor/tipografia para variáveis CSS ou do design system. 4. Use Auto Layout para entender flexbox/grid. 5. Exporte ícones como SVG.</li>\n<li><strong>Q: O que é Auto Layout no Figma?</strong><br>\nA: Sistema análogo ao Flexbox/CSS — define direção, espaçamento, padding e comportamento de resize de frames. Frames com Auto Layout se traduzem diretamente em <code>display:flex</code> no CSS.</li>\n<li><strong>Q: Como comunicar bem com designers?</strong><br>\nA: Use o mesmo vocabulário (tokens, componentes, variantes). Questione decisões que são difíceis de implementar cedo. Deixe feedback no próprio Figma com comentários. Compartilhe protótipos interativos para validação antes de codar.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is a Design System?</strong><br>\nA: Centralized library of reusable components, design tokens (colors, typography, spacing) and guidelines. Ensures visual consistency and accelerates development. Examples: Material Design (Google), Fluent (Microsoft).</li>\n<li><strong>Q: How to translate a Figma design into code?</strong><br>\nA: 1. Inspect the right panel (Dev Mode) for CSS, measurements and assets. 2. Identify repeated components. 3. Map color/typography tokens to CSS variables. 4. Use Auto Layout to understand flexbox/grid. 5. Export icons as SVG.</li>\n<li><strong>Q: What is Auto Layout in Figma?</strong><br>\nA: System analogous to Flexbox/CSS — defines direction, spacing, padding and resize behavior. Auto Layout frames translate directly to <code>display:flex</code>.</li>\n<li><strong>Q: Communicating with designers?</strong><br>\nA: Use the same vocabulary (tokens, components, variants). Challenge hard-to-implement decisions early. Leave Figma comments. Share interactive prototypes before coding.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce qu'un Design System ?</strong><br>\nR : Bibliothèque centralisée de composants réutilisables, tokens de design et guidelines. Assure la cohérence visuelle et accélère le développement.</li>\n<li><strong>Q : Traduire un design Figma en code ?</strong><br>\nR : Inspectez le panneau Dev Mode pour CSS et mesures. Identifiez les composants répétés. Mappez les tokens vers des variables CSS. Utilisez Auto Layout pour comprendre flexbox/grid.</li>\n<li><strong>Q : Auto Layout ?</strong><br>\nR : Système analogue à Flexbox/CSS — direction, espacement, padding, comportement de redimensionnement. Se traduit directement en <code>display:flex</code>.</li>\n<li><strong>Q : Communiquer avec les designers ?</strong><br>\nR : Utilisez le même vocabulaire. Partagez des prototypes interactifs. Laissez des commentaires dans Figma.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "wordpress",
+      "name": "WordPress",
+      "category": "cms",
+      "icon": "📝",
+      "description": {
+        "pt": "CMS open-source que alimenta mais de 40% da web. Permite criar sites, blogs e e-commerces com plugins e temas.",
+        "en": "Open-source CMS powering over 40% of the web. Allows creating websites, blogs and e-commerces with plugins and themes.",
+        "fr": "CMS open-source alimentant plus de 40% du web. Permet de créer des sites, blogs et e-commerces avec des plugins et thèmes."
+      },
+      "example": {
+        "pt": "Endpoint REST personalizado com WP-JSON para app mobile consumir dados do CMS.",
+        "en": "Custom REST endpoint with WP-JSON for mobile app to consume CMS data.",
+        "fr": "Endpoint REST personnalisé avec WP-JSON pour qu'une app mobile consomme les données du CMS.",
+        "code": "// functions.php\nadd_action('rest_api_init', function() {\n  register_rest_route('meu-plugin/v1', '/products', [\n    'methods'  => 'GET',\n    'callback' => 'get_custom_products',\n    'permission_callback' => '__return_true'\n  ]);\n});\n\nfunction get_custom_products($request) {\n  $posts = get_posts([ 'post_type' => 'product', 'numberposts' => 10 ]);\n  return rest_ensure_response($posts);\n}"
+      },
+      "relations": [
+        "mysql",
+        "css",
+        "javascript",
+        "php"
+      ],
+      "pros": {
+        "pt": [
+          "Facilidade de uso para não-developers",
+          "Enorme marketplace de plugins e temas",
+          "REST API nativa desde v4.7",
+          "Ótimo para sites e blogs corporativos"
+        ],
+        "en": [
+          "Easy to use for non-developers",
+          "Huge plugin and theme marketplace",
+          "Native REST API since v4.7",
+          "Great for corporate websites and blogs"
+        ],
+        "fr": [
+          "Facilité d'utilisation pour les non-développeurs",
+          "Énorme marketplace de plugins et thèmes",
+          "API REST native depuis v4.7",
+          "Idéal pour les sites et blogs d'entreprise"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Segurança é preocupação constante (muitos plugins vulneráveis)",
+          "Performance pode degradar com muitos plugins",
+          "Não é ideal para aplicações web complexas"
+        ],
+        "en": [
+          "Security is a constant concern (many vulnerable plugins)",
+          "Performance can degrade with many plugins",
+          "Not ideal for complex web applications"
+        ],
+        "fr": [
+          "La sécurité est une préoccupation constante (beaucoup de plugins vulnérables)",
+          "Les performances peuvent se dégrader avec trop de plugins",
+          "Pas idéal pour les applications web complexes"
+        ]
+      },
+      "scenarios": {
+        "pt": "Ideal para sites institucionais, blogs, portfólios e e-commerces com WooCommerce.",
+        "en": "Ideal for institutional websites, blogs, portfolios and e-commerces with WooCommerce.",
+        "fr": "Idéal pour les sites institutionnels, blogs, portfolios et e-commerces avec WooCommerce."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Explique o Loop do WordPress?</strong><br>\nA: O mecanismo principal que busca e exibe posts. Toda template de listagem usa o loop:<br>\n<pre>if (have_posts()) :\n  while (have_posts()) : the_post();\n    echo '&lt;h2&gt;' . get_the_title() . '&lt;/h2&gt;';\n  endwhile;\nendif;</pre></li>\n<li><strong>Q: O que é um Custom Post Type e quando criar?</strong><br>\nA: Tipo de conteúdo personalizado além de Posts e Pages. Crie quando tiver conteúdo com estrutura própria (Produtos, Eventos, Portfólio, Imóveis).<br>\n<pre>register_post_type('produto', [\n  'label'    => 'Produtos',\n  'public'   => true,\n  'supports' => ['title', 'editor', 'thumbnail'],\n]);</pre></li>\n<li><strong>Q: Como funciona o sistema de hooks (add_action, add_filter)?</strong><br>\nA: <b>Actions</b>: executam código em um ponto específico (ex: ao salvar post). <b>Filters</b>: modificam dados antes de exibir/salvar.<br>\n<pre>// Action: enviar email ao publicar post\nadd_action('publish_post', function($post_id) {\n  wp_mail('admin@site.com', 'Novo post!', get_permalink($post_id));\n});\n// Filter: modificar title\nadd_filter('the_title', fn($title) => strtoupper($title));</pre></li>\n<li><strong>Q: Headless WordPress vs tradicional?</strong><br>\nA: Headless usa o WP apenas como CMS (via REST API ou WPGraphQL), com o front-end desacoplado em React/Next.js. Vantagem: performance, SEO com Next.js, flexibilidade. Desvantagem: preview de conteúdo mais complexo.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: Explain the WordPress Loop?</strong><br>\n<pre>if (have_posts()) :\n  while (have_posts()) : the_post();\n    echo '&lt;h2&gt;' . get_the_title() . '&lt;/h2&gt;';\n  endwhile;\nendif;</pre></li>\n<li><strong>Q: Custom Post Type — what and when?</strong><br>\nA: Custom content type beyond Posts and Pages. Create when you have content with its own structure (Products, Events, Portfolio).<br>\n<pre>register_post_type('product', ['public' => true, ...]);</pre></li>\n<li><strong>Q: Hooks system (add_action, add_filter)?</strong><br>\nA: <b>Actions</b>: execute code at a specific point. <b>Filters</b>: modify data before display/save.<br>\n<pre>add_action('publish_post', fn($id) => wp_mail(...));\nadd_filter('the_title', fn($t) => strtoupper($t));</pre></li>\n<li><strong>Q: Headless WordPress vs traditional?</strong><br>\nA: Headless uses WP only as CMS (via REST API or WPGraphQL) with a decoupled React/Next.js frontend. Advantages: performance, SEO. Disadvantage: more complex content preview.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : La boucle WordPress ?</strong><br>\n<pre>if (have_posts()) :\n  while (have_posts()) : the_post();\n    echo get_the_title();\n  endwhile;\nendif;</pre></li>\n<li><strong>Q : Custom Post Type ?</strong><br>\nR : Type de contenu personnalisé au-delà des Posts et Pages. Créez-en pour des structures de contenu propres (Produits, Événements).</li>\n<li><strong>Q : Système de hooks ?</strong><br>\nR : <b>Actions</b> exécutent du code à un point précis. <b>Filters</b> modifient les données avant affichage/sauvegarde.</li>\n<li><strong>Q : WordPress Headless vs traditionnel ?</strong><br>\nR : Headless utilise WP uniquement comme CMS (REST API ou WPGraphQL) avec un frontend React/Next.js découplé.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "php",
+      "name": "PHP",
+      "category": "backend",
+      "icon": "🐘",
+      "description": {
+        "pt": "Linguagem de script server-side que alimenta mais de 75% dos sites com backend conhecido. Base do WordPress, Laravel e Symfony.",
+        "en": "Server-side scripting language powering over 75% of sites with known backend. Foundation of WordPress, Laravel and Symfony.",
+        "fr": "Langage de script côté serveur alimentant plus de 75% des sites avec backend connu. Base de WordPress, Laravel et Symfony."
+      },
+      "example": {
+        "pt": "Controller com Laravel para CRUD de usuários com validação e autenticação.",
+        "en": "Laravel controller for user CRUD with validation and authentication.",
+        "fr": "Controller Laravel pour le CRUD des utilisateurs avec validation et authentification.",
+        "code": "// app/Http/Controllers/UserController.php\nclass UserController extends Controller\n{\n  public function index()\n  {\n    return UserResource::collection(\n      User::paginate(20)\n    );\n  }\n\n  public function store(Request $request)\n  {\n    $validated = $request->validate([\n      'name'  => 'required|string|max:255',\n      'email' => 'required|email|unique:users',\n      'password' => 'required|min:8',\n    ]);\n\n    $user = User::create($validated);\n    return new UserResource($user);\n  }\n}"
+      },
+      "relations": [
+        "mysql",
+        "wordpress",
+        "javascript",
+        "docker",
+        "redis"
+      ],
+      "pros": {
+        "pt": [
+          "Hosting baratíssimo e universal",
+          "Laravel é um dos melhores frameworks web",
+          "Integração nativa com MySQL e Apache",
+          "Enorme legado e comunidade"
+        ],
+        "en": [
+          "Very cheap and universal hosting",
+          "Laravel is one of the best web frameworks",
+          "Native integration with MySQL and Apache",
+          "Huge legacy and community"
+        ],
+        "fr": [
+          "Hébergement très bon marché et universel",
+          "Laravel est l'un des meilleurs frameworks web",
+          "Intégration native avec MySQL et Apache",
+          "Immense héritage et communauté"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Reputação prejudicada por código legado mal escrito",
+          "Menos usado em novos projetos vs Node.js/Python",
+          "Performance inferior a Go ou Java em alta concorrência"
+        ],
+        "en": [
+          "Reputation hurt by poorly written legacy code",
+          "Less used in new projects vs Node.js/Python",
+          "Performance inferior to Go or Java in high concurrency"
+        ],
+        "fr": [
+          "Réputation entachée par du code hérité mal écrit",
+          "Moins utilisé dans les nouveaux projets vs Node.js/Python",
+          "Performance inférieure à Go ou Java en haute concurrence"
+        ]
+      },
+      "scenarios": {
+        "pt": "Dominante em agências web, sites corporativos com WordPress/WooCommerce e sistemas legados. Laravel para novos projetos PHP.",
+        "en": "Dominant in web agencies, corporate sites with WordPress/WooCommerce and legacy systems. Laravel for new PHP projects.",
+        "fr": "Dominant dans les agences web, sites d'entreprise avec WordPress/WooCommerce et systèmes hérités. Laravel pour les nouveaux projets PHP."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: O que é o Composer?</strong><br>\nA: Gerenciador de dependências do PHP (equivalente ao npm). Usa <code>composer.json</code> para declarar dependências e <code>composer.lock</code> para garantir versões exatas.<br>\n<pre>composer require laravel/sanctum\ncomposer install       # instala do composer.lock\ncomposer update        # atualiza para as últimas versões</pre></li>\n<li><strong>Q: Como funciona o Eloquent ORM (Active Record)?</strong><br>\nA: Cada model representa uma tabela. O model conhece sua própria tabela e tem métodos de CRUD nativos.<br>\n<pre>// Busca com relacionamentos eager loading\nUser::with('posts.comments')->where('active', true)->get();\n// Create\nUser::create(['name' => 'Alice', 'email' => 'a@b.com']);</pre></li>\n<li><strong>Q: O que são Migrations e Seeders?</strong><br>\nA: <b>Migrations</b>: versionamento do schema do banco — equivalente a \"git para o banco de dados\". <b>Seeders</b>: popula o banco com dados iniciais/de teste.<br>\n<pre>php artisan make:migration create_users_table\nphp artisan migrate\nphp artisan db:seed --class=UserSeeder</pre></li>\n<li><strong>Q: Diferença entre <code>include</code> e <code>require</code>?</strong><br>\nA: <b>require</b> lança erro fatal se o arquivo não existir (para a execução). <b>include</b> apenas emite um warning e continua. Use <code>require_once</code>/<code>include_once</code> para evitar inclusões duplicadas.</li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: What is Composer?</strong><br>\nA: PHP's dependency manager (equivalent to npm). Uses <code>composer.json</code> to declare dependencies and <code>composer.lock</code> for exact versions.<br>\n<pre>composer require laravel/sanctum\ncomposer install</pre></li>\n<li><strong>Q: How does Eloquent ORM (Active Record) work?</strong><br>\n<pre>User::with('posts.comments')->where('active', true)->get();\nUser::create(['name' => 'Alice', 'email' => 'a@b.com']);</pre></li>\n<li><strong>Q: Migrations and Seeders?</strong><br>\nA: <b>Migrations</b>: database schema versioning — \"git for the database\". <b>Seeders</b>: populate DB with initial/test data.<br>\n<pre>php artisan make:migration create_users_table && php artisan migrate</pre></li>\n<li><strong>Q: <code>include</code> vs <code>require</code>?</strong><br>\nA: <b>require</b> throws fatal error if file missing (stops execution). <b>include</b> only emits a warning and continues. Use <code>_once</code> variants to prevent duplicate inclusions.</li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Qu'est-ce que Composer ?</strong><br>\nR : Gestionnaire de dépendances PHP (équivalent à npm). Utilise <code>composer.json</code> et <code>composer.lock</code>.<br>\n<pre>composer require laravel/sanctum && composer install</pre></li>\n<li><strong>Q : Eloquent ORM ?</strong><br>\nR : Chaque modèle représente une table et possède des méthodes CRUD natives.<br>\n<pre>User::with('posts')->where('active', true)->get();</pre></li>\n<li><strong>Q : Migrations et Seeders ?</strong><br>\nR : <b>Migrations</b> : versionnage du schéma de base de données. <b>Seeders</b> : peuplent la base avec des données initiales.</li>\n<li><strong>Q : <code>include</code> vs <code>require</code> ?</strong><br>\nR : <code>require</code> génère une erreur fatale si le fichier manque. <code>include</code> émet juste un avertissement. Utilisez les variantes <code>_once</code> pour éviter les inclusions dupliquées.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "ti",
+      "name": "Suporte de TI",
+      "category": "tools",
+      "icon": "🖨️",
+      "description": {
+        "pt": "Infraestrutura e suporte técnico: configuração de impressoras, diagnóstico de hardware/software, instalação e manutenção de sistemas.",
+        "en": "Infrastructure and technical support: printer setup, hardware/software diagnostics, installation and system maintenance.",
+        "fr": "Infrastructure et support technique : configuration d'imprimantes, diagnostic matériel/logiciel, installation et maintenance des systèmes."
+      },
+      "example": {
+        "pt": "Script PowerShell para instalar e configurar impressoras em rede automaticamente em múltiplos PCs.",
+        "en": "PowerShell script to automatically install and configure network printers on multiple PCs.",
+        "fr": "Script PowerShell pour installer et configurer automatiquement des imprimantes réseau sur plusieurs PC.",
+        "code": "# PowerShell - Instalar impressora em rede\n$PrinterIP = '192.168.1.100'\n$PrinterName = 'HP-Impressora-RH'\n$DriverName = 'HP Universal Printing PCL 6'\n\nAdd-PrinterPort -Name \"IP_$PrinterIP\" -PrinterHostAddress $PrinterIP\nAdd-Printer -Name $PrinterName `\n            -DriverName $DriverName `\n            -PortName \"IP_$PrinterIP\"\n\nWrite-Host \"Impressora $PrinterName instalada com sucesso!\""
+      },
+      "relations": [
+        "docker",
+        "python",
+        "javascript"
+      ],
+      "pros": {
+        "pt": [
+          "Visão holística da infraestrutura de TI",
+          "Diagnóstico e resolução rápida de problemas",
+          "Base para entender o ambiente onde o software roda"
+        ],
+        "en": [
+          "Holistic view of IT infrastructure",
+          "Fast problem diagnosis and resolution",
+          "Foundation to understand the environment where software runs"
+        ],
+        "fr": [
+          "Vue holistique de l'infrastructure IT",
+          "Diagnostic et résolution rapide des problèmes",
+          "Base pour comprendre l'environnement où le logiciel s'exécute"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Trabalho operacional pode ser repetitivo",
+          "Difícil de escalar sem automação",
+          "Nem sempre valorizado em ambientes de desenvolvimento"
+        ],
+        "en": [
+          "Operational work can be repetitive",
+          "Hard to scale without automation",
+          "Not always valued in development environments"
+        ],
+        "fr": [
+          "Le travail opérationnel peut être répétitif",
+          "Difficile à mettre à l'échelle sans automatisation",
+          "Pas toujours valorisé dans les environnements de développement"
+        ]
+      },
+      "scenarios": {
+        "pt": "Essencial em empresas de qualquer porte. Suporte de TI garante que toda a infraestrutura funcione para o time de desenvolvimento.",
+        "en": "Essential in companies of any size. IT support ensures all infrastructure works for the development team.",
+        "fr": "Essentiel dans les entreprises de toute taille. Le support IT assure que toute l'infrastructure fonctionne pour l'équipe de développement."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Como diagnosticar uma rede lenta?</strong><br>\nA: 1. <code>ping 8.8.8.8</code> — verifica conectividade básica e latência. 2. <code>traceroute</code>/<code>tracert</code> — identifica onde a latência está ocorrendo. 3. Verificar largura de banda com speedtest. 4. Checar utilização da interface de rede no servidor/roteador. 5. Verificar colisões, erros e drops no switch. 6. Analisar tráfego com Wireshark se necessário.</li>\n<li><strong>Q: O que é DHCP vs IP estático?</strong><br>\nA: <b>DHCP</b>: servidor atribui automaticamente IP, máscara, gateway e DNS ao dispositivo. Ideal para estações de trabalho. <b>IP estático</b>: configurado manualmente — necessário para servidores, impressoras de rede e qualquer dispositivo que precise ser encontrado sempre no mesmo endereço.</li>\n<li><strong>Q: Explique o modelo OSI em 7 camadas?</strong><br>\nA: Física → Enlace → Rede → Transporte → Sessão → Apresentação → Aplicação. Mnemônico PT: \"Por Favor Não Toque Seu Plug Aqui\".<br>\n<b>Relevantes para troubleshooting</b>: Física (cabos, portas), Rede (IP, roteamento), Transporte (TCP/UDP, portas), Aplicação (HTTP, DNS, FTP).</li>\n<li><strong>Q: Como automatizar tarefas repetitivas?</strong><br>\nA: PowerShell no Windows, Bash no Linux. Exemplos: backup automático, criação de usuários em lote, monitoramento de serviços.<br>\n<pre># Bash: monitorar serviço e reiniciar se parado\nif ! systemctl is-active --quiet nginx; then\n  systemctl restart nginx\n  echo \"nginx reiniciado $(date)\" >> /var/log/monitor.log\nfi</pre></li>\n</ul>",
+        "en": "<ul class=\"interview-qa\">\n<li><strong>Q: How to diagnose a slow network?</strong><br>\nA: 1. <code>ping 8.8.8.8</code> — basic connectivity and latency. 2. <code>traceroute</code> — find where latency occurs. 3. Bandwidth check with speedtest. 4. Check network interface utilization. 5. Check switch for collisions/errors/drops. 6. Wireshark for traffic analysis if needed.</li>\n<li><strong>Q: DHCP vs static IP?</strong><br>\nA: <b>DHCP</b>: server automatically assigns IP, mask, gateway, DNS. Ideal for workstations. <b>Static IP</b>: manually configured — needed for servers, network printers, any device that must always be at the same address.</li>\n<li><strong>Q: OSI model in 7 layers?</strong><br>\nA: Physical → Data Link → Network → Transport → Session → Presentation → Application.<br>\n<b>Key for troubleshooting</b>: Physical (cables, ports), Network (IP, routing), Transport (TCP/UDP, ports), Application (HTTP, DNS).</li>\n<li><strong>Q: Automate repetitive tasks?</strong><br>\n<pre># Monitor and restart service if stopped\nif ! systemctl is-active --quiet nginx; then\n  systemctl restart nginx\nfi</pre></li>\n</ul>",
+        "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Diagnostiquer un réseau lent ?</strong><br>\nR : 1. <code>ping 8.8.8.8</code> — connectivité basique. 2. <code>traceroute</code> — où la latence se produit. 3. Test de bande passante. 4. Vérifier l'utilisation de l'interface réseau. 5. Wireshark pour analyse si nécessaire.</li>\n<li><strong>Q : DHCP vs IP statique ?</strong><br>\nR : DHCP attribue automatiquement IP, masque, passerelle, DNS — idéal pour les postes de travail. IP statique est nécessaire pour les serveurs et imprimantes réseau.</li>\n<li><strong>Q : Modèle OSI en 7 couches ?</strong><br>\nR : Physique → Liaison → Réseau → Transport → Session → Présentation → Application. Pour le dépannage : Physique (câbles), Réseau (IP), Transport (TCP/UDP), Application (HTTP, DNS).</li>\n<li><strong>Q : Automatiser les tâches répétitives ?</strong><br>\nR : PowerShell sous Windows, Bash sous Linux. Exemples : sauvegardes, création d'utilisateurs en lot, surveillance de services.</li>\n</ul>"
+      }
+    }
+  ]
+}
