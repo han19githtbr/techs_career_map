@@ -13,6 +13,7 @@
   <link rel="apple-touch-icon" href="icons/icon-192.png" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/roles.css" />
+  <link rel="stylesheet" href="css/async.css" />
 </head>
 <body>
 
@@ -89,6 +90,32 @@
   </div>
 
   <!-- =====================================================
+       SEÇÃO: JAVASCRIPT ASSÍNCRONO
+       ===================================================== -->
+  <section id="async-section" aria-labelledby="async-heading">
+
+    <div id="async-header">
+      <div class="async-badge">
+        <span class="async-badge-dot"></span>
+        <span data-async-i18n="badge">Guia Interativo</span>
+      </div>
+      <h2 id="async-heading" data-async-i18n="title">
+        JavaScript Assíncrono
+      </h2>
+      <p class="async-subtitle" data-async-i18n="subtitle">
+        Domine callbacks, Promises, async/await, Event Loop e muito mais — com exemplos reais, impacto na performance e dicas de entrevista.
+      </p>
+    </div>
+
+    <!-- Tabs de navegação entre conceitos -->
+    <div id="async-tabs" role="tablist" aria-label="Conceitos de JS Assíncrono"></div>
+
+    <!-- Painel de conteúdo do conceito ativo -->
+    <div id="async-panel" role="tabpanel"></div>
+
+  </section>
+
+  <!-- =====================================================
        SEÇÃO: PAPÉIS & RESPONSABILIDADES
        ===================================================== -->
   <section id="roles-section" aria-labelledby="roles-heading">
@@ -134,7 +161,31 @@
 
   <!-- Script de papéis & responsabilidades -->
   <script src="js/roles.js"></script>
+  <!-- Script de JavaScript Assíncrono -->
+  <script src="js/async.js"></script>
   <!-- Script principal -->
   <script src="js/index.js"></script>
+
+  <script>
+    // Inicializa a seção async após o DOM carregar,
+    // sincronizado com a troca de idioma do app principal
+    document.addEventListener('DOMContentLoaded', () => {
+      // Aguarda o init() do index.js detectar o idioma
+      setTimeout(() => {
+        const lang = typeof APP !== 'undefined' ? APP.lang : 'pt';
+        renderAsync(lang);
+      }, 0);
+
+      // Intercepta trocas de idioma para re-renderizar a seção async
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setTimeout(() => {
+            const lang = typeof APP !== 'undefined' ? APP.lang : btn.dataset.lang;
+            renderAsync(lang);
+          }, 10);
+        });
+      });
+    });
+  </script>
 </body>
 </html>
