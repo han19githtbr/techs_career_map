@@ -133,6 +133,46 @@
       },
       "color": "#64748b",
       "icon": "🌐"
+    },
+    {
+      "id": "automation",
+      "label": {
+        "pt": "Automação",
+        "en": "Automation",
+        "fr": "Automatisation"
+      },
+      "color": "#f97316",
+      "icon": "🤖"
+    },
+    {
+      "id": "seo",
+      "label": {
+        "pt": "SEO & Marketing",
+        "en": "SEO & Marketing",
+        "fr": "SEO & Marketing"
+      },
+      "color": "#10b981",
+      "icon": "🔍"
+    },
+    {
+      "id": "chatbot",
+      "label": {
+        "pt": "WhatsApp & Bots",
+        "en": "WhatsApp & Bots",
+        "fr": "WhatsApp & Bots"
+      },
+      "color": "#25d366",
+      "icon": "💬"
+    },
+    {
+      "id": "ecommerce",
+      "label": {
+        "pt": "E-commerce",
+        "en": "E-commerce",
+        "fr": "E-commerce"
+      },
+      "color": "#6366f1",
+      "icon": "🛒"
     }
   ],
   "technologies": [
@@ -1847,6 +1887,657 @@
         "pt": "<ul class=\"interview-qa\">\n<li><strong>Q: Como diagnosticar uma rede lenta?</strong><br>\nA: 1. <code>ping 8.8.8.8</code> — verifica conectividade básica e latência. 2. <code>traceroute</code>/<code>tracert</code> — identifica onde a latência está ocorrendo. 3. Verificar largura de banda com speedtest. 4. Checar utilização da interface de rede no servidor/roteador. 5. Verificar colisões, erros e drops no switch. 6. Analisar tráfego com Wireshark se necessário.</li>\n<li><strong>Q: O que é DHCP vs IP estático?</strong><br>\nA: <b>DHCP</b>: servidor atribui automaticamente IP, máscara, gateway e DNS ao dispositivo. Ideal para estações de trabalho. <b>IP estático</b>: configurado manualmente — necessário para servidores, impressoras de rede e qualquer dispositivo que precise ser encontrado sempre no mesmo endereço.</li>\n<li><strong>Q: Explique o modelo OSI em 7 camadas?</strong><br>\nA: Física → Enlace → Rede → Transporte → Sessão → Apresentação → Aplicação. Mnemônico PT: \"Por Favor Não Toque Seu Plug Aqui\".<br>\n<b>Relevantes para troubleshooting</b>: Física (cabos, portas), Rede (IP, roteamento), Transporte (TCP/UDP, portas), Aplicação (HTTP, DNS, FTP).</li>\n<li><strong>Q: Como automatizar tarefas repetitivas?</strong><br>\nA: PowerShell no Windows, Bash no Linux. Exemplos: backup automático, criação de usuários em lote, monitoramento de serviços.<br>\n<pre># Bash: monitorar serviço e reiniciar se parado\nif ! systemctl is-active --quiet nginx; then\n  systemctl restart nginx\n  echo \"nginx reiniciado $(date)\" >> /var/log/monitor.log\nfi</pre></li>\n</ul>",
         "en": "<ul class=\"interview-qa\">\n<li><strong>Q: How to diagnose a slow network?</strong><br>\nA: 1. <code>ping 8.8.8.8</code> — basic connectivity and latency. 2. <code>traceroute</code> — find where latency occurs. 3. Bandwidth check with speedtest. 4. Check network interface utilization. 5. Check switch for collisions/errors/drops. 6. Wireshark for traffic analysis if needed.</li>\n<li><strong>Q: DHCP vs static IP?</strong><br>\nA: <b>DHCP</b>: server automatically assigns IP, mask, gateway, DNS. Ideal for workstations. <b>Static IP</b>: manually configured — needed for servers, network printers, any device that must always be at the same address.</li>\n<li><strong>Q: OSI model in 7 layers?</strong><br>\nA: Physical → Data Link → Network → Transport → Session → Presentation → Application.<br>\n<b>Key for troubleshooting</b>: Physical (cables, ports), Network (IP, routing), Transport (TCP/UDP, ports), Application (HTTP, DNS).</li>\n<li><strong>Q: Automate repetitive tasks?</strong><br>\n<pre># Monitor and restart service if stopped\nif ! systemctl is-active --quiet nginx; then\n  systemctl restart nginx\nfi</pre></li>\n</ul>",
         "fr": "<ul class=\"interview-qa\">\n<li><strong>Q : Diagnostiquer un réseau lent ?</strong><br>\nR : 1. <code>ping 8.8.8.8</code> — connectivité basique. 2. <code>traceroute</code> — où la latence se produit. 3. Test de bande passante. 4. Vérifier l'utilisation de l'interface réseau. 5. Wireshark pour analyse si nécessaire.</li>\n<li><strong>Q : DHCP vs IP statique ?</strong><br>\nR : DHCP attribue automatiquement IP, masque, passerelle, DNS — idéal pour les postes de travail. IP statique est nécessaire pour les serveurs et imprimantes réseau.</li>\n<li><strong>Q : Modèle OSI en 7 couches ?</strong><br>\nR : Physique → Liaison → Réseau → Transport → Session → Présentation → Application. Pour le dépannage : Physique (câbles), Réseau (IP), Transport (TCP/UDP), Application (HTTP, DNS).</li>\n<li><strong>Q : Automatiser les tâches répétitives ?</strong><br>\nR : PowerShell sous Windows, Bash sous Linux. Exemples : sauvegardes, création d'utilisateurs en lot, surveillance de services.</li>\n</ul>"
+      }
+    },
+    {
+      "id": "n8n",
+      "name": "n8n",
+      "category": "automation",
+      "icon": "🔗",
+      "description": {
+        "pt": "Plataforma open-source de automação de fluxos de trabalho com interface visual. Conecta centenas de serviços via nós e permite lógica customizada com código JavaScript.",
+        "en": "Open-source workflow automation platform with a visual interface. Connects hundreds of services via nodes and allows custom logic with JavaScript code.",
+        "fr": "Plateforme d'automatisation de workflows open-source avec interface visuelle. Connecte des centaines de services via des nœuds et permet la logique personnalisée avec du code JavaScript."
+      },
+      "example": {
+        "pt": "Fluxo que monitora um formulário, envia dados para Google Sheets e dispara WhatsApp.",
+        "en": "Workflow that monitors a form, sends data to Google Sheets and triggers WhatsApp.",
+        "fr": "Workflow qui surveille un formulaire, envoie des données vers Google Sheets et déclenche WhatsApp.",
+        "code": "// Nó de código customizado dentro do n8n\n// Processa dados do webhook e filtra pedidos urgentes\n\nconst items = $input.all();\n\nconst urgentes = items.filter(item => {\n  const pedido = item.json;\n  return pedido.prioridade === 'alta' || pedido.valor > 5000;\n});\n\nreturn urgentes.map(item => ({\n  json: {\n    ...item.json,\n    notificar: true,\n    mensagem: `🚨 Pedido urgente #${item.json.id} — R$ ${item.json.valor}`,\n    timestamp: new Date().toISOString(),\n  }\n}));\n\n// Fluxo completo tipicamente:\n// Webhook → Filtro → Google Sheets (salvar)\n//                 → WhatsApp (notificar)\n//                 → Email (confirmar cliente)"
+      },
+      "relations": [
+        "zapier",
+        "make",
+        "whatsapp-api",
+        "python"
+      ],
+      "pros": {
+        "pt": [
+          "Auto-hospedado — dados sob seu controle",
+          "Gratuito para uso self-hosted",
+          "Lógica customizada com JS nativo",
+          "Mais de 400 integrações nativas"
+        ],
+        "en": [
+          "Self-hosted — data under your control",
+          "Free for self-hosted use",
+          "Custom logic with native JS",
+          "400+ native integrations"
+        ],
+        "fr": [
+          "Auto-hébergé — données sous votre contrôle",
+          "Gratuit pour usage self-hosted",
+          "Logique personnalisée avec JS natif",
+          "Plus de 400 intégrations natives"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Curva de aprendizado para fluxos complexos",
+          "Self-hosting exige manutenção de servidor",
+          "Documentação menos madura que Zapier"
+        ],
+        "en": [
+          "Learning curve for complex flows",
+          "Self-hosting requires server maintenance",
+          "Less mature documentation than Zapier"
+        ],
+        "fr": [
+          "Courbe d'apprentissage pour les flux complexes",
+          "L'auto-hébergement nécessite une maintenance serveur",
+          "Documentation moins mature que Zapier"
+        ]
+      },
+      "scenarios": {
+        "pt": "Sincronização de CRM → ERP, notificações automáticas de pedidos, pipelines de dados entre APIs internas e externas.",
+        "en": "CRM → ERP synchronization, automatic order notifications, data pipelines between internal and external APIs.",
+        "fr": "Synchronisation CRM → ERP, notifications automatiques de commandes, pipelines de données entre APIs internes et externes."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Quando usar n8n vs Zapier?</strong><br>A: n8n para dados sensíveis (self-hosted), código customizado e custo zero. Zapier para equipes não-técnicas que precisam de setup rápido sem servidor.</li><li><strong>Q: Como lidar com erros em fluxos n8n?</strong><br>A: Use o nó 'Error Trigger' para capturar falhas, adicione retry com 'Wait' nodes e envie alertas para Slack/email no nó de erro.</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: When to use n8n vs Zapier?</strong><br>A: n8n for sensitive data (self-hosted), custom code and zero cost. Zapier for non-technical teams needing fast setup without a server.</li><li><strong>Q: How to handle errors in n8n flows?</strong><br>A: Use the 'Error Trigger' node to catch failures, add retry with 'Wait' nodes and send alerts to Slack/email in the error node.</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Quand utiliser n8n vs Zapier ?</strong><br>R : n8n pour les données sensibles (self-hosted), le code personnalisé et le coût zéro. Zapier pour les équipes non techniques ayant besoin d'une configuration rapide sans serveur.</li></ul>"
+      }
+    },
+    {
+      "id": "zapier",
+      "name": "Zapier",
+      "category": "automation",
+      "icon": "⚡",
+      "description": {
+        "pt": "Plataforma SaaS líder em automação no-code. Conecta mais de 6.000 apps em fluxos chamados 'Zaps' sem necessidade de código.",
+        "en": "Leading no-code automation SaaS platform. Connects 6,000+ apps in flows called 'Zaps' without writing code.",
+        "fr": "Plateforme SaaS leader en automatisation no-code. Connecte plus de 6 000 apps dans des flux appelés 'Zaps' sans écrire de code."
+      },
+      "example": {
+        "pt": "Zap: novo lead no formulário → CRM + Slack + email de boas-vindas automático.",
+        "en": "Zap: new form lead → CRM + Slack + automatic welcome email.",
+        "fr": "Zap : nouveau lead dans le formulaire → CRM + Slack + email de bienvenue automatique.",
+        "code": "// Zapier suporta 'Code by Zapier' — JavaScript ou Python\n// Exemplo: Formatar dados antes de enviar ao CRM\n\nconst inputData = inputData; // dados do step anterior\n\n// Normaliza telefone para E.164\nfunction formatPhone(phone) {\n  const digits = phone.replace(/\\D/g, '');\n  if (digits.startsWith('55')) return `+${digits}`;\n  return `+55${digits}`;\n}\n\n// Calcula score de lead simples\nfunction leadScore(data) {\n  let score = 0;\n  if (data.empresa) score += 30;\n  if (data.cargo?.includes('CEO') || data.cargo?.includes('Diretor')) score += 40;\n  if (data.funcionarios > 50) score += 30;\n  return score;\n}\n\nconst output = {\n  nome: inputData.nome?.trim(),\n  email: inputData.email?.toLowerCase(),\n  telefone: formatPhone(inputData.telefone || ''),\n  score: leadScore(inputData),\n  origem: 'formulario-site',\n  data_criacao: new Date().toISOString(),\n};\n\noutput; // Zapier usa a última expressão como retorno"
+      },
+      "relations": [
+        "n8n",
+        "make",
+        "whatsapp-api"
+      ],
+      "pros": {
+        "pt": [
+          "Interface extremamente intuitiva",
+          "6.000+ integrações",
+          "Zaps multi-step com lógica condicional",
+          "Sem necessidade de servidor"
+        ],
+        "en": [
+          "Extremely intuitive interface",
+          "6,000+ integrations",
+          "Multi-step Zaps with conditional logic",
+          "No server needed"
+        ],
+        "fr": [
+          "Interface extrêmement intuitive",
+          "6 000+ intégrations",
+          "Zaps multi-étapes avec logique conditionnelle",
+          "Pas de serveur nécessaire"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Custo alto em volumes maiores",
+          "Dados passam pelos servidores do Zapier",
+          "Limites de tarefas por plano",
+          "Menos flexível que n8n para código complexo"
+        ],
+        "en": [
+          "High cost at larger volumes",
+          "Data passes through Zapier's servers",
+          "Task limits per plan",
+          "Less flexible than n8n for complex code"
+        ],
+        "fr": [
+          "Coût élevé à grands volumes",
+          "Les données transitent par les serveurs Zapier",
+          "Limites de tâches par plan",
+          "Moins flexible que n8n pour le code complexe"
+        ]
+      },
+      "scenarios": {
+        "pt": "Automação de marketing (CRM + email), notificações de vendas, sincronização entre SaaS tools sem dev.",
+        "en": "Marketing automation (CRM + email), sales notifications, synchronization between SaaS tools without dev.",
+        "fr": "Automatisation marketing (CRM + email), notifications de ventes, synchronisation entre outils SaaS sans dev."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Qual a diferença entre Trigger e Action no Zapier?</strong><br>A: Trigger é o evento que inicia o Zap (ex: novo email). Action é a tarefa executada (ex: criar contato no CRM). Um Zap pode ter múltiplas Actions mas apenas um Trigger.</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: What's the difference between Trigger and Action in Zapier?</strong><br>A: Trigger is the event that starts the Zap (e.g. new email). Action is the task executed (e.g. create CRM contact). A Zap can have multiple Actions but only one Trigger.</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Différence entre Trigger et Action dans Zapier ?</strong><br>R : Trigger est l'événement qui démarre le Zap. Action est la tâche exécutée. Un Zap peut avoir plusieurs Actions mais un seul Trigger.</li></ul>"
+      }
+    },
+    {
+      "id": "puppeteer",
+      "name": "Puppeteer / Playwright",
+      "category": "automation",
+      "icon": "🎭",
+      "description": {
+        "pt": "Bibliotecas Node.js para controle headless de navegadores Chrome/Firefox. Usadas para web scraping, automação de tarefas web, testes E2E e geração de PDFs/screenshots.",
+        "en": "Node.js libraries for headless browser control (Chrome/Firefox). Used for web scraping, web task automation, E2E testing and PDF/screenshot generation.",
+        "fr": "Bibliothèques Node.js pour le contrôle headless de navigateurs Chrome/Firefox. Utilisées pour le web scraping, l'automatisation de tâches web, les tests E2E et la génération de PDF/captures d'écran."
+      },
+      "example": {
+        "pt": "Web scraping e geração de PDF com Puppeteer.",
+        "en": "Web scraping and PDF generation with Puppeteer.",
+        "fr": "Web scraping et génération de PDF avec Puppeteer.",
+        "code": "const puppeteer = require('puppeteer');\n\n// ✅ Web Scraping — coleta preços de produto\nasync function scrapePrecos(url) {\n  const browser = await puppeteer.launch({\n    headless: 'new', // modo headless moderno\n    args: ['--no-sandbox', '--disable-setuid-sandbox'],\n  });\n\n  const page = await browser.newPage();\n\n  // Simula user-agent real para evitar bloqueio\n  await page.setUserAgent(\n    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'\n  );\n\n  await page.goto(url, { waitUntil: 'networkidle2' });\n\n  // Aguarda elemento específico carregar\n  await page.waitForSelector('.produto-preco', { timeout: 5000 });\n\n  // Extrai dados do DOM\n  const dados = await page.evaluate(() => {\n    return Array.from(document.querySelectorAll('.produto-card')).map(card => ({\n      nome:  card.querySelector('.nome')?.innerText,\n      preco: card.querySelector('.preco')?.innerText,\n      disponivel: !card.querySelector('.esgotado'),\n    }));\n  });\n\n  await browser.close();\n  return dados;\n}\n\n// ✅ Gerar PDF de relatório HTML\nasync function gerarPDF(htmlUrl, outputPath) {\n  const browser = await puppeteer.launch({ headless: 'new' });\n  const page    = await browser.newPage();\n\n  await page.goto(htmlUrl, { waitUntil: 'networkidle0' });\n\n  await page.pdf({\n    path: outputPath,\n    format: 'A4',\n    printBackground: true,\n    margin: { top: '20mm', bottom: '20mm', left: '15mm', right: '15mm' },\n  });\n\n  await browser.close();\n  console.log(`PDF gerado em ${outputPath}`);\n}\n\n// ✅ Preencher e submeter formulário automaticamente\nasync function preencherFormulario(dados) {\n  const browser = await puppeteer.launch({ headless: false }); // visível\n  const page    = await browser.newPage();\n\n  await page.goto('https://sistema-interno.com/cadastro');\n  await page.type('#nome',  dados.nome,  { delay: 50 });\n  await page.type('#email', dados.email, { delay: 50 });\n  await page.select('#categoria', dados.categoria);\n  await page.click('#btn-salvar');\n  await page.waitForNavigation();\n\n  await browser.close();\n}"
+      },
+      "relations": [
+        "nodejs",
+        "n8n",
+        "python"
+      ],
+      "pros": {
+        "pt": [
+          "Controle total do navegador real",
+          "Geração de PDFs/screenshots de alta qualidade",
+          "Funciona em qualquer site (incluindo SPAs)",
+          "Integração nativa com Node.js"
+        ],
+        "en": [
+          "Full control of real browser",
+          "High quality PDF/screenshot generation",
+          "Works on any site (including SPAs)",
+          "Native Node.js integration"
+        ],
+        "fr": [
+          "Contrôle total du vrai navigateur",
+          "Génération de PDF/captures d'écran de haute qualité",
+          "Fonctionne sur n'importe quel site (dont les SPAs)",
+          "Intégration native Node.js"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Consumo alto de memória (instância de browser)",
+          "Sites podem detectar e bloquear bots",
+          "Manutenção frágil com mudanças de layout",
+          "Mais lento que APIs diretas"
+        ],
+        "en": [
+          "High memory usage (browser instance)",
+          "Sites can detect and block bots",
+          "Fragile maintenance with layout changes",
+          "Slower than direct APIs"
+        ],
+        "fr": [
+          "Consommation mémoire élevée (instance navigateur)",
+          "Les sites peuvent détecter et bloquer les bots",
+          "Maintenance fragile lors de changements de layout",
+          "Plus lent que les APIs directes"
+        ]
+      },
+      "scenarios": {
+        "pt": "Coleta de preços concorrentes, geração de relatórios PDF, automação de sistemas legados sem API, testes E2E de interface.",
+        "en": "Competitor price collection, PDF report generation, legacy system automation without API, E2E interface testing.",
+        "fr": "Collecte de prix concurrents, génération de rapports PDF, automatisation de systèmes legacy sans API, tests E2E d'interface."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Diferença entre Puppeteer e Playwright?</strong><br>A: Playwright suporta Chrome, Firefox e Safari nativamente, tem API mais moderna, melhor suporte a múltiplos contextos e é mantido pela Microsoft. Puppeteer foca em Chrome/Chromium e é mais antigo. Para projetos novos, prefira Playwright.</li><li><strong>Q: Como evitar detecção de bot?</strong><br>A: Use user-agent real, adicione delays aleatórios entre ações, use puppeteer-extra com o plugin stealth, e respeite robots.txt por questões legais.</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: Difference between Puppeteer and Playwright?</strong><br>A: Playwright supports Chrome, Firefox and Safari natively, has a more modern API, better multi-context support, and is maintained by Microsoft. Puppeteer focuses on Chrome/Chromium. For new projects, prefer Playwright.</li><li><strong>Q: How to avoid bot detection?</strong><br>A: Use a real user-agent, add random delays between actions, use puppeteer-extra with the stealth plugin, and respect robots.txt for legal reasons.</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Différence entre Puppeteer et Playwright ?</strong><br>R : Playwright supporte Chrome, Firefox et Safari nativement, a une API plus moderne et est maintenu par Microsoft. Puppeteer se concentre sur Chrome/Chromium. Pour les nouveaux projets, préférez Playwright.</li></ul>"
+      }
+    },
+    {
+      "id": "seo-tecnico",
+      "name": "SEO Técnico",
+      "category": "seo",
+      "icon": "🔍",
+      "description": {
+        "pt": "Conjunto de práticas que garantem que os rastreadores dos motores de busca conseguem encontrar, interpretar e indexar corretamente o conteúdo do site.",
+        "en": "Set of practices that ensure search engine crawlers can find, interpret and correctly index the site's content.",
+        "fr": "Ensemble de pratiques garantissant que les robots des moteurs de recherche peuvent trouver, interpréter et indexer correctement le contenu du site."
+      },
+      "example": {
+        "pt": "Implementação de meta tags, sitemap, schema.org e Core Web Vitals.",
+        "en": "Implementation of meta tags, sitemap, schema.org and Core Web Vitals.",
+        "fr": "Implémentation des balises meta, sitemap, schema.org et Core Web Vitals.",
+        "code": "<!-- ✅ Meta tags essenciais para SEO -->\n<head>\n  <title>Guia Completo de React 2025 | DevBlog</title>\n  <meta name=\"description\"\n        content=\"Aprenda React do zero ao avançado. Hooks, Context, performance e muito mais.\">\n  <meta name=\"robots\" content=\"index, follow\">\n  <link rel=\"canonical\" href=\"https://devblog.com/react-guia\">\n\n  <!-- Open Graph para compartilhamento social -->\n  <meta property=\"og:title\"       content=\"Guia Completo de React 2025\">\n  <meta property=\"og:description\" content=\"Do zero ao avançado em React.\">\n  <meta property=\"og:image\"       content=\"https://devblog.com/og/react-guia.jpg\">\n  <meta property=\"og:url\"         content=\"https://devblog.com/react-guia\">\n  <meta property=\"og:type\"        content=\"article\">\n\n  <!-- Twitter Card -->\n  <meta name=\"twitter:card\"  content=\"summary_large_image\">\n  <meta name=\"twitter:title\" content=\"Guia Completo de React 2025\">\n</head>\n\n// ✅ Schema.org para rich snippets (JSON-LD)\nconst articleSchema = {\n  \"@context\": \"https://schema.org\",\n  \"@type\": \"Article\",\n  \"headline\": \"Guia Completo de React 2025\",\n  \"author\": { \"@type\": \"Person\", \"name\": \"João Dev\" },\n  \"datePublished\": \"2025-01-15\",\n  \"dateModified\":  \"2025-06-01\",\n  \"image\": \"https://devblog.com/react-guia.jpg\",\n  \"publisher\": {\n    \"@type\": \"Organization\",\n    \"name\": \"DevBlog\",\n    \"logo\": { \"@type\": \"ImageObject\", \"url\": \"https://devblog.com/logo.png\" }\n  }\n};\n\n// ✅ Sitemap XML dinâmico (Next.js)\n// app/sitemap.js\nexport default async function sitemap() {\n  const posts = await getPosts();\n  return [\n    { url: 'https://devblog.com', lastModified: new Date(), changeFrequency: 'daily', priority: 1 },\n    ...posts.map(post => ({\n      url: `https://devblog.com/blog/${post.slug}`,\n      lastModified: post.updatedAt,\n      changeFrequency: 'weekly',\n      priority: 0.8,\n    }))\n  ];\n}\n\n// ✅ Core Web Vitals — medir e monitorar\nimport { onCLS, onFID, onLCP } from 'web-vitals';\n\nonLCP(metric => console.log('LCP:', metric.value)); // < 2.5s = bom\nonFID(metric => console.log('FID:', metric.value)); // < 100ms = bom\nonCLS(metric => console.log('CLS:', metric.value)); // < 0.1 = bom"
+      },
+      "relations": [
+        "nextjs",
+        "wordpress",
+        "seo-conteudo"
+      ],
+      "pros": {
+        "pt": [
+          "Tráfego orgânico gratuito e sustentável",
+          "Credibilidade e autoridade de marca",
+          "Resultados compostos com o tempo",
+          "Complementa estratégias pagas"
+        ],
+        "en": [
+          "Free and sustainable organic traffic",
+          "Brand credibility and authority",
+          "Compound results over time",
+          "Complements paid strategies"
+        ],
+        "fr": [
+          "Trafic organique gratuit et durable",
+          "Crédibilité et autorité de marque",
+          "Résultats composés dans le temps",
+          "Complète les stratégies payantes"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Resultados demoram 3–12 meses",
+          "Algoritmos do Google mudam constantemente",
+          "Exige produção contínua de conteúdo",
+          "Competição alta em nichos saturados"
+        ],
+        "en": [
+          "Results take 3–12 months",
+          "Google algorithms change constantly",
+          "Requires continuous content production",
+          "High competition in saturated niches"
+        ],
+        "fr": [
+          "Les résultats prennent 3 à 12 mois",
+          "Les algorithmes Google changent constamment",
+          "Nécessite une production continue de contenu",
+          "Forte concurrence dans les niches saturées"
+        ]
+      },
+      "scenarios": {
+        "pt": "E-commerce buscando tráfego orgânico, blogs de conteúdo, SaaS com estratégia de inbound marketing, sites institucionais.",
+        "en": "E-commerce seeking organic traffic, content blogs, SaaS with inbound marketing strategy, institutional sites.",
+        "fr": "E-commerce cherchant du trafic organique, blogs de contenu, SaaS avec stratégie inbound marketing, sites institutionnels."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: O que são Core Web Vitals?</strong><br>A: Métricas de UX do Google: LCP (Largest Contentful Paint &lt; 2.5s), FID/INP (interatividade &lt; 100ms) e CLS (Cumulative Layout Shift &lt; 0.1). São fatores de ranqueamento desde 2021.</li><li><strong>Q: Tag canonical serve para quê?</strong><br>A: Indica ao Google qual é a URL principal quando há conteúdo duplicado (ex: página com e sem www, com e sem parâmetros UTM).</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: What are Core Web Vitals?</strong><br>A: Google's UX metrics: LCP (Largest Contentful Paint &lt; 2.5s), FID/INP (interactivity &lt; 100ms) and CLS (Cumulative Layout Shift &lt; 0.1). They are ranking factors since 2021.</li><li><strong>Q: What is the canonical tag for?</strong><br>A: Tells Google which is the main URL when there is duplicate content (e.g. page with and without www, with and without UTM parameters).</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Que sont les Core Web Vitals ?</strong><br>R : Métriques UX de Google : LCP (&lt; 2,5s), FID/INP (&lt; 100ms) et CLS (&lt; 0,1). Ce sont des facteurs de classement depuis 2021.</li></ul>"
+      }
+    },
+    {
+      "id": "seo-conteudo",
+      "name": "SEO de Conteúdo",
+      "category": "seo",
+      "icon": "✍️",
+      "description": {
+        "pt": "Estratégia de criação de conteúdo otimizado para motores de busca e usuários — combinando pesquisa de palavras-chave, intenção de busca e produção editorial.",
+        "en": "Strategy for creating content optimized for search engines and users — combining keyword research, search intent and editorial production.",
+        "fr": "Stratégie de création de contenu optimisé pour les moteurs de recherche et les utilisateurs — combinant recherche de mots-clés, intention de recherche et production éditoriale."
+      },
+      "example": {
+        "pt": "Pesquisa de palavras-chave e estruturação de artigo com pillar page e cluster.",
+        "en": "Keyword research and article structuring with pillar page and cluster.",
+        "fr": "Recherche de mots-clés et structuration d'article avec pillar page et cluster.",
+        "code": "// ✅ Estrutura de conteúdo para SEO (Next.js / React)\n// Hierarquia correta de headings — CRUCIAL para SEO\n\nexport function ArtigoSEO({ post }) {\n  return (\n    <article itemScope itemType=\"https://schema.org/Article\">\n\n      {/* H1 único — palavra-chave principal */}\n      <h1 itemProp=\"headline\">\n        {post.titulo} {/* ex: \"Como usar React Hooks em 2025\" */}\n      </h1>\n\n      {/* Meta description visível (opcional) */}\n      <p className=\"resumo\" itemProp=\"description\">\n        {post.resumo}\n      </p>\n\n      {/* H2 — subtópicos principais (palavras-chave secundárias) */}\n      <h2>O que são React Hooks?</h2>\n      <p>...</p>\n\n      <h2>useState e useEffect na Prática</h2>\n      {/* H3 — subtópicos dos H2 */}\n      <h3>Exemplo real de useState</h3>\n      <p>...</p>\n\n      {/* Imagem otimizada para SEO */}\n      <img\n        src=\"/react-hooks-diagram.webp\"\n        alt=\"Diagrama explicando ciclo de vida com React Hooks\" {/* alt descritivo! */}\n        width={800}\n        height={450}\n        loading=\"lazy\"\n      />\n\n      {/* Links internos — fortalecem SEO */}\n      <p>Veja também nosso guia sobre\n        <a href=\"/react-context\">React Context</a> e\n        <a href=\"/typescript-react\">TypeScript com React</a>.\n      </p>\n\n    </article>\n  );\n}\n\n// ✅ Estratégia Pillar + Cluster\n// Pillar page: /guia-react (2.000+ palavras, abrangente)\n//   Cluster 1: /react-hooks\n//   Cluster 2: /react-context\n//   Cluster 3: /react-performance\n// Todos os clusters linkam de volta para o pillar\n// Resultado: autoridade concentrada na URL principal 🎯"
+      },
+      "relations": [
+        "seo-tecnico",
+        "wordpress",
+        "nextjs"
+      ],
+      "pros": {
+        "pt": [
+          "Atrai leads qualificados com intenção de compra",
+          "Conteúdo perene gera tráfego por anos",
+          "Constrói autoridade no nicho",
+          "Reduz custo por aquisição vs. anúncios"
+        ],
+        "en": [
+          "Attracts qualified leads with purchase intent",
+          "Evergreen content generates traffic for years",
+          "Builds niche authority",
+          "Reduces cost per acquisition vs. ads"
+        ],
+        "fr": [
+          "Attire des leads qualifiés avec intention d'achat",
+          "Le contenu evergreen génère du trafic pendant des années",
+          "Construit l'autorité dans le niche",
+          "Réduit le coût par acquisition vs. publicités"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Exige investimento editorial constante",
+          "Difícil medir ROI no curto prazo",
+          "Requer especialização no tema",
+          "Resultados levam meses para aparecer"
+        ],
+        "en": [
+          "Requires constant editorial investment",
+          "Hard to measure ROI in the short term",
+          "Requires topic specialization",
+          "Results take months to appear"
+        ],
+        "fr": [
+          "Nécessite un investissement éditorial constant",
+          "Difficile de mesurer le ROI à court terme",
+          "Nécessite une spécialisation dans le sujet",
+          "Les résultats prennent des mois à apparaître"
+        ]
+      },
+      "scenarios": {
+        "pt": "Blog de dev com tutoriais, SaaS com estratégia de inbound, e-commerce com guias de compra, agências de marketing de conteúdo.",
+        "en": "Dev blog with tutorials, SaaS with inbound strategy, e-commerce with buying guides, content marketing agencies.",
+        "fr": "Blog dev avec tutoriels, SaaS avec stratégie inbound, e-commerce avec guides d'achat, agences de marketing de contenu."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: O que é intenção de busca?</strong><br>A: O motivo por trás da pesquisa do usuário. Pode ser informacional (aprender), navegacional (achar um site), comercial (comparar) ou transacional (comprar). O conteúdo deve corresponder à intenção para ranquear bem.</li><li><strong>Q: O que é E-E-A-T?</strong><br>A: Experience, Expertise, Authoritativeness, Trustworthiness — critérios do Quality Rater Guidelines do Google para avaliar qualidade de conteúdo, especialmente em nichos YMYL (saúde, finanças).</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: What is search intent?</strong><br>A: The reason behind the user's search. Can be informational (learn), navigational (find a site), commercial (compare) or transactional (buy). Content must match intent to rank well.</li><li><strong>Q: What is E-E-A-T?</strong><br>A: Experience, Expertise, Authoritativeness, Trustworthiness — Google's Quality Rater Guidelines criteria for evaluating content quality, especially in YMYL niches (health, finance).</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Qu'est-ce que l'intention de recherche ?</strong><br>R : La raison derrière la recherche de l'utilisateur : informationnelle, navigationnelle, commerciale ou transactionnelle. Le contenu doit correspondre à l'intention pour bien se classer.</li></ul>"
+      }
+    },
+    {
+      "id": "whatsapp-api",
+      "name": "WhatsApp Business API",
+      "category": "chatbot",
+      "icon": "📱",
+      "description": {
+        "pt": "API oficial da Meta para envio e recebimento de mensagens no WhatsApp em escala empresarial. Permite bots, notificações transacionais e atendimento automatizado.",
+        "en": "Meta's official API for sending and receiving WhatsApp messages at enterprise scale. Enables bots, transactional notifications and automated service.",
+        "fr": "L'API officielle de Meta pour l'envoi et la réception de messages WhatsApp à l'échelle entreprise. Permet les bots, les notifications transactionnelles et le service automatisé."
+      },
+      "example": {
+        "pt": "Envio de notificação de pedido e fluxo de bot com botões interativos.",
+        "en": "Order notification sending and bot flow with interactive buttons.",
+        "fr": "Envoi de notification de commande et flux de bot avec boutons interactifs.",
+        "code": "// ✅ Enviar mensagem via WhatsApp Cloud API (Meta)\nconst PHONE_ID   = process.env.WA_PHONE_NUMBER_ID;\nconst WA_TOKEN   = process.env.WA_ACCESS_TOKEN;\n\nasync function enviarNotificacaoPedido(telefone, pedido) {\n  const response = await fetch(\n    `https://graph.facebook.com/v18.0/${PHONE_ID}/messages`,\n    {\n      method: 'POST',\n      headers: {\n        'Authorization': `Bearer ${WA_TOKEN}`,\n        'Content-Type': 'application/json',\n      },\n      body: JSON.stringify({\n        messaging_product: 'whatsapp',\n        to: telefone, // formato E.164: +5521999999999\n        type: 'template',\n        template: {\n          name: 'confirmacao_pedido',\n          language: { code: 'pt_BR' },\n          components: [\n            {\n              type: 'body',\n              parameters: [\n                { type: 'text', text: pedido.cliente },\n                { type: 'text', text: pedido.numero },\n                { type: 'text', text: `R$ ${pedido.valor}` },\n              ]\n            }\n          ]\n        }\n      })\n    }\n  );\n  return response.json();\n}\n\n// ✅ Receber mensagens (Webhook)\n// Registre https://seu-servidor.com/webhook no Meta for Developers\napp.post('/webhook', (req, res) => {\n  const body = req.body;\n\n  if (body.object !== 'whatsapp_business_account') {\n    return res.sendStatus(404);\n  }\n\n  const entry   = body.entry?.[0];\n  const changes = entry?.changes?.[0];\n  const value   = changes?.value;\n  const message = value?.messages?.[0];\n\n  if (!message) return res.sendStatus(200);\n\n  const from  = message.from;       // número do remetente\n  const tipo  = message.type;       // text | interactive | image\n  const texto = message.text?.body; // conteúdo (se tipo === 'text')\n\n  console.log(`📩 De: ${from} | Tipo: ${tipo} | Texto: ${texto}`);\n\n  // Processa e responde...\n  processarMensagem(from, tipo, message);\n\n  res.sendStatus(200); // SEMPRE responda 200 para a Meta!\n});\n\n// ✅ Enviar mensagem com botões interativos\nasync function enviarMenu(telefone) {\n  return fetch(`https://graph.facebook.com/v18.0/${PHONE_ID}/messages`, {\n    method: 'POST',\n    headers: { 'Authorization': `Bearer ${WA_TOKEN}`, 'Content-Type': 'application/json' },\n    body: JSON.stringify({\n      messaging_product: 'whatsapp',\n      to: telefone,\n      type: 'interactive',\n      interactive: {\n        type: 'button',\n        body: { text: 'Olá! Como posso ajudar?' },\n        action: {\n          buttons: [\n            { type: 'reply', reply: { id: 'rastrear',  title: '📦 Rastrear pedido' } },\n            { type: 'reply', reply: { id: 'suporte',   title: '🆘 Falar com suporte' } },\n            { type: 'reply', reply: { id: 'catalogo',  title: '🛒 Ver catálogo' } },\n          ]\n        }\n      }\n    })\n  });\n}"
+      },
+      "relations": [
+        "n8n",
+        "zapier",
+        "nodejs",
+        "chatbot-flow"
+      ],
+      "pros": {
+        "pt": [
+          "API oficial — sem risco de banimento",
+          "Templates com alta taxa de entrega",
+          "Suporte a botões, listas e mídias",
+          "Escala para milhões de mensagens"
+        ],
+        "en": [
+          "Official API — no risk of being banned",
+          "Templates with high delivery rate",
+          "Support for buttons, lists and media",
+          "Scales to millions of messages"
+        ],
+        "fr": [
+          "API officielle — sans risque de bannissement",
+          "Templates avec taux de livraison élevé",
+          "Support des boutons, listes et médias",
+          "Scalable à des millions de messages"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Templates precisam de aprovação prévia da Meta",
+          "Custo por conversa (janela de 24h)",
+          "Processo de verificação de empresa obrigatório",
+          "Sandbox limitado para testes"
+        ],
+        "en": [
+          "Templates need prior Meta approval",
+          "Cost per conversation (24h window)",
+          "Mandatory business verification process",
+          "Limited sandbox for testing"
+        ],
+        "fr": [
+          "Les templates nécessitent une approbation préalable de Meta",
+          "Coût par conversation (fenêtre de 24h)",
+          "Processus de vérification d'entreprise obligatoire",
+          "Sandbox limité pour les tests"
+        ]
+      },
+      "scenarios": {
+        "pt": "Notificações de pedido (e-commerce), agendamento automático (clínicas), suporte nível 1 (telecom/banco), campanhas de marketing opt-in.",
+        "en": "Order notifications (e-commerce), automatic scheduling (clinics), level 1 support (telecom/banking), opt-in marketing campaigns.",
+        "fr": "Notifications de commande (e-commerce), planification automatique (cliniques), support niveau 1 (télécom/banque), campagnes marketing opt-in."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Qual a diferença entre a janela de 24h e templates no WhatsApp API?</strong><br>A: Dentro da janela de 24h após o usuário escrever, você pode enviar qualquer mensagem livremente. Fora dessa janela, APENAS templates pré-aprovados pela Meta podem ser enviados (e têm custo).</li><li><strong>Q: Como escalar um bot WhatsApp para alto volume?</strong><br>A: Use uma BSP (Business Solution Provider) como Twilio, Zenvia ou Take Blip, que gerenciam a infraestrutura. Implemente filas (Redis/BullMQ) para processar mensagens assincronamente.</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: What's the difference between the 24h window and templates in WhatsApp API?</strong><br>A: Within the 24h window after the user writes, you can send any message freely. Outside this window, ONLY Meta pre-approved templates can be sent (and they have a cost).</li><li><strong>Q: How to scale a WhatsApp bot to high volume?</strong><br>A: Use a BSP (Business Solution Provider) like Twilio, Zenvia or Take Blip, who manage the infrastructure. Implement queues (Redis/BullMQ) to process messages asynchronously.</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Différence entre la fenêtre 24h et les templates WhatsApp API ?</strong><br>R : Dans la fenêtre 24h après que l'utilisateur écrit, vous pouvez envoyer n'importe quel message. En dehors, SEULS les templates pré-approuvés par Meta peuvent être envoyés (et ont un coût).</li></ul>"
+      }
+    },
+    {
+      "id": "chatbot-flow",
+      "name": "Chatbot Flow Design",
+      "category": "chatbot",
+      "icon": "🤖",
+      "description": {
+        "pt": "Arquitetura e design de fluxos conversacionais para bots — combinando árvores de decisão, NLP, estado de sessão e integração com APIs.",
+        "en": "Architecture and design of conversational flows for bots — combining decision trees, NLP, session state and API integration.",
+        "fr": "Architecture et design des flux conversationnels pour les bots — combinant arbres de décision, NLP, état de session et intégration API."
+      },
+      "example": {
+        "pt": "Máquina de estados para bot de atendimento com contexto de sessão.",
+        "en": "State machine for customer service bot with session context.",
+        "fr": "Machine à états pour bot de service client avec contexte de session.",
+        "code": "// ✅ Máquina de estados para chatbot\n// Padrão robusto para gerenciar contexto de conversa\n\nconst ESTADOS = {\n  INICIO:          'inicio',\n  AGUARDANDO_CPF:  'aguardando_cpf',\n  MENU_PRINCIPAL:  'menu_principal',\n  RASTREANDO:      'rastreando',\n  SUPORTE_HUMANO:  'suporte_humano',\n};\n\n// Armazenamento de sessão (Redis em produção)\nconst sessoes = new Map();\n\nfunction obterSessao(telefone) {\n  if (!sessoes.has(telefone)) {\n    sessoes.set(telefone, {\n      estado: ESTADOS.INICIO,\n      dados:  {},\n      historico: [],\n    });\n  }\n  return sessoes.get(telefone);\n}\n\nasync function processarMensagem(telefone, mensagem) {\n  const sessao = obterSessao(telefone);\n  sessao.historico.push({ role: 'user', content: mensagem, ts: Date.now() });\n\n  let resposta = '';\n\n  switch (sessao.estado) {\n\n    case ESTADOS.INICIO:\n      resposta = `Olá! Sou o assistente virtual.\\n\\nInforme seu CPF para continuar:`;\n      sessao.estado = ESTADOS.AGUARDANDO_CPF;\n      break;\n\n    case ESTADOS.AGUARDANDO_CPF:\n      const cpf = mensagem.replace(/\\D/g, '');\n      if (cpf.length !== 11) {\n        resposta = '❌ CPF inválido. Informe apenas os 11 dígitos:';\n        break;\n      }\n      sessao.dados.cpf   = cpf;\n      sessao.dados.nome  = await buscarClientePorCPF(cpf);\n      sessao.estado      = ESTADOS.MENU_PRINCIPAL;\n      resposta = [\n        `✅ Olá, ${sessao.dados.nome}!`,\n        '',\n        'Como posso ajudar?',\n        '1️⃣ Rastrear pedido',\n        '2️⃣ Cancelar pedido',\n        '3️⃣ Falar com atendente',\n      ].join('\\n');\n      break;\n\n    case ESTADOS.MENU_PRINCIPAL:\n      if (mensagem === '1' || mensagem.includes('rastrear')) {\n        sessao.estado = ESTADOS.RASTREANDO;\n        resposta = 'Informe o número do pedido:';\n      } else if (mensagem === '3' || mensagem.includes('atendente')) {\n        sessao.estado = ESTADOS.SUPORTE_HUMANO;\n        resposta = '🔄 Transferindo para um atendente. Aguarde...';\n        await notificarEquipe(telefone, sessao);\n      }\n      break;\n  }\n\n  sessao.historico.push({ role: 'bot', content: resposta, ts: Date.now() });\n  return resposta;\n}"
+      },
+      "relations": [
+        "whatsapp-api",
+        "nodejs",
+        "redis",
+        "n8n"
+      ],
+      "pros": {
+        "pt": [
+          "Atendimento 24/7 sem custo de equipe",
+          "Escalável para milhares de conversas simultâneas",
+          "Coleta estruturada de dados",
+          "Reduz filas de atendimento humano"
+        ],
+        "en": [
+          "24/7 service without team cost",
+          "Scalable to thousands of simultaneous conversations",
+          "Structured data collection",
+          "Reduces human service queues"
+        ],
+        "fr": [
+          "Service 24h/24, 7j/7 sans coût d'équipe",
+          "Scalable à des milliers de conversations simultanées",
+          "Collecte structurée de données",
+          "Réduit les files d'attente du service humain"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Frustrante para casos fora do fluxo",
+          "Manutenção aumenta com complexidade",
+          "Não substitui empatia humana",
+          "Dados sensíveis exigem LGPD/GDPR"
+        ],
+        "en": [
+          "Frustrating for out-of-flow cases",
+          "Maintenance grows with complexity",
+          "Does not replace human empathy",
+          "Sensitive data requires LGPD/GDPR compliance"
+        ],
+        "fr": [
+          "Frustrant pour les cas hors flux",
+          "La maintenance augmente avec la complexité",
+          "Ne remplace pas l'empathie humaine",
+          "Les données sensibles nécessitent RGPD"
+        ]
+      },
+      "scenarios": {
+        "pt": "SAC automatizado (telecom, bancos), agendamento de consultas, qualificação de leads, suporte nível 1 com escalada para humano.",
+        "en": "Automated customer service (telecom, banks), appointment scheduling, lead qualification, level 1 support with escalation to human.",
+        "fr": "Service client automatisé (télécom, banques), prise de rendez-vous, qualification de leads, support niveau 1 avec escalade vers humain."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Como gerenciar contexto de sessão em bots de alta escala?</strong><br>A: Use Redis com TTL para armazenar estado da sessão (ex: 24h de inatividade = reset). Nunca guarde estado em memória do processo — instâncias múltiplas não compartilham RAM.</li><li><strong>Q: Quando integrar NLP vs. fluxo baseado em regras?</strong><br>A: Regras para fluxos simples e previsíveis (menu numérico). NLP (Dialogflow, OpenAI) para entendimento de linguagem natural — mais caro mas muito mais flexível.</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: How to manage session context in high-scale bots?</strong><br>A: Use Redis with TTL to store session state (e.g. 24h inactivity = reset). Never store state in process memory — multiple instances don't share RAM.</li><li><strong>Q: When to integrate NLP vs. rule-based flow?</strong><br>A: Rules for simple, predictable flows (numeric menu). NLP (Dialogflow, OpenAI) for natural language understanding — more expensive but much more flexible.</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Comment gérer le contexte de session dans les bots à grande échelle ?</strong><br>R : Utilisez Redis avec TTL pour stocker l'état de session. Ne stockez jamais l'état en mémoire de processus — les instances multiples ne partagent pas la RAM.</li></ul>"
+      }
+    },
+    {
+      "id": "ecommerce-arch",
+      "name": "Arquitetura E-commerce",
+      "category": "ecommerce",
+      "icon": "🛒",
+      "description": {
+        "pt": "Conjunto de decisões técnicas e de negócio para construir lojas virtuais — desde plataformas SaaS até arquiteturas headless customizadas.",
+        "en": "Set of technical and business decisions for building online stores — from SaaS platforms to custom headless architectures.",
+        "fr": "Ensemble de décisions techniques et métier pour construire des boutiques en ligne — des plateformes SaaS aux architectures headless personnalisées."
+      },
+      "example": {
+        "pt": "Comparação de arquiteturas: monolítica vs. headless e implementação de carrinho.",
+        "en": "Architecture comparison: monolithic vs. headless and cart implementation.",
+        "fr": "Comparaison d'architectures : monolithique vs. headless et implémentation du panier.",
+        "code": "// ✅ Arquitetura Headless: Next.js + Shopify Storefront API\n\n// lib/shopify.js — cliente GraphQL\nconst SHOPIFY_DOMAIN = process.env.SHOPIFY_DOMAIN;\nconst SHOPIFY_TOKEN  = process.env.SHOPIFY_STOREFRONT_TOKEN;\n\nexport async function shopifyFetch(query, variables = {}) {\n  const res = await fetch(\n    `https://${SHOPIFY_DOMAIN}/api/2024-01/graphql.json`,\n    {\n      method: 'POST',\n      headers: {\n        'Content-Type': 'application/json',\n        'X-Shopify-Storefront-Access-Token': SHOPIFY_TOKEN,\n      },\n      body: JSON.stringify({ query, variables }),\n    }\n  );\n  const { data, errors } = await res.json();\n  if (errors) throw new Error(errors[0].message);\n  return data;\n}\n\n// ✅ Buscar produtos com paginação cursor-based\nexport async function getProdutos(cursor = null, limite = 12) {\n  const { products } = await shopifyFetch(`\n    query Produtos($first: Int!, $after: String) {\n      products(first: $first, after: $after, sortKey: BEST_SELLING) {\n        pageInfo { hasNextPage endCursor }\n        edges {\n          node {\n            id handle title\n            priceRange {\n              minVariantPrice { amount currencyCode }\n            }\n            images(first: 1) {\n              edges { node { url altText width height } }\n            }\n          }\n        }\n      }\n    }`, { first: limite, after: cursor });\n  return products;\n}\n\n// ✅ Gerenciamento de carrinho (localStorage + API)\nclass Carrinho {\n  constructor() {\n    this.items = JSON.parse(localStorage.getItem('cart') || '[]');\n  }\n\n  adicionar(produto, quantidade = 1) {\n    const existente = this.items.find(i => i.id === produto.id);\n    if (existente) {\n      existente.quantidade += quantidade;\n    } else {\n      this.items.push({ ...produto, quantidade });\n    }\n    this._salvar();\n    return this;\n  }\n\n  remover(produtoId) {\n    this.items = this.items.filter(i => i.id !== produtoId);\n    this._salvar();\n    return this;\n  }\n\n  get total() {\n    return this.items.reduce((sum, i) => sum + (i.preco * i.quantidade), 0);\n  }\n\n  get quantidadeTotal() {\n    return this.items.reduce((sum, i) => sum + i.quantidade, 0);\n  }\n\n  _salvar() {\n    localStorage.setItem('cart', JSON.stringify(this.items));\n  }\n}\n\n// ✅ Criando checkout (Shopify)\nexport async function criarCheckout(cartItems) {\n  const { checkoutCreate } = await shopifyFetch(`\n    mutation CheckoutCreate($input: CheckoutCreateInput!) {\n      checkoutCreate(input: $input) {\n        checkout { id webUrl }\n        checkoutUserErrors { message field }\n      }\n    }`,\n    { input: { lineItems: cartItems.map(item => ({\n        variantId: item.variantId,\n        quantity:  item.quantidade,\n    })) } }\n  );\n  return checkoutCreate.checkout.webUrl; // redireciona para Shopify\n}"
+      },
+      "relations": [
+        "nextjs",
+        "react",
+        "nodejs",
+        "postgresql",
+        "pagamentos"
+      ],
+      "pros": {
+        "pt": [
+          "Headless = flexibilidade total no front",
+          "Shopify/Stripe cuidam de compliance PCI",
+          "Escalabilidade para alto tráfego",
+          "Ecossistema maduro de plugins e integrações"
+        ],
+        "en": [
+          "Headless = total front-end flexibility",
+          "Shopify/Stripe handle PCI compliance",
+          "Scalability for high traffic",
+          "Mature ecosystem of plugins and integrations"
+        ],
+        "fr": [
+          "Headless = flexibilité totale en front",
+          "Shopify/Stripe gèrent la conformité PCI",
+          "Scalabilité pour fort trafic",
+          "Écosystème mature de plugins et intégrations"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Complexidade técnica maior que plataformas prontas",
+          "Custo de desenvolvimento mais alto",
+          "Manutenção de infraestrutura própria",
+          "Tempo de go-to-market mais longo"
+        ],
+        "en": [
+          "Greater technical complexity than ready platforms",
+          "Higher development cost",
+          "Own infrastructure maintenance",
+          "Longer time-to-market"
+        ],
+        "fr": [
+          "Complexité technique plus élevée que les plateformes prêtes",
+          "Coût de développement plus élevé",
+          "Maintenance de l'infrastructure propre",
+          "Délai de mise sur le marché plus long"
+        ]
+      },
+      "scenarios": {
+        "pt": "Lojas de médio/grande porte que precisam de UX customizada, multi-idioma, integração com ERP, ou experiências que plataformas prontas não suportam.",
+        "en": "Medium/large stores that need custom UX, multi-language, ERP integration, or experiences that ready platforms don't support.",
+        "fr": "Magasins moyens/grands ayant besoin d'UX personnalisée, multi-langues, intégration ERP, ou d'expériences non supportées par les plateformes prêtes."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Quando usar plataforma SaaS vs. headless para e-commerce?</strong><br>A: SaaS (Shopify, VTEX, Nuvemshop) para lançamento rápido, equipes pequenas e orçamento limitado. Headless para total controle de UX, escalabilidade extrema e integração com sistemas legados complexos.</li><li><strong>Q: Como garantir SEO em e-commerce headless?</strong><br>A: Use SSR ou SSG com Next.js, meta tags dinâmicas por produto, sitemap XML gerado programaticamente, dados estruturados schema.org para produtos (preço, disponibilidade, avaliações).</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: When to use SaaS platform vs. headless for e-commerce?</strong><br>A: SaaS (Shopify, VTEX) for fast launch, small teams and limited budget. Headless for total UX control, extreme scalability and integration with complex legacy systems.</li><li><strong>Q: How to ensure SEO in headless e-commerce?</strong><br>A: Use SSR or SSG with Next.js, dynamic meta tags per product, programmatically generated XML sitemap, schema.org structured data for products (price, availability, reviews).</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Quand utiliser une plateforme SaaS vs. headless ?</strong><br>R : SaaS pour lancement rapide, petites équipes. Headless pour contrôle UX total, scalabilité extrême et intégration avec des systèmes legacy complexes.</li></ul>"
+      }
+    },
+    {
+      "id": "pagamentos",
+      "name": "Pagamentos Online",
+      "category": "ecommerce",
+      "icon": "💳",
+      "description": {
+        "pt": "Integração com gateways de pagamento — Stripe, PagSeguro, Mercado Pago — para processar cartões, PIX, boletos e assinaturas de forma segura e com conformidade PCI.",
+        "en": "Integration with payment gateways — Stripe, PagSeguro, Mercado Pago — to process cards, PIX, boletos and subscriptions securely and with PCI compliance.",
+        "fr": "Intégration avec les passerelles de paiement — Stripe, PagSeguro, Mercado Pago — pour traiter les cartes, PIX, boletos et abonnements de manière sécurisée et conforme PCI."
+      },
+      "example": {
+        "pt": "Implementação de checkout com Stripe e webhook para confirmar pagamento.",
+        "en": "Checkout implementation with Stripe and webhook to confirm payment.",
+        "fr": "Implémentation du checkout avec Stripe et webhook pour confirmer le paiement.",
+        "code": "// ✅ Stripe — criar PaymentIntent (backend Node.js)\nconst stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);\n\n// Rota: POST /api/pagamentos/criar-intent\napp.post('/api/pagamentos/criar-intent', async (req, res) => {\n  const { valor, moeda, pedidoId } = req.body;\n\n  try {\n    const paymentIntent = await stripe.paymentIntents.create({\n      amount:   Math.round(valor * 100), // Stripe usa centavos!\n      currency: moeda || 'brl',\n      metadata: { pedido_id: pedidoId },\n      automatic_payment_methods: { enabled: true },\n    });\n\n    res.json({\n      clientSecret: paymentIntent.client_secret,\n      intentId:     paymentIntent.id,\n    });\n  } catch (err) {\n    res.status(400).json({ error: err.message });\n  }\n});\n\n// ✅ Frontend — Stripe Elements (React)\nimport { loadStripe } from '@stripe/stripe-js';\nimport { Elements, PaymentElement, useStripe, useElements } from '@stripe/react-stripe-js';\n\nconst stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_KEY);\n\nfunction CheckoutForm({ clientSecret }) {\n  const stripe   = useStripe();\n  const elements = useElements();\n\n  const handleSubmit = async (e) => {\n    e.preventDefault();\n    const { error, paymentIntent } = await stripe.confirmPayment({\n      elements,\n      confirmParams: { return_url: 'https://loja.com/sucesso' },\n      redirect: 'if_required',\n    });\n    if (error) console.error(error.message);\n    else if (paymentIntent.status === 'succeeded') {\n      // Pagamento confirmado no cliente — mas SEMPRE confirme no webhook!\n      router.push('/pedido/sucesso');\n    }\n  };\n\n  return (\n    <form onSubmit={handleSubmit}>\n      <PaymentElement />\n      <button type=\"submit\">Pagar</button>\n    </form>\n  );\n}\n\n// ✅ Webhook — confirmação OFICIAL do pagamento\n// NUNCA confie apenas no retorno do frontend!\napp.post('/webhook/stripe',\n  express.raw({ type: 'application/json' }),\n  (req, res) => {\n    const sig   = req.headers['stripe-signature'];\n    let event;\n\n    try {\n      event = stripe.webhooks.constructEvent(\n        req.body,\n        sig,\n        process.env.STRIPE_WEBHOOK_SECRET\n      );\n    } catch (err) {\n      return res.status(400).send(`Webhook Error: ${err.message}`);\n    }\n\n    if (event.type === 'payment_intent.succeeded') {\n      const pi = event.data.object;\n      const pedidoId = pi.metadata.pedido_id;\n      confirmarPedido(pedidoId); // atualiza DB, envia email, etc.\n    }\n\n    res.json({ received: true });\n  }\n);"
+      },
+      "relations": [
+        "ecommerce-arch",
+        "nodejs",
+        "postgresql",
+        "nextjs"
+      ],
+      "pros": {
+        "pt": [
+          "Stripe: melhor DX do mercado + anti-fraude",
+          "PCI compliance gerenciado pelo gateway",
+          "Suporte a PIX nativo (Mercado Pago)",
+          "Webhooks garantem integridade das transações"
+        ],
+        "en": [
+          "Stripe: best DX in market + anti-fraud",
+          "PCI compliance managed by gateway",
+          "Native PIX support (Mercado Pago)",
+          "Webhooks ensure transaction integrity"
+        ],
+        "fr": [
+          "Stripe : meilleure DX du marché + anti-fraude",
+          "Conformité PCI gérée par la passerelle",
+          "Support PIX natif (Mercado Pago)",
+          "Webhooks garantissent l'intégrité des transactions"
+        ]
+      },
+      "cons": {
+        "pt": [
+          "Taxas por transação (2–4%)",
+          "Stripe tem suporte PIX limitado no Brasil",
+          "Webhooks falhando = pedidos não confirmados",
+          "Chargebacks exigem gestão ativa"
+        ],
+        "en": [
+          "Fees per transaction (2–4%)",
+          "Stripe has limited PIX support in Brazil",
+          "Failed webhooks = unconfirmed orders",
+          "Chargebacks require active management"
+        ],
+        "fr": [
+          "Frais par transaction (2 à 4%)",
+          "Stripe a un support PIX limité au Brésil",
+          "Les webhooks échouants = commandes non confirmées",
+          "Les chargebacks nécessitent une gestion active"
+        ]
+      },
+      "scenarios": {
+        "pt": "Checkout de e-commerce, assinaturas recorrentes (SaaS), marketplaces com split de pagamento, cobranças B2B.",
+        "en": "E-commerce checkout, recurring subscriptions (SaaS), marketplaces with payment splitting, B2B billing.",
+        "fr": "Checkout e-commerce, abonnements récurrents (SaaS), marketplaces avec partage de paiement, facturation B2B."
+      },
+      "interview": {
+        "pt": "<ul class=\"interview-qa\"><li><strong>Q: Por que SEMPRE confirmar pagamento via webhook e não só no frontend?</strong><br>A: O frontend pode ser manipulado, o usuário pode fechar o browser antes do redirect, ou a rede pode cair. O webhook é chamado diretamente pela Stripe ao servidor — é a fonte de verdade imutável.</li><li><strong>Q: O que é idempotência em pagamentos?</strong><br>A: Garantia de que processar o mesmo evento webhook múltiplas vezes (retry) não causa efeitos duplicados. Implemente com idempotency_key no Stripe e verificação de processamento no DB.</li></ul>",
+        "en": "<ul class=\"interview-qa\"><li><strong>Q: Why ALWAYS confirm payment via webhook and not just in the frontend?</strong><br>A: The frontend can be manipulated, the user may close the browser before the redirect, or the network may fail. The webhook is called directly by Stripe to the server — it is the immutable source of truth.</li><li><strong>Q: What is idempotency in payments?</strong><br>A: Guarantee that processing the same webhook event multiple times (retry) doesn't cause duplicate effects. Implement with idempotency_key in Stripe and DB processing check.</li></ul>",
+        "fr": "<ul class=\"interview-qa\"><li><strong>Q : Pourquoi TOUJOURS confirmer le paiement via webhook ?</strong><br>R : Le frontend peut être manipulé, l'utilisateur peut fermer le navigateur avant la redirection. Le webhook est appelé directement par Stripe au serveur — c'est la source de vérité immuable.</li></ul>"
       }
     }
   ]
