@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/roles.css" />
   <link rel="stylesheet" href="css/async.css" />
+  <link rel="stylesheet" href="css/wordpress.css" />
 </head>
 <body>
 
@@ -116,6 +117,29 @@
   </section>
 
   <!-- =====================================================
+       SEÇÃO: PLUG-INS WORDPRESS
+       ===================================================== -->
+  <section id="wp-section" aria-labelledby="wp-heading">
+
+    <div id="wp-header">
+      <div class="wp-badge">
+        <span class="wp-badge-dot"></span>
+        <span data-wp-i18n="badge">Guia Interativo</span>
+      </div>
+      <h2 id="wp-heading" data-wp-i18n="title">
+        Plug-ins WordPress
+      </h2>
+      <p class="wp-subtitle" data-wp-i18n="subtitle">
+        Estrutura, hooks, shortcodes, REST API e integração com apps externos — do zero ao headless.
+      </p>
+    </div>
+
+    <div id="wp-tabs" role="tablist" aria-label="Conceitos de Plug-ins WordPress"></div>
+    <div id="wp-panel" role="tabpanel"></div>
+
+  </section>
+
+  <!-- =====================================================
        SEÇÃO: PAPÉIS & RESPONSABILIDADES
        ===================================================== -->
   <section id="roles-section" aria-labelledby="roles-heading">
@@ -163,25 +187,25 @@
   <script src="js/roles.js"></script>
   <!-- Script de JavaScript Assíncrono -->
   <script src="js/async.js"></script>
+  <!-- Script de Plug-ins WordPress -->
+  <script src="js/wordpress.js"></script>
   <!-- Script principal -->
   <script src="js/index.js"></script>
 
   <script>
-    // Inicializa a seção async após o DOM carregar,
-    // sincronizado com a troca de idioma do app principal
     document.addEventListener('DOMContentLoaded', () => {
-      // Aguarda o init() do index.js detectar o idioma
       setTimeout(() => {
         const lang = typeof APP !== 'undefined' ? APP.lang : 'pt';
         renderAsync(lang);
+        renderWordPress(lang);
       }, 0);
 
-      // Intercepta trocas de idioma para re-renderizar a seção async
       document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', () => {
           setTimeout(() => {
             const lang = typeof APP !== 'undefined' ? APP.lang : btn.dataset.lang;
             renderAsync(lang);
+            renderWordPress(lang);
           }, 10);
         });
       });
@@ -189,3 +213,4 @@
   </script>
 </body>
 </html>
+
