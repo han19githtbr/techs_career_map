@@ -140,6 +140,30 @@
   </section>
 
   <!-- =====================================================
+       SEÇÃO: ENTREVISTA TÉCNICA
+       ===================================================== -->
+  <section id="interview-section" aria-labelledby="interview-heading">
+
+    <div id="interview-header">
+      <div class="interview-badge">
+        <span class="interview-badge-dot"></span>
+        <span data-interview-i18n="badge">Guia de Entrevista</span>
+      </div>
+      <h2 id="interview-heading" data-interview-i18n="title">Perguntas e respostas para processos seletivos</h2>
+      <p class="interview-subtitle" data-interview-i18n="subtitle">
+        Treine com perguntas objetivas, respostas diretas e a explicação certa para cada cenário.
+      </p>
+      <div id="interview-controls" class="interview-controls">
+        <div id="interview-category-bar" class="interview-category-bar" role="tablist" aria-label="Categorias"></div>
+        <button id="interview-practice-toggle" class="interview-practice-btn" type="button" aria-pressed="false"></button>
+      </div>
+    </div>
+
+    <div id="interview-grid" class="interview-grid" role="list"></div>
+
+  </section>
+
+  <!-- =====================================================
        SEÇÃO: PAPÉIS & RESPONSABILIDADES
        ===================================================== -->
   <section id="roles-section" aria-labelledby="roles-heading">
@@ -189,6 +213,7 @@
   <script src="js/async.js"></script>
   <!-- Script de Plug-ins WordPress -->
   <script src="js/wordpress.js"></script>
+  <script src="js/interview.js"></script>
   <!-- Script principal -->
   <script src="js/index.js"></script>
 
@@ -198,6 +223,7 @@
         const lang = typeof APP !== 'undefined' ? APP.lang : 'pt';
         renderAsync(lang);
         renderWordPress(lang);
+        renderInterview(lang);
       }, 0);
 
       document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -206,6 +232,7 @@
             const lang = typeof APP !== 'undefined' ? APP.lang : btn.dataset.lang;
             renderAsync(lang);
             renderWordPress(lang);
+            renderInterview(lang);
           }, 10);
         });
       });

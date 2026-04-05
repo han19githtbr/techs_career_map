@@ -59,6 +59,7 @@ async function init() {
   bindSearchEvent();
   updateStats();
   renderRoles(APP.lang);
+  renderInterview(APP.lang);
 
   // Fecha modal ao clicar fora do painel
   document.getElementById('modal-overlay').addEventListener('click', (e) => {
@@ -420,6 +421,7 @@ function setLanguage(lang) {
   renderCards();
   applyFilters();
   renderRoles(APP.lang);
+  renderInterview(APP.lang);
 
   if (APP.openTechId) openModal(APP.openTechId);
 }
